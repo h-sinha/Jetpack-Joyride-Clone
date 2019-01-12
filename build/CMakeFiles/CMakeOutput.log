@@ -28,28 +28,28 @@ The CXX compiler identification is GNU, found in "/home/harsh/acads/sem4/Graphic
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_84cfb/fast"
-/usr/bin/make -f CMakeFiles/cmTC_84cfb.dir/build.make CMakeFiles/cmTC_84cfb.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_ac3f9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ac3f9.dir/build.make CMakeFiles/cmTC_ac3f9.dir/build
 make[1]: Entering directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_84cfb.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_84cfb.dir/testCCompiler.c.o   -c /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_84cfb
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_84cfb.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_84cfb.dir/testCCompiler.c.o  -o cmTC_84cfb 
+Building C object CMakeFiles/cmTC_ac3f9.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_ac3f9.dir/testCCompiler.c.o   -c /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_ac3f9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac3f9.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_ac3f9.dir/testCCompiler.c.o  -o cmTC_ac3f9 
 make[1]: Leaving directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1466c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1466c.dir/build.make CMakeFiles/cmTC_1466c.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_46daa/fast"
+/usr/bin/make -f CMakeFiles/cmTC_46daa.dir/build.make CMakeFiles/cmTC_46daa.dir/build
 make[1]: Entering directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1466c.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_1466c.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_1466c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1466c.dir/link.txt --verbose=1
-/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_1466c.dir/CMakeCCompilerABI.c.o  -o cmTC_1466c 
+Building C object CMakeFiles/cmTC_46daa.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_46daa.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_46daa
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_46daa.dir/link.txt --verbose=1
+/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_46daa.dir/CMakeCCompilerABI.c.o  -o cmTC_46daa 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -61,9 +61,9 @@ Thread model: posix
 gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_1466c' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjiviwI.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_1466c /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_1466c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_1466c' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_46daa' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc5O0ST5.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_46daa /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_46daa.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_46daa' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp'
 
 
@@ -71,14 +71,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_1466c/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_1466c.dir/build.make CMakeFiles/cmTC_1466c.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_46daa/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_46daa.dir/build.make CMakeFiles/cmTC_46daa.dir/build]
   ignore line: [make[1]: Entering directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_1466c.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_1466c.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_1466c]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1466c.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_1466c.dir/CMakeCCompilerABI.c.o  -o cmTC_1466c ]
+  ignore line: [Building C object CMakeFiles/cmTC_46daa.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_46daa.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_46daa]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_46daa.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_46daa.dir/CMakeCCompilerABI.c.o  -o cmTC_46daa ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -90,13 +90,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_1466c' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjiviwI.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_1466c /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_1466c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_46daa' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc5O0ST5.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_46daa /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_46daa.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccjiviwI.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc5O0ST5.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -116,7 +116,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_1466c] ==> ignore
+    arg [cmTC_46daa] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -128,7 +128,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_1466c.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_46daa.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -160,14 +160,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_246c4/fast"
-/usr/bin/make -f CMakeFiles/cmTC_246c4.dir/build.make CMakeFiles/cmTC_246c4.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_eaa83/fast"
+/usr/bin/make -f CMakeFiles/cmTC_eaa83.dir/build.make CMakeFiles/cmTC_eaa83.dir/build
 make[1]: Entering directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_246c4.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_246c4.dir/feature_tests.c.o   -c /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_246c4
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_246c4.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_246c4.dir/feature_tests.c.o  -o cmTC_246c4 
+Building C object CMakeFiles/cmTC_eaa83.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_eaa83.dir/feature_tests.c.o   -c /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_eaa83
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eaa83.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_eaa83.dir/feature_tests.c.o  -o cmTC_eaa83 
 make[1]: Leaving directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp'
 
 
@@ -180,14 +180,14 @@ make[1]: Leaving directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_84ee1/fast"
-/usr/bin/make -f CMakeFiles/cmTC_84ee1.dir/build.make CMakeFiles/cmTC_84ee1.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_585d4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_585d4.dir/build.make CMakeFiles/cmTC_585d4.dir/build
 make[1]: Entering directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_84ee1.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_84ee1.dir/feature_tests.c.o   -c /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_84ee1
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_84ee1.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_84ee1.dir/feature_tests.c.o  -o cmTC_84ee1 
+Building C object CMakeFiles/cmTC_585d4.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_585d4.dir/feature_tests.c.o   -c /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_585d4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_585d4.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_585d4.dir/feature_tests.c.o  -o cmTC_585d4 
 make[1]: Leaving directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp'
 
 
@@ -200,14 +200,14 @@ make[1]: Leaving directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_66b8b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_66b8b.dir/build.make CMakeFiles/cmTC_66b8b.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_3b33c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3b33c.dir/build.make CMakeFiles/cmTC_3b33c.dir/build
 make[1]: Entering directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_66b8b.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_66b8b.dir/feature_tests.c.o   -c /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_66b8b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66b8b.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_66b8b.dir/feature_tests.c.o  -o cmTC_66b8b 
+Building C object CMakeFiles/cmTC_3b33c.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_3b33c.dir/feature_tests.c.o   -c /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_3b33c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3b33c.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_3b33c.dir/feature_tests.c.o  -o cmTC_3b33c 
 make[1]: Leaving directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp'
 
 
@@ -218,28 +218,28 @@ make[1]: Leaving directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c16f2/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c16f2.dir/build.make CMakeFiles/cmTC_c16f2.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_59d73/fast"
+/usr/bin/make -f CMakeFiles/cmTC_59d73.dir/build.make CMakeFiles/cmTC_59d73.dir/build
 make[1]: Entering directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_c16f2.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_c16f2.dir/testCXXCompiler.cxx.o -c /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_c16f2
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c16f2.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_c16f2.dir/testCXXCompiler.cxx.o  -o cmTC_c16f2 
+Building CXX object CMakeFiles/cmTC_59d73.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_59d73.dir/testCXXCompiler.cxx.o -c /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_59d73
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59d73.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_59d73.dir/testCXXCompiler.cxx.o  -o cmTC_59d73 
 make[1]: Leaving directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_404aa/fast"
-/usr/bin/make -f CMakeFiles/cmTC_404aa.dir/build.make CMakeFiles/cmTC_404aa.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_5df0c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5df0c.dir/build.make CMakeFiles/cmTC_5df0c.dir/build
 make[1]: Entering directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_404aa.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_404aa.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_404aa
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_404aa.dir/link.txt --verbose=1
-/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_404aa.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_404aa 
+Building CXX object CMakeFiles/cmTC_5df0c.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_5df0c.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_5df0c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5df0c.dir/link.txt --verbose=1
+/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_5df0c.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_5df0c 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -251,9 +251,9 @@ Thread model: posix
 gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_404aa' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccrOQ5IZ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_404aa /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_404aa.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_404aa' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_5df0c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0mqIZu.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_5df0c /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_5df0c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_5df0c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp'
 
 
@@ -261,14 +261,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_404aa/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_404aa.dir/build.make CMakeFiles/cmTC_404aa.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_5df0c/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_5df0c.dir/build.make CMakeFiles/cmTC_5df0c.dir/build]
   ignore line: [make[1]: Entering directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_404aa.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_404aa.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_404aa]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_404aa.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_404aa.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_404aa ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_5df0c.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_5df0c.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_5df0c]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5df0c.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_5df0c.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_5df0c ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -280,13 +280,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_404aa' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccrOQ5IZ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_404aa /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_404aa.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_5df0c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0mqIZu.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_5df0c /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_5df0c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccrOQ5IZ.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc0mqIZu.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -306,7 +306,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_404aa] ==> ignore
+    arg [cmTC_5df0c] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -318,7 +318,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_404aa.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_5df0c.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -346,14 +346,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e656d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e656d.dir/build.make CMakeFiles/cmTC_e656d.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_8519a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8519a.dir/build.make CMakeFiles/cmTC_8519a.dir/build
 make[1]: Entering directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_e656d.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_e656d.dir/feature_tests.cxx.o -c /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_e656d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e656d.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_e656d.dir/feature_tests.cxx.o  -o cmTC_e656d 
+Building CXX object CMakeFiles/cmTC_8519a.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_8519a.dir/feature_tests.cxx.o -c /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_8519a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8519a.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_8519a.dir/feature_tests.cxx.o  -o cmTC_8519a 
 make[1]: Leaving directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp'
 
 
@@ -419,14 +419,14 @@ make[1]: Leaving directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_fd403/fast"
-/usr/bin/make -f CMakeFiles/cmTC_fd403.dir/build.make CMakeFiles/cmTC_fd403.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_07732/fast"
+/usr/bin/make -f CMakeFiles/cmTC_07732.dir/build.make CMakeFiles/cmTC_07732.dir/build
 make[1]: Entering directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_fd403.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_fd403.dir/feature_tests.cxx.o -c /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_fd403
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fd403.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_fd403.dir/feature_tests.cxx.o  -o cmTC_fd403 
+Building CXX object CMakeFiles/cmTC_07732.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_07732.dir/feature_tests.cxx.o -c /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_07732
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_07732.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_07732.dir/feature_tests.cxx.o  -o cmTC_07732 
 make[1]: Leaving directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp'
 
 
@@ -492,14 +492,14 @@ make[1]: Leaving directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_416e6/fast"
-/usr/bin/make -f CMakeFiles/cmTC_416e6.dir/build.make CMakeFiles/cmTC_416e6.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_23463/fast"
+/usr/bin/make -f CMakeFiles/cmTC_23463.dir/build.make CMakeFiles/cmTC_23463.dir/build
 make[1]: Entering directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_416e6.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_416e6.dir/feature_tests.cxx.o -c /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_416e6
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_416e6.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_416e6.dir/feature_tests.cxx.o  -o cmTC_416e6 
+Building CXX object CMakeFiles/cmTC_23463.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_23463.dir/feature_tests.cxx.o -c /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_23463
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_23463.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_23463.dir/feature_tests.cxx.o  -o cmTC_23463 
 make[1]: Leaving directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp'
 
 
@@ -565,14 +565,14 @@ make[1]: Leaving directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e3421/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e3421.dir/build.make CMakeFiles/cmTC_e3421.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_ea260/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ea260.dir/build.make CMakeFiles/cmTC_ea260.dir/build
 make[1]: Entering directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_e3421.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_e3421.dir/feature_tests.cxx.o -c /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_e3421
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3421.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_e3421.dir/feature_tests.cxx.o  -o cmTC_e3421 
+Building CXX object CMakeFiles/cmTC_ea260.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_ea260.dir/feature_tests.cxx.o -c /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_ea260
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ea260.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_ea260.dir/feature_tests.cxx.o  -o cmTC_ea260 
 make[1]: Leaving directory '/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/CMakeTmp'
 
 

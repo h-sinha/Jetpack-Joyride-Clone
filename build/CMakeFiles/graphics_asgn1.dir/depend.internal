@@ -21,6 +21,7 @@ CMakeFiles/graphics_asgn1.dir/src/main.cpp.o
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.cpp
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/timer.h
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/wall.h
 CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/nonedit.cpp
@@ -30,3 +31,7 @@ CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o
 CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/timer.cpp
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/timer.h
+CMakeFiles/graphics_asgn1.dir/src/wall.cpp.o
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/wall.cpp
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/wall.h
