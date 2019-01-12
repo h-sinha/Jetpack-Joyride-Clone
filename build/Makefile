@@ -150,31 +150,6 @@ src/ball.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/ball.cpp.s
 .PHONY : src/ball.cpp.s
 
-
-# target to build an object file
-src/wall.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/wall.cpp.o
-.PHONY : src/wall.cpp.o
-
-src/wall.i: src/wall.cpp.i
-
-.PHONY : src/wall.i
-
-# target to preprocess a source file
-src/wall.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/wall.cpp.i
-.PHONY : src/wall.cpp.i
-
-src/wall.s: src/wall.cpp.s
-
-.PHONY : src/wall.s
-
-# target to generate assembly for a file
-src/wall.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/wall.cpp.s
-.PHONY : src/wall.cpp.s
-
-
 src/bricks.o: src/bricks.cpp.o
 
 .PHONY : src/bricks.o
@@ -376,9 +351,6 @@ help:
 	@echo "... src/ball.o"
 	@echo "... src/ball.i"
 	@echo "... src/ball.s"
-	@echo "... src/wall.o"
-	@echo "... src/wall.i"
-	@echo "... src/wall.s"
 	@echo "... src/bricks.o"
 	@echo "... src/bricks.i"
 	@echo "... src/bricks.s"
