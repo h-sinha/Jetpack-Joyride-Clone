@@ -1,17 +1,17 @@
 #include "main.h"
 
-#ifndef BALL_H
-#define BALL_H
+#ifndef COIN_H
+#define COIN_H
 
 
-class Ball {
+class Coin {
 public:
-    Ball() {}
-    Ball(float x, float y, color_t color, float init_speed);
+    Coin() {}
+    Coin(float x, float y, color_t color);
     glm::vec3 position;
-    float rotation;
-    float length;
+     float length;
     float width;
+    float rotation;
     void draw(glm::mat4 VP);
     void set_position(float x, float y);
     void tick();
@@ -20,4 +20,4 @@ private:
     VAO *object;
 };
 
-#endif // BALL_H
+#endif // COIN_H

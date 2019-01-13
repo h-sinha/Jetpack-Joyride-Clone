@@ -4,6 +4,8 @@
 Ball::Ball(float x, float y, color_t color, float init_speed) {
     this->position = glm::vec3(x, y, 0);
     this->rotation = 0;
+    this->length = 0.3;
+    this->width = 0.3;
     speed = init_speed;
     // Our vertices. Three consecutive floats give a 3D vertex; Three consecutive vertices give a triangle.
     // A cube has 6 faces with 2 triangles each, so this makes 6*2=12 triangles, and 12*3 vertices

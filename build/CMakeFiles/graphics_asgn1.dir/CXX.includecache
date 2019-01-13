@@ -26,6 +26,16 @@ main.h
 main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
 
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/coin.cpp
+coin.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/coin.h
+main.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/coin.h
+main.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/color.cpp
 main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
@@ -63,9 +73,13 @@ bricks.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/bricks.h
 wall.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/wall.h
+coin.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/coin.h
 player.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/player.h
 vector
+-
+set
 -
 
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h

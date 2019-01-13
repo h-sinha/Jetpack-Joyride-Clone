@@ -9,6 +9,10 @@ CMakeFiles/graphics_asgn1.dir/src/bricks.cpp.o: ../src/bricks.cpp
 CMakeFiles/graphics_asgn1.dir/src/bricks.cpp.o: ../src/bricks.h
 CMakeFiles/graphics_asgn1.dir/src/bricks.cpp.o: ../src/main.h
 
+CMakeFiles/graphics_asgn1.dir/src/coin.cpp.o: ../src/coin.cpp
+CMakeFiles/graphics_asgn1.dir/src/coin.cpp.o: ../src/coin.h
+CMakeFiles/graphics_asgn1.dir/src/coin.cpp.o: ../src/main.h
+
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.o: ../src/color.cpp
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.o: ../src/main.h
 
@@ -17,6 +21,7 @@ CMakeFiles/graphics_asgn1.dir/src/input.cpp.o: ../src/main.h
 
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/ball.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/bricks.h
+CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/coin.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/player.h

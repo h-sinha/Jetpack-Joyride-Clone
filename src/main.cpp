@@ -3,8 +3,10 @@
 #include "ball.h"
 #include "bricks.h"
 #include "wall.h"
+#include "coin.h"
 #include "player.h"
 #include <vector>
+#include <set>
 
 using namespace std;
 
@@ -18,11 +20,15 @@ GLFWwindow *window;
 
 std::vector<Brick> BrickPos;
 std::vector<Wall> WallPos;
+std::vector<Coin> CoinPos;
+
 Player player;
+bounding_box_t PlayerBound;
 
 float screen_zoom = 1, screen_center_x = 0, screen_center_y = 0;
 float camera_rotation_angle = 0;
 int ScreenWidth = 600, ScreenHeight = 600;
+std::vector<bool> done(30);
 
 Timer t60(1.0 / 60);
 
@@ -66,6 +72,31 @@ void draw() {
     {
         x.draw(VP);
     }
+    int cur = 0;
+    for(auto &x:CoinPos)
+    {
+        if(done[cur])
+        {
+            cur++;
+            continue;
+        }
+        bounding_box_t c;
+        PlayerBound.x = player.position[0];
+        PlayerBound.y = player.position[1];
+        PlayerBound.height = player.length;
+        PlayerBound.width = player.width;
+        c.x = x.position[0];
+        c.y = x.position[1];
+        c.height = x.length;
+        c.width = x.width;
+        int flag = detect_collision(PlayerBound, c);
+        printf("%d\n", flag);
+        if(detect_collision(PlayerBound, c) == 0)
+            x.draw(VP);
+        else 
+            done[cur] = 1;
+        cur++;
+    }
     player.draw(VP);
 }
 
@@ -89,8 +120,15 @@ void tick_elements() {
     {
         x.tick();
     }
+    int cur = 0;
+    for (auto &x:CoinPos)
+    {
+        float prev = x.position[0];
+        x.tick();
+        if(x.position[0] > prev)done[cur] = 0;
+        cur++;
+    }
     player.tick();
-    // printf("%lf %lf\n",player.position[0], player.position[1] );
 }
 
 /* Initialize the OpenGL rendering properties */
@@ -122,7 +160,12 @@ void initGL(GLFWwindow *window, int width, int height) {
         wall = Wall(0.0, 0.0, COLOR_LIGHT_BROWN);
         WallPos.push_back(wall);
     }
-  
+    for (float i = 0; i < 10; ++i)
+    {
+        Coin coin;
+        coin = Coin(0.0f, 0.0f, COLOR_YELLOW);
+        CoinPos.push_back(coin);
+    }
     player = Player(0.9,0.2,COLOR_BROWN);
 
     // Create and compile our GLSL program from the shaders
@@ -176,6 +219,7 @@ int main(int argc, char **argv) {
 }
 
 bool detect_collision(bounding_box_t a, bounding_box_t b) {
+    printf("%f %f %f %f %f %f %f %f\n",a.x, b.x, a.width, b.width, a.y, b.y, a.height, b.height );
     return (abs(a.x - b.x) * 2 < (a.width + b.width)) &&
            (abs(a.y - b.y) * 2 < (a.height + b.height));
 }
@@ -186,5 +230,7 @@ void reset_screen() {
     float left   = screen_center_x - 4 / screen_zoom;
     float right  = screen_center_x + 4 / screen_zoom;
     // changed origin
+     // Matrices.projection = glm::ortho(left, right, bottom, top, 0.1f, 500.0f);
     Matrices.projection = glm::ortho(0.0f, right, 0.0f, top, 0.1f, 500.0f);
+    // Matrices.projection = glm::ortho(0.0f, 0.0f, 0.0f, 0.0f, 0.1f, 500.0f);
 }

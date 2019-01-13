@@ -15,13 +15,13 @@ Wall::Wall(float x, float y, color_t color) {
      {
         vertex_buffer_data[cur] =  0.2 * cos((2.0*PI*i)/n);
         vertex_buffer_data[cur+1] =  0.2 * sin((2.0*PI*i)/n);
-        vertex_buffer_data[cur+2] = 0.0;
+        vertex_buffer_data[cur+2] = -100.0;
         vertex_buffer_data[cur+3] = 0.2 * cos((2.0*PI*(i+1))/n);
         vertex_buffer_data[cur+4] = 0.2 * sin((2.0*PI*(i+1))/n);
-        vertex_buffer_data[cur+5] = 0.0;
+        vertex_buffer_data[cur+5] = -100.0;
         vertex_buffer_data[cur+6] = 0.0;
         vertex_buffer_data[cur+7] = 0.0;
-        vertex_buffer_data[cur+8] = 0.0;
+        vertex_buffer_data[cur+8] = -100.0;
         cur += 9;
      } 
     // Our vertices. Three consecutive floats give a 3D vertex; Three consecutive vertices give a triangle.

@@ -4,7 +4,9 @@
 Player::Player(float x, float y, color_t color) {
     this->position = glm::vec3(x, y, 0);
     this->rotation = 0;
-    speed = GameSpeed;
+    this->length = 0.4;
+    this->width = 0.4;
+    speed = 0.02;
     // Our vertices. Three consecutive floats give a 3D vertex; Three consecutive vertices give a triangle.
     // A cube has 6 faces with 2 triangles each, so this makes 6*2=12 triangles, and 12*3 vertices
     static const GLfloat vertex_buffer_data[] = {
@@ -15,7 +17,6 @@ Player::Player(float x, float y, color_t color) {
        x + 0.4f, y, 0.0f,
        x + 0.4f, y + 0.4f, 0.0f,
      };
-     printf("%d %d %d\n",color.r, color.g, color.b );
     this->object = create3DObject(GL_TRIANGLES, 2*3, vertex_buffer_data, color, GL_FILL);
 }
 
@@ -48,7 +49,6 @@ void Player::move(int up) {
     // this->position.x -= speed;
     if(up == 1)
     {
-      printf("%lf\n",this->position.y + speed + 0.4);
       if(this->position.y + speed + 0.4f < 3.8f)
         this->position.y += speed;
     }
@@ -58,5 +58,4 @@ void Player::move(int up) {
         this->position.y -= speed;
     }
     // this->set_position(this->position.x, this->position.y);
-    // printf("%f %f\n",speed, this->position.x );
 }
