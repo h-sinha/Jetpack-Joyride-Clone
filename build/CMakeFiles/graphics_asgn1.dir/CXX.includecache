@@ -63,6 +63,8 @@ bricks.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/bricks.h
 wall.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/wall.h
+player.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/player.h
 vector
 -
 
@@ -127,6 +129,16 @@ glm/gtx/transform.hpp
 -
 glm/gtc/matrix_transform.hpp
 -
+main.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/player.cpp
+player.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/player.h
+main.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/player.h
 main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
 

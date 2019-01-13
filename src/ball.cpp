@@ -73,4 +73,3 @@ void Ball::tick() {
     // this->set_position(this->position.x, this->position.y);
     // printf("%f %f\n",speed, this->position.x );
 }
-

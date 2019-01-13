@@ -3,6 +3,7 @@
 #include "ball.h"
 #include "bricks.h"
 #include "wall.h"
+#include "player.h"
 #include <vector>
 
 using namespace std;
@@ -17,6 +18,7 @@ GLFWwindow *window;
 
 std::vector<Brick> BrickPos;
 std::vector<Wall> WallPos;
+Player player;
 
 float screen_zoom = 1, screen_center_x = 0, screen_center_y = 0;
 float camera_rotation_angle = 0;
@@ -64,13 +66,17 @@ void draw() {
     {
         x.draw(VP);
     }
+    player.draw(VP);
 }
 
 void tick_input(GLFWwindow *window) {
-    int left  = glfwGetKey(window, GLFW_KEY_LEFT);
+    int left  = glfwGetKey(window, GLFW_KEY_UP);
     int right = glfwGetKey(window, GLFW_KEY_RIGHT);
     if (left) {
-        // Do something
+        player.move(1);
+    }
+    else {
+        player.move(-1);
     }
 }
 
@@ -83,6 +89,8 @@ void tick_elements() {
     {
         x.tick();
     }
+    player.tick();
+    // printf("%lf %lf\n",player.position[0], player.position[1] );
 }
 
 /* Initialize the OpenGL rendering properties */
@@ -90,7 +98,6 @@ void tick_elements() {
 void initGL(GLFWwindow *window, int width, int height) {
     /* Objects should be created before any other gl function and shaders */
     // Create the models
-
     for (float i = 0; i < 30; ++i)
     {
         Brick brick;
@@ -109,12 +116,15 @@ void initGL(GLFWwindow *window, int width, int height) {
             brick = Brick(i*(0.2), 0.2f, COLOR_LIGHT_BROWN);
         BrickPos.push_back(brick);
     }
-    for (float i = 0; i < 10; ++i)
+    for (float i = 0; i < 15; ++i)
     {
         Wall wall;
         wall = Wall(0.0, 0.0, COLOR_LIGHT_BROWN);
         WallPos.push_back(wall);
     }
+  
+    player = Player(0.9,0.2,COLOR_BROWN);
+
     // Create and compile our GLSL program from the shaders
     programID = LoadShaders("Sample_GL.vert", "Sample_GL.frag");
     // Get a handle for our "MVP" uniform

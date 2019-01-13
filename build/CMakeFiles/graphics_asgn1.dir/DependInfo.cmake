@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.cpp" "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/graphics_asgn1.dir/src/main.cpp.o"
   "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/nonedit.cpp" "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o"
   "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/other_handlers.cpp" "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o"
+  "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/player.cpp" "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/graphics_asgn1.dir/src/player.cpp.o"
   "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/timer.cpp" "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o"
   "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/wall.cpp" "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/graphics_asgn1.dir/src/wall.cpp.o"
   )
