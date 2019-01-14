@@ -12,6 +12,9 @@ public:
     float rotation;
      float length;
     float width;
+     float scalex;
+    float scaley;
+    float scalez;
     void draw(glm::mat4 VP);
     void set_position(float x, float y);
     void tick();

@@ -27,10 +27,30 @@ bounding_box_t PlayerBound;
 
 float screen_zoom = 1, screen_center_x = 0, screen_center_y = 0;
 float camera_rotation_angle = 0;
+int score = 0;
 int ScreenWidth = 600, ScreenHeight = 600;
 std::vector<bool> done(30);
 
 Timer t60(1.0 / 60.0);
+
+void scoreDisplay(){
+  //    glFontBegin(&font);
+  // glScalef(8.0, 8.0, 8.0);
+  // glTranslatef(30, 30, 0);
+  // glFontTextOut("Test", 5, 5, 0);
+  // glFontEnd();
+  // glFlush();
+    // GLvoid* font_style = GLUT_BITMAP_TIMES_ROMAN_24;
+    // int temp = score, idx = 0;
+    // while(temp > 0)
+    // {
+    //     glRasterPos3f ((0.0-(idx*space_char)), 6.0, 100.0);    
+    //     // takes font style and ascii value as parameter
+    //     glutBitmapCharacter(font_style, 48+(temp%10));
+    //     idx++;
+    //     temp /= 10;
+    // }
+}
 
 /* Render the scene with openGL */
 /* Edit this function according to your assignment */
@@ -102,12 +122,38 @@ void draw() {
         cur++;
     }
     player.draw(VP);
+    scoreDisplay();
 }
-
+// zoom function 
+void zoom(){
+    player.scalex = ScaleFactor;
+    player.scaley = ScaleFactor;
+    player.scalez = ScaleFactor;
+    for (auto &x:BrickPos)
+    {
+        x.scalex = ScaleFactor;
+        x.scaley = ScaleFactor;
+        x.scalez = ScaleFactor;
+    }
+    for (auto &x:CoinPos)
+    {
+        x.scalex = ScaleFactor;
+        x.scaley = ScaleFactor;
+        x.scalez = ScaleFactor;
+    }
+    for (auto &x:WallPos)
+    {
+        x.scalex = ScaleFactor;
+        x.scaley = ScaleFactor;
+        x.scalez = ScaleFactor;
+    }
+}
 void tick_input(GLFWwindow *window) {
     int up  = glfwGetKey(window, GLFW_KEY_UP);
     int right = glfwGetKey(window, GLFW_KEY_RIGHT);
     int left = glfwGetKey(window, GLFW_KEY_LEFT);
+    int scroll = glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_MIDDLE);
+    zoom();
     if (up) {
         player.move(1);
     }
@@ -117,12 +163,7 @@ void tick_input(GLFWwindow *window) {
     }
     else if(left){
         if(GameSpeed > -0.2){
-            if(GameSpeed < 0)GameSpeed -= 0.001;
-            else
-            {
-                if(GameSpeed > 0.1)GameSpeed -= 0.001;
-                else GameSpeed = -GameSpeed;
-            }
+            GameSpeed -= 0.001;
         }
     }
     else {
@@ -147,7 +188,7 @@ void tick_elements() {
     {
         float prev = x.position[0];
         x.tick();
-        // if(x.position[0] > prev)done[cur] = 0;
+        if(x.position[0] > prev)done[cur] = 0;
         cur++;
     }
     player.tick();
@@ -159,7 +200,8 @@ void initGL(GLFWwindow *window, int width, int height) {
     /* Objects should be created before any other gl function and shaders */
     // Create the models
     int cur = -10;
-    for (float i = 0; i < 50; ++i)
+    scoreDisplay();
+    for (float i = 0; i < 60; ++i)
     {
         Brick brick;
         if(int(i)%2 == 0)
@@ -170,13 +212,13 @@ void initGL(GLFWwindow *window, int width, int height) {
         cur++;
     }
     cur = -10;
-    for (float i = 0; i < 50; ++i)
+    for (float i = 0; i < 60; ++i)
     {
         Brick brick;
         if(int(i)%2 == 1)
-            brick = Brick(cur*(0.2), 0.2f, COLOR_BROWN);
+            brick = Brick(cur*(0.2), 0.18f, COLOR_BROWN);
         else
-            brick = Brick(cur*(0.2), 0.2f, COLOR_LIGHT_BROWN);
+            brick = Brick(cur*(0.2), 0.18f, COLOR_LIGHT_BROWN);
         BrickPos.push_back(brick);
         cur++;
     }
@@ -192,7 +234,7 @@ void initGL(GLFWwindow *window, int width, int height) {
         coin = Coin(0.0f, 0.0f, COLOR_YELLOW);
         CoinPos.push_back(coin);
     }
-    player = Player(0.9,0.2,COLOR_BROWN);
+    player = Player(0.9,0.18,COLOR_BROWN);
 
     // Create and compile our GLSL program from the shaders
     programID = LoadShaders("Sample_GL.vert", "Sample_GL.frag");
@@ -246,8 +288,8 @@ int main(int argc, char **argv) {
 
 bool detect_collision(bounding_box_t a, bounding_box_t b) {
     // Collision x-axis?
-    bool collisionX = a.x + a.width >= b.x & b.x + b.width >= a.x;
-    bool collisionY = a.y + a.height >= b.y & b.y + b.height >= a.y;
+    bool collisionX = a.x + a.width >= b.x && b.x + b.width >= a.x;
+    bool collisionY = a.y + a.height >= b.y && b.y + b.height >= a.y;
     // Collision only if on both axes
     if(collisionX && collisionY)
     {
@@ -259,7 +301,7 @@ bool detect_collision(bounding_box_t a, bounding_box_t b) {
 
     // printf("%f %f %f %f %f %f %f %f\n",a.x, b.x, a.width, b.width, a.y, b.y, a.height, b.height );
     // return (abs(a.x - b.x) * 2.0 < (a.width + b.width)) &&
-           // (abs(a.y - b.y) * 2.0 < (a.height + b.height));
+    //        (abs(a.y - b.y) * 2.0 < (a.height + b.height));
 }
 
 void reset_screen() {

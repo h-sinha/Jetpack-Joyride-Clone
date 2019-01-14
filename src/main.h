@@ -15,6 +15,7 @@
 #include <glm/gtx/transform.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
+
 struct color_t {
     int r;
     int g;
@@ -87,6 +88,7 @@ extern const color_t COLOR_LIGHT_BROWN;
 extern const color_t COLOR_YELLOW;
 extern const color_t COLOR_BACKGROUND;
 extern float GameSpeed;
+extern float ScaleFactor;
 
 
 #endif

@@ -63,6 +63,7 @@ void keyboardChar(GLFWwindow *window, unsigned int key) {
 
 /* Executed when a mouse button is pressed/released */
 void mouseButton(GLFWwindow *window, int button, int action, int mods) {
+    
     switch (button) {
     case GLFW_MOUSE_BUTTON_LEFT:
         if (action == GLFW_PRESS) {
@@ -84,4 +85,17 @@ void mouseButton(GLFWwindow *window, int button, int action, int mods) {
 
 void scroll_callback(GLFWwindow *window, double xoffset, double yoffset) {
     // Do something
+    if(yoffset > 0)
+    {
+        if(ScaleFactor < 1.03)
+        ScaleFactor += 0.01;
+    }
+    else if(yoffset<0)
+    {
+        if(ScaleFactor > 0.97)
+        ScaleFactor -= 0.01;
+    }
+    else
+        ScaleFactor = 1.0;
+
 }
