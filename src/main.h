@@ -86,7 +86,7 @@ extern const color_t COLOR_BROWN;
 extern const color_t COLOR_LIGHT_BROWN;
 extern const color_t COLOR_YELLOW;
 extern const color_t COLOR_BACKGROUND;
-extern const float GameSpeed;
+extern float GameSpeed;
 
 
 #endif

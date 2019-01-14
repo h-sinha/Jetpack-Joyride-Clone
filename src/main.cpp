@@ -30,7 +30,7 @@ float camera_rotation_angle = 0;
 int ScreenWidth = 600, ScreenHeight = 600;
 std::vector<bool> done(30);
 
-Timer t60(1.0 / 60);
+Timer t60(1.0 / 60.0);
 
 /* Render the scene with openGL */
 /* Edit this function according to your assignment */
@@ -73,7 +73,7 @@ void draw() {
         x.draw(VP);
     }
     int cur = 0;
-    for(auto &x:CoinPos)
+    for(auto x:CoinPos)
     {
         if(done[cur])
         {
@@ -90,8 +90,12 @@ void draw() {
         c.height = x.length;
         c.width = x.width;
         int flag = detect_collision(PlayerBound, c);
-        printf("%d\n", flag);
-        if(detect_collision(PlayerBound, c) == 0)
+        if(flag)
+        {
+            cout<<done[cur]<<" "<<cur<<endl;
+            printf("%d %lf %lf %lf %lf\n", flag, x.position[0], x.position[1],PlayerBound.x, PlayerBound.y);
+        }
+        if(!flag)
             x.draw(VP);
         else 
             done[cur] = 1;
@@ -101,14 +105,32 @@ void draw() {
 }
 
 void tick_input(GLFWwindow *window) {
-    int left  = glfwGetKey(window, GLFW_KEY_UP);
+    int up  = glfwGetKey(window, GLFW_KEY_UP);
     int right = glfwGetKey(window, GLFW_KEY_RIGHT);
-    if (left) {
+    int left = glfwGetKey(window, GLFW_KEY_LEFT);
+    if (up) {
         player.move(1);
     }
-    else {
-        player.move(-1);
+    else if(right){
+        if(GameSpeed < 0.2)
+        GameSpeed+=0.001;
     }
+    else if(left){
+        if(GameSpeed > -0.2){
+            if(GameSpeed < 0)GameSpeed -= 0.001;
+            else
+            {
+                if(GameSpeed > 0.1)GameSpeed -= 0.001;
+                else GameSpeed = -GameSpeed;
+            }
+        }
+    }
+    else {
+        if(GameSpeed > 0.01)GameSpeed -= 0.001;
+        if(GameSpeed < 0.01)GameSpeed += 0.001;
+    }
+    if(!up)
+    player.move(-1);
 }
 
 void tick_elements() {
@@ -125,7 +147,7 @@ void tick_elements() {
     {
         float prev = x.position[0];
         x.tick();
-        if(x.position[0] > prev)done[cur] = 0;
+        // if(x.position[0] > prev)done[cur] = 0;
         cur++;
     }
     player.tick();
@@ -136,23 +158,27 @@ void tick_elements() {
 void initGL(GLFWwindow *window, int width, int height) {
     /* Objects should be created before any other gl function and shaders */
     // Create the models
-    for (float i = 0; i < 30; ++i)
+    int cur = -10;
+    for (float i = 0; i < 50; ++i)
     {
         Brick brick;
         if(int(i)%2 == 0)
-            brick = Brick(i*(0.2), 0.0f, COLOR_BROWN);
+            brick = Brick(cur*(0.2), 0.0f, COLOR_BROWN);
         else
-            brick = Brick(i*(0.2), 0.0f, COLOR_LIGHT_BROWN);
+            brick = Brick(cur*(0.2), 0.0f, COLOR_LIGHT_BROWN);
         BrickPos.push_back(brick);
+        cur++;
     }
-    for (float i = 0; i < 30; ++i)
+    cur = -10;
+    for (float i = 0; i < 50; ++i)
     {
         Brick brick;
         if(int(i)%2 == 1)
-            brick = Brick(i*(0.2), 0.2f, COLOR_BROWN);
+            brick = Brick(cur*(0.2), 0.2f, COLOR_BROWN);
         else
-            brick = Brick(i*(0.2), 0.2f, COLOR_LIGHT_BROWN);
+            brick = Brick(cur*(0.2), 0.2f, COLOR_LIGHT_BROWN);
         BrickPos.push_back(brick);
+        cur++;
     }
     for (float i = 0; i < 15; ++i)
     {
@@ -219,9 +245,21 @@ int main(int argc, char **argv) {
 }
 
 bool detect_collision(bounding_box_t a, bounding_box_t b) {
-    printf("%f %f %f %f %f %f %f %f\n",a.x, b.x, a.width, b.width, a.y, b.y, a.height, b.height );
-    return (abs(a.x - b.x) * 2 < (a.width + b.width)) &&
-           (abs(a.y - b.y) * 2 < (a.height + b.height));
+    // Collision x-axis?
+    bool collisionX = a.x + a.width >= b.x & b.x + b.width >= a.x;
+    bool collisionY = a.y + a.height >= b.y & b.y + b.height >= a.y;
+    // Collision only if on both axes
+    if(collisionX && collisionY)
+    {
+        printf("%lf %lf %lf %lf\n",a.x+ a.width, b.x, b.x + b.width, a.x );
+        printf("%lf %lf %lf %lf\n",a.y+ a.height, b.y, b.y + b.height, a.y );
+    }
+    return collisionX && collisionY;
+
+
+    // printf("%f %f %f %f %f %f %f %f\n",a.x, b.x, a.width, b.width, a.y, b.y, a.height, b.height );
+    // return (abs(a.x - b.x) * 2.0 < (a.width + b.width)) &&
+           // (abs(a.y - b.y) * 2.0 < (a.height + b.height));
 }
 
 void reset_screen() {

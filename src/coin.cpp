@@ -3,10 +3,9 @@
 const double PI = 3.141592653589793238460;
 
 Coin::Coin(float x, float y, color_t color) {
-    this->position = glm::vec3(x, y, 0);
     this->rotation = 0;
-    this->length = 0.4;
-    this->width = 0.4;
+    this->length = 0.1;
+    this->width = 0.1;
     speed = GameSpeed;
     // Our vertices. Three consecutive floats give a 3D vertex; Three consecutive vertices give a triangle.
     // A cube has 6 faces with 2 triangles each, so this makes 6*2=12 triangles, and 12*3 vertices
@@ -14,6 +13,7 @@ Coin::Coin(float x, float y, color_t color) {
     GLfloat vertex_buffer_data[9*n];
     x = 0.0 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(6.0)));
     y = 0.6 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(5)));
+    this->position = glm::vec3(x, y, 0);
     
     int cur = 0;
     for (int i = 1; i <= n; ++i)
@@ -41,7 +41,6 @@ void Coin::draw(glm::mat4 VP) {
     // rotate          = rotate * glm::translate(glm::vec3(0, -0.6, 0));
     Matrices.model *= (translate * rotate);
     glm::mat4 MVP = VP * Matrices.model;
-     // printf("hola\n");
     glUniformMatrix4fv(Matrices.MatrixID, 1, GL_FALSE, &MVP[0][0]);
     draw3DObject(this->object);
 }
@@ -52,14 +51,10 @@ void Coin::set_position(float x, float y) {
 
 void Coin::tick() {
     // this->rotation += speed;
-    this->position.x -= speed;
+    this->position.x -= GameSpeed;
     if(this->position.x <-6.0)
-    {
-
-    printf("%lf\n",this->position.x );
       position.x += 12.0;
-    }
-    // this->position.y -= speed;
-    // this->set_position(this->position.x, this->position.y);
-    // printf("%f %f\n",speed, this->position.x );
+    else if(this->position.x > 6.0)
+      position.x -= 12.0;
+    this->set_position(this->position.x, this->position.y);
 }

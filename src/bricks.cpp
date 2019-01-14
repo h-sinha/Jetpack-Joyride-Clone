@@ -4,7 +4,7 @@
 Brick::Brick(float x, float y, color_t color) {
     this->position = glm::vec3(x, y, 0);
     this->rotation = 0;
-    this->length = 0.4;
+    this->length = 0.1;
     this->width = 0.2;
     speed = GameSpeed;
     // Our vertices. Three consecutive floats give a 3D vertex; Three consecutive vertices give a triangle.
@@ -38,8 +38,12 @@ void Brick::set_position(float x, float y) {
 }
 
 void Brick::tick() {
-    this->position.x -= speed;
-    if(this->position.x <= -0.3)
-      this->position.x += 5.0;
+    this->position.x -= GameSpeed;
+    if(this->position.x <= 0.0)
+      this->position.x += 6;
+    else if(this->position.x > 6)
+        this->position.x -= 6;
+    this->set_position(this->position.x, this->position.y);
+
 }
 

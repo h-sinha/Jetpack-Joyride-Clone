@@ -57,5 +57,5 @@ void Player::move(int up) {
       if(this->position.y - speed > 0.2f)
         this->position.y -= speed;
     }
-    // this->set_position(this->position.x, this->position.y);
+    this->set_position(this->position.x, this->position.y);
 }

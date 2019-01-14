@@ -49,8 +49,13 @@ void Wall::set_position(float x, float y) {
 }
 
 void Wall::tick() {
-    this->position.x -= speed;
+    this->position.x -= GameSpeed;
     if(this->position.x <= -0.2)
       this->position.x += 5.8;
+  else if(this->position.x > 6.0)
+      this->position.x -= 6.0;
+    this->set_position(this->position.x, this->position.y);
+
+
 }
 

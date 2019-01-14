@@ -8,4 +8,4 @@ const color_t COLOR_BLUE = { 0, 0, 255 };
 const color_t COLOR_BROWN = { 139, 69, 19 };
 const color_t COLOR_LIGHT_BROWN = { 205, 133, 63 };
 const color_t COLOR_YELLOW = { 255, 215, 0 };
-const float GameSpeed = 0.01;
+float GameSpeed = 0.01;
