@@ -43,7 +43,7 @@ void Brick::set_position(float x, float y) {
 void Brick::tick() {
     this->position.x -= GameSpeed;
     if(this->position.x <= -0.8)
-      this->position.x += 6.0;
+      this->position.x += 5.8;
     else if(this->position.x > 5.6)
         this->position.x -= 5.8;
     this->set_position(this->position.x, this->position.y);

@@ -60,6 +60,16 @@ main.h
 main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
 
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy3.boomerang.cpp
+enemy3_boomerang.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy3_boomerang.h
+main.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy3_boomerang.h
+main.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/input.cpp
 iostream
 -
@@ -101,6 +111,8 @@ enemy1_firelines.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy1_firelines.h
 enemy2_firebeam.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy2_firebeam.h
+enemy3_boomerang.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy3_boomerang.h
 vector
 -
 set

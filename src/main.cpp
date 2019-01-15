@@ -7,6 +7,7 @@
 #include "player.h"
 #include "enemy1_firelines.h"
 #include "enemy2_firebeam.h"
+#include "enemy3_boomerang.h"
 #include <vector>
 #include <set>
 
@@ -21,11 +22,11 @@ GLFWwindow *window;
 **************************/
 
 std::vector<Brick> BrickPos;
-std::vector<Wall> WallPos;
+// std::vector<Wall> WallPos;
 std::vector<Coin> CoinPos;
 Fireline fireline;
 Firebeam firebeam;
-
+Boomerang boomerang;
 Player player;
 bounding_box_t PlayerBound;
 
@@ -39,6 +40,14 @@ Timer t60(1.0 / 60.0);
 
 /* Render the scene with openGL */
 /* Edit this function according to your assignment */
+void gameOver()
+{
+    cout<<"-----------------GAMEOVER-------------------------\n";
+    cout<<"YOUR SCORE : "<<score<<endl;
+    cout<<"-----------------********-------------------------\n";
+    // quit(window);
+
+}
 void draw() {
     // clear the color and depth in the frame buffer
     glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -73,10 +82,10 @@ void draw() {
     {
         x.draw(VP);
     }
-    for(auto &x:WallPos)
-    {
-        x.draw(VP);
-    }
+    // for(auto &x:WallPos)
+    // {
+    //     x.draw(VP);
+    // }
     int cur = CoinPos.size();
     Coin x;
     for(int i = cur-1;i>=0;--i)
@@ -98,7 +107,15 @@ void draw() {
     }   
     player.draw(VP);
     fireline.draw(VP);
+    bounding_box_t xx;
+    xx.x = firebeam.position[0];
+    xx.y = firebeam.position[1];
+    xx.height = firebeam.length;
+    xx.width = firebeam.width;
+    if(detect_collision(xx, PlayerBound))
+        gameOver();
     firebeam.draw(VP);
+    boomerang.draw(VP);
 }
 // zoom function 
 void zoom(){
@@ -117,18 +134,21 @@ void zoom(){
         x.scaley = ScaleFactor;
         x.scalez = ScaleFactor;
     }
-    for (auto &x:WallPos)
-    {
-        x.scalex = ScaleFactor;
-        x.scaley = ScaleFactor;
-        x.scalez = ScaleFactor;
-    }
+    // for (auto &x:WallPos)
+    // {
+    //     x.scalex = ScaleFactor;
+    //     x.scaley = ScaleFactor;
+    //     x.scalez = ScaleFactor;
+    // }
     fireline.scalex = ScaleFactor;
     fireline.scalez = ScaleFactor;
     fireline.scaley = ScaleFactor;
      firebeam.scalex = ScaleFactor;
     firebeam.scalez = ScaleFactor;
     firebeam.scaley = ScaleFactor;
+    boomerang.scalex = ScaleFactor;
+    boomerang.scalez = ScaleFactor;
+    boomerang.scaley = ScaleFactor;
 }
 void tick_input(GLFWwindow *window) {
     int up  = glfwGetKey(window, GLFW_KEY_UP);
@@ -159,10 +179,10 @@ void tick_elements() {
     {
         x.tick();
     }
-    for (auto &x:WallPos)
-    {
-        x.tick();
-    }
+    // for (auto &x:WallPos)
+    // {
+    //     x.tick();
+    // }
     for (auto &x:CoinPos)
         x.tick();
     player.tick();
@@ -172,7 +192,8 @@ void tick_elements() {
     PlayerBound.width = player.width;
     fireline.tick();
     firebeam.tick();
-    
+    boomerang.tick(player.position[0]);
+
 }
 
 /* Initialize the OpenGL rendering properties */
@@ -202,12 +223,12 @@ void initGL(GLFWwindow *window, int width, int height) {
         BrickPos.push_back(brick);
         cur++;
     }
-    for (float i = 0; i < 15; ++i)
-    {
-        Wall wall;
-        wall = Wall(0.0, 0.0, COLOR_LIGHT_BROWN);
-        WallPos.push_back(wall);
-    }
+    // for (float i = 0; i < 15; ++i)
+    // {
+    //     Wall wall;
+    //     wall = Wall(0.0, 0.0, COLOR_LIGHT_BROWN);
+    //     WallPos.push_back(wall);
+    // }
     for (float i = 0; i < 10; ++i)
     {
         // Coin coin;
@@ -217,6 +238,7 @@ void initGL(GLFWwindow *window, int width, int height) {
      player = Player(1.8,0.4,COLOR_BROWN);
      fireline = Fireline(0.0, 0.0, COLOR_BACKGROUND);
      firebeam = Firebeam(0.0, 0.0, COLOR_BACKGROUND);
+     boomerang = Boomerang(0.0, 0.0, COLOR_BACKGROUND);
     // Create and compile our GLSL program from the shaders
     programID = LoadShaders("Sample_GL.vert", "Sample_GL.frag");
     // Get a handle for our "MVP" uniform

@@ -285,6 +285,33 @@ src/enemy2_firebeam.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/enemy2_firebeam.cpp.s
 .PHONY : src/enemy2_firebeam.cpp.s
 
+src/enemy3.boomerang.o: src/enemy3.boomerang.cpp.o
+
+.PHONY : src/enemy3.boomerang.o
+
+# target to build an object file
+src/enemy3.boomerang.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/enemy3.boomerang.cpp.o
+.PHONY : src/enemy3.boomerang.cpp.o
+
+src/enemy3.boomerang.i: src/enemy3.boomerang.cpp.i
+
+.PHONY : src/enemy3.boomerang.i
+
+# target to preprocess a source file
+src/enemy3.boomerang.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/enemy3.boomerang.cpp.i
+.PHONY : src/enemy3.boomerang.cpp.i
+
+src/enemy3.boomerang.s: src/enemy3.boomerang.cpp.s
+
+.PHONY : src/enemy3.boomerang.s
+
+# target to generate assembly for a file
+src/enemy3.boomerang.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/enemy3.boomerang.cpp.s
+.PHONY : src/enemy3.boomerang.cpp.s
+
 src/input.o: src/input.cpp.o
 
 .PHONY : src/input.o
@@ -501,6 +528,9 @@ help:
 	@echo "... src/enemy2_firebeam.o"
 	@echo "... src/enemy2_firebeam.i"
 	@echo "... src/enemy2_firebeam.s"
+	@echo "... src/enemy3.boomerang.o"
+	@echo "... src/enemy3.boomerang.i"
+	@echo "... src/enemy3.boomerang.s"
 	@echo "... src/input.o"
 	@echo "... src/input.i"
 	@echo "... src/input.s"

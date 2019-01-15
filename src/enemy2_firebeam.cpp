@@ -9,6 +9,8 @@ Firebeam::Firebeam(float x, float y, color_t color) {
      this->scalex = 1.0;
     this->scaley = 1.0;
     this->scalez = 1.0;
+    this->length = 0.8; 
+    this->width = 0.2;
      int n=15, cur = 0;
     GLfloat vertex_buffer_data[9*n];
     GLfloat vertex_buffer_data1[9*n];
@@ -109,5 +111,6 @@ void Firebeam::tick() {
         up = 1;
         this->position.y += speed;
     }
+    if(this->position.x < -3.0)this->position.x += 12;
 }
 

@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/graphics_asgn1.dir/src/color.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/src/enemy1_firelines.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/src/enemy2_firebeam.cpp.o"
+  "CMakeFiles/graphics_asgn1.dir/src/enemy3.boomerang.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/src/input.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/src/main.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o"
