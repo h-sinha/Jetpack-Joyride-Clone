@@ -114,6 +114,12 @@ void draw() {
     xx.width = firebeam.width;
     if(detect_collision(xx, PlayerBound))
         gameOver();
+    xx.x = fireline.position[0];
+    xx.y = fireline.position[1];
+    xx.height = fireline.length;
+    xx.width = fireline.width;
+    if(detect_collision(xx, PlayerBound))
+        gameOver();
     firebeam.draw(VP);
     boomerang.draw(VP);
 }
@@ -290,6 +296,12 @@ int main(int argc, char **argv) {
 }
 
 bool detect_collision(bounding_box_t a, bounding_box_t b) {
+    printf("%lf %lf %lf %lf\n",a.x,a.y,a.width, a.height );
+    printf("%lf %lf %lf %lf\n",b.x,b.y,b.width, b.height );
+    printf("%lf %lf %lf %lf\n",abs(a.x - b.x) * 2.0 , a.width + b.width ,
+           abs(a.y - b.y) * 2.0 , a.height + b.height);
+
+    printf("\n");
     return (abs(a.x - b.x) * 2.0 < (a.width + b.width)) &&
            (abs(a.y - b.y) * 2.0 < (a.height + b.height));
 }
