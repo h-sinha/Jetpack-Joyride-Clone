@@ -13,12 +13,12 @@ Brick::Brick(float x, float y, color_t color) {
     // Our vertices. Three consecutive floats give a 3D vertex; Three consecutive vertices give a triangle.
     // A cube has 6 faces with 2 triangles each, so this makes 6*2=12 triangles, and 12*3 vertices
     static const GLfloat vertex_buffer_data[] = {
-        x , y + 0.2f, 0.0f,    
-        x , y, 0.0f,    
-        x + 0.4f , y, 0.0f,    
-        x , y + 0.2f, 0.0f,    
-        x + 0.4f , y, 0.0f,    
-        x + 0.4f, y + 0.2f, 0.0f,    
+        0.0f , 0.2f, 0.0f,    
+        0.0f , 0.0f, 0.0f,    
+        0.4f , 0.0f, 0.0f,    
+        0.4f , 0.2f, 0.0f,    
+        0.4f , 0.0f, 0.0f,    
+        0.0f, 0.2f, 0.0f,    
      };
 
     this->object = create3DObject(GL_TRIANGLES, 2*3, vertex_buffer_data, color, GL_FILL);
@@ -42,10 +42,10 @@ void Brick::set_position(float x, float y) {
 
 void Brick::tick() {
     this->position.x -= GameSpeed;
-    if(this->position.x <= 0.0)
-      this->position.x += 6;
-    else if(this->position.x > 6)
-        this->position.x -= 6;
+    if(this->position.x <= -0.8)
+      this->position.x += 6.0;
+    else if(this->position.x > 5.6)
+        this->position.x -= 5.8;
     this->set_position(this->position.x, this->position.y);
 
 }

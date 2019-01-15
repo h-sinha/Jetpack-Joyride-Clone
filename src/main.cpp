@@ -29,28 +29,10 @@ float screen_zoom = 1, screen_center_x = 0, screen_center_y = 0;
 float camera_rotation_angle = 0;
 int score = 0;
 int ScreenWidth = 600, ScreenHeight = 600;
-std::vector<bool> done(30);
+// std::vector<bool> done(30);
 
 Timer t60(1.0 / 60.0);
 
-void scoreDisplay(){
-  //    glFontBegin(&font);
-  // glScalef(8.0, 8.0, 8.0);
-  // glTranslatef(30, 30, 0);
-  // glFontTextOut("Test", 5, 5, 0);
-  // glFontEnd();
-  // glFlush();
-    // GLvoid* font_style = GLUT_BITMAP_TIMES_ROMAN_24;
-    // int temp = score, idx = 0;
-    // while(temp > 0)
-    // {
-    //     glRasterPos3f ((0.0-(idx*space_char)), 6.0, 100.0);    
-    //     // takes font style and ascii value as parameter
-    //     glutBitmapCharacter(font_style, 48+(temp%10));
-    //     idx++;
-    //     temp /= 10;
-    // }
-}
 
 /* Render the scene with openGL */
 /* Edit this function according to your assignment */
@@ -92,14 +74,11 @@ void draw() {
     {
         x.draw(VP);
     }
-    int cur = 0;
-    for(auto x:CoinPos)
+    int cur = CoinPos.size();
+    Coin x;
+    for(int i = cur-1;i>=0;--i)
     {
-        if(done[cur])
-        {
-            cur++;
-            continue;
-        }
+        x = CoinPos[i];
         bounding_box_t c;
         PlayerBound.x = player.position[0];
         PlayerBound.y = player.position[1];
@@ -110,19 +89,12 @@ void draw() {
         c.height = x.length;
         c.width = x.width;
         int flag = detect_collision(PlayerBound, c);
-        if(flag)
-        {
-            cout<<done[cur]<<" "<<cur<<endl;
-            printf("%d %lf %lf %lf %lf\n", flag, x.position[0], x.position[1],PlayerBound.x, PlayerBound.y);
-        }
         if(!flag)
             x.draw(VP);
         else 
-            done[cur] = 1;
-        cur++;
-    }
+            CoinPos.erase(CoinPos.begin() + i);
+    }   
     player.draw(VP);
-    scoreDisplay();
 }
 // zoom function 
 void zoom(){
@@ -157,19 +129,17 @@ void tick_input(GLFWwindow *window) {
     if (up) {
         player.move(1);
     }
-    else if(right){
+    if(right){
         if(GameSpeed < 0.2)
         GameSpeed+=0.001;
     }
-    else if(left){
+    if(left){
         if(GameSpeed > -0.2){
             GameSpeed -= 0.001;
         }
     }
-    else {
-        if(GameSpeed > 0.01)GameSpeed -= 0.001;
-        if(GameSpeed < 0.01)GameSpeed += 0.001;
-    }
+    if(GameSpeed > 0.01 && !right && !left)GameSpeed -= 0.001;
+    if(GameSpeed < 0.01 && !right && !left)GameSpeed += 0.001;
     if(!up)
     player.move(-1);
 }
@@ -183,14 +153,8 @@ void tick_elements() {
     {
         x.tick();
     }
-    int cur = 0;
     for (auto &x:CoinPos)
-    {
-        float prev = x.position[0];
         x.tick();
-        if(x.position[0] > prev)done[cur] = 0;
-        cur++;
-    }
     player.tick();
 }
 
@@ -200,14 +164,13 @@ void initGL(GLFWwindow *window, int width, int height) {
     /* Objects should be created before any other gl function and shaders */
     // Create the models
     int cur = -10;
-    scoreDisplay();
     for (float i = 0; i < 60; ++i)
     {
         Brick brick;
         if(int(i)%2 == 0)
-            brick = Brick(cur*(0.2), 0.0f, COLOR_BROWN);
+            brick = Brick(cur*(0.4), 0.0f, COLOR_BROWN);
         else
-            brick = Brick(cur*(0.2), 0.0f, COLOR_LIGHT_BROWN);
+            brick = Brick(cur*(0.4), 0.0f, COLOR_LIGHT_BROWN);
         BrickPos.push_back(brick);
         cur++;
     }
@@ -216,9 +179,9 @@ void initGL(GLFWwindow *window, int width, int height) {
     {
         Brick brick;
         if(int(i)%2 == 1)
-            brick = Brick(cur*(0.2), 0.18f, COLOR_BROWN);
+            brick = Brick(cur*(0.4), 0.18f, COLOR_BROWN);
         else
-            brick = Brick(cur*(0.2), 0.18f, COLOR_LIGHT_BROWN);
+            brick = Brick(cur*(0.4), 0.18f, COLOR_LIGHT_BROWN);
         BrickPos.push_back(brick);
         cur++;
     }
@@ -230,11 +193,11 @@ void initGL(GLFWwindow *window, int width, int height) {
     }
     for (float i = 0; i < 10; ++i)
     {
-        Coin coin;
-        coin = Coin(0.0f, 0.0f, COLOR_YELLOW);
+        // Coin coin;
+        Coin coin = Coin(0.0f, 0.0f, COLOR_YELLOW);
         CoinPos.push_back(coin);
     }
-    player = Player(0.9,0.18,COLOR_BROWN);
+     player = Player(1.8,0.4,COLOR_BROWN);
 
     // Create and compile our GLSL program from the shaders
     programID = LoadShaders("Sample_GL.vert", "Sample_GL.frag");
@@ -287,30 +250,18 @@ int main(int argc, char **argv) {
 }
 
 bool detect_collision(bounding_box_t a, bounding_box_t b) {
-    // Collision x-axis?
-    bool collisionX = a.x + a.width >= b.x && b.x + b.width >= a.x;
-    bool collisionY = a.y + a.height >= b.y && b.y + b.height >= a.y;
-    // Collision only if on both axes
-    if(collisionX && collisionY)
-    {
-        printf("%lf %lf %lf %lf\n",a.x+ a.width, b.x, b.x + b.width, a.x );
-        printf("%lf %lf %lf %lf\n",a.y+ a.height, b.y, b.y + b.height, a.y );
-    }
-    return collisionX && collisionY;
-
-
-    // printf("%f %f %f %f %f %f %f %f\n",a.x, b.x, a.width, b.width, a.y, b.y, a.height, b.height );
-    // return (abs(a.x - b.x) * 2.0 < (a.width + b.width)) &&
-    //        (abs(a.y - b.y) * 2.0 < (a.height + b.height));
+    return (abs(a.x - b.x) * 2.0 < (a.width + b.width)) &&
+           (abs(a.y - b.y) * 2.0 < (a.height + b.height));
 }
 
 void reset_screen() {
-    float top    = screen_center_y + 4 / screen_zoom;
-    float bottom = screen_center_y - 4 / screen_zoom;
-    float left   = screen_center_x - 4 / screen_zoom;
-    float right  = screen_center_x + 4 / screen_zoom;
+
+    float top    =  4/screen_zoom;
+    float bottom = 0 ;
+    float left   = 0;
+    float right  = 4 / screen_zoom;
     // changed origin
-     // Matrices.projection = glm::ortho(left, right, bottom, top, 0.1f, 500.0f);
-    Matrices.projection = glm::ortho(0.0f, right, 0.0f, top, 0.1f, 500.0f);
+     Matrices.projection = glm::ortho(left, right, bottom, top, 0.1f, 500.0f);
+    // Matrices.projection = glm::ortho(0.0f, right, 0.0f, top, 0.1f, 500.0f);
     // Matrices.projection = glm::ortho(0.0f, 0.0f, 0.0f, 0.0f, 0.1f, 500.0f);
 }

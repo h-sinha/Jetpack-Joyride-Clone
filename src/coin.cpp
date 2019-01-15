@@ -1,11 +1,11 @@
 #include "coin.h"
 #include "main.h"
 const double PI = 3.141592653589793238460;
-
+float cur=0;
 Coin::Coin(float x, float y, color_t color) {
     this->rotation = 0;
-    this->length = 0.1;
-    this->width = 0.1;
+    this->length = 0.2;
+    this->width = 0.2;
      this->scalex = 1.0;
     this->scaley = 1.0;
     this->scalez = 1.0;
@@ -14,21 +14,24 @@ Coin::Coin(float x, float y, color_t color) {
     // A cube has 6 faces with 2 triangles each, so this makes 6*2=12 triangles, and 12*3 vertices
     int n = 15;
     GLfloat vertex_buffer_data[9*n];
+    // x = 0.9;
+    // y = 0.3 + cur;
+    // cur+=0.3;
     x = 0.0 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(6.0)));
     y = 0.6 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(5)));
-    this->position = glm::vec3(x, y, 0);
+    this->position = glm::vec3(x, y  , 0);
     
     int cur = 0;
     for (int i = 1; i <= n; ++i)
      {
-        vertex_buffer_data[cur] =  x + 0.1 * cos((2.0*PI*i)/n);
-        vertex_buffer_data[cur+1] = y + 0.1 * sin((2.0*PI*i)/n);
+        vertex_buffer_data[cur] =  0.1 * cos((2.0*PI*i)/n);
+        vertex_buffer_data[cur+1] = 0.1 * sin((2.0*PI*i)/n);
         vertex_buffer_data[cur+2] = 0.0;
-        vertex_buffer_data[cur+3] = x + 0.1 * cos((2.0*PI*(i+1))/n);
-        vertex_buffer_data[cur+4] = y + 0.1 * sin((2.0*PI*(i+1))/n);
+        vertex_buffer_data[cur+3] = 0.1 * cos((2.0*PI*(i+1))/n);
+        vertex_buffer_data[cur+4] = 0.1 * sin((2.0*PI*(i+1))/n);
         vertex_buffer_data[cur+5] = 0.0;
-        vertex_buffer_data[cur+6] = x;
-        vertex_buffer_data[cur+7] = y;
+        vertex_buffer_data[cur+6] = 0.0;
+        vertex_buffer_data[cur+7] = 0.0;
         vertex_buffer_data[cur+8] = 0.0;
         cur += 9;
      } 
@@ -53,11 +56,10 @@ void Coin::set_position(float x, float y) {
 }
 
 void Coin::tick() {
-    // this->rotation += speed;
+    this->rotation += speed;
     this->position.x -= GameSpeed;
     if(this->position.x <-6.0)
-      position.x += 12.0;
+      this->position.x += 12.0;
     else if(this->position.x > 6.0)
-      position.x -= 12.0;
-    this->set_position(this->position.x, this->position.y);
+      this->position.x -= 12.0;
 }
