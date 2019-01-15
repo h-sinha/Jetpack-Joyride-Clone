@@ -15,13 +15,16 @@ public:
     float scaley;
     float scalez;
     float rotation;
-    bool up;
+    bool up, left, flag;
     void draw(glm::mat4 VP);
     void set_position(float x, float y);
     void tick(float x);
     double speed;
 private:
     VAO *ring1;
+    VAO *ring2;
+    VAO *ring3;
+    VAO *tri;
 };
 
 #endif // COIN_H
