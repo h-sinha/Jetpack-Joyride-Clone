@@ -9,9 +9,9 @@ Fireline::Fireline(float x, float y, color_t color) {
     xx = 0.2 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
     yy = 1.5 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
     // xx = 1.0, yy = 1.0;
-     this->scalex = 10000.0;
-    this->scaley = 5.0;
-    this->scalez = 5.0;
+     this->scalex = 1.0;
+    this->scaley = 1.0;
+    this->scalez = 1.0;
     this->length = 1.495*1.4;
     this->width = 1.0;
      int n=15, cur = 0;

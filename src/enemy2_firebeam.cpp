@@ -6,7 +6,7 @@ Firebeam::Firebeam(float x, float y, color_t color) {
    
     speed = 0.03;
     up = 1;
-     this->scalex = 1.0;
+    this->scalex = 1.0;
     this->scaley = 1.0;
     this->scalez = 1.0;
     this->length = 0.8; 
@@ -19,10 +19,10 @@ Firebeam::Firebeam(float x, float y, color_t color) {
     for (int i = 1; i <= n; ++i)
      {
         vertex_buffer_data[cur] =  0.1 * cos((2.0*PI*i)/n);
-        vertex_buffer_data[cur+1] = 0.2 * sin((2.0*PI*i)/n);
+        vertex_buffer_data[cur+1] = 0.1 * sin((2.0*PI*i)/n);
         vertex_buffer_data[cur+2] = 0.0;
         vertex_buffer_data[cur+3] = 0.1 * cos((2.0*PI*(i+1))/n);
-        vertex_buffer_data[cur+4] = 0.2 * sin((2.0*PI*(i+1))/n);
+        vertex_buffer_data[cur+4] = 0.1 * sin((2.0*PI*(i+1))/n);
         vertex_buffer_data[cur+5] = 0.0;
         vertex_buffer_data[cur+6] = 0.0;
         vertex_buffer_data[cur+7] = 0.0;
@@ -32,40 +32,60 @@ Firebeam::Firebeam(float x, float y, color_t color) {
      cur = 0;
     for (int i = 1; i <= n; ++i)
      {
-        vertex_buffer_data1[cur] =  0.6 + 0.1 * cos((2.0*PI*i)/n);
-        vertex_buffer_data1[cur+1] =  0.2 * sin((2.0*PI*i)/n);
+        vertex_buffer_data1[cur] =  1.5 + 0.1 * cos((2.0*PI*i)/n);
+        vertex_buffer_data1[cur+1] =  0.1 * sin((2.0*PI*i)/n);
         vertex_buffer_data1[cur+2] = 0.0;
-        vertex_buffer_data1[cur+3] = 0.6 + 0.1 * cos((2.0*PI*(i+1))/n);
-        vertex_buffer_data1[cur+4] =  0.2 * sin((2.0*PI*(i+1))/n);
+        vertex_buffer_data1[cur+3] = 1.5 + 0.1 * cos((2.0*PI*(i+1))/n);
+        vertex_buffer_data1[cur+4] =  0.1 * sin((2.0*PI*(i+1))/n);
         vertex_buffer_data1[cur+5] = 0.0;
-        vertex_buffer_data1[cur+6] = 0.6 + 0.0;
+        vertex_buffer_data1[cur+6] = 1.5 + 0.0;
         vertex_buffer_data1[cur+7] =  0.0;
         vertex_buffer_data1[cur+8] = 0.0;
         cur += 9;
      } 
      cur = 0;
      float offset = 0.02;
-     for (int i = 1; i <= n; ++i)
+     for (int i = 1; i <= 9; ++i)
      {
         vertex_buffer_data2[cur] =  0.0;
-        vertex_buffer_data2[cur+1] =  - 0.2 + offset;
+        vertex_buffer_data2[cur+1] =  - 0.1 + offset;
         vertex_buffer_data2[cur+2] =  -1.0;
-        vertex_buffer_data2[cur+3] =  0.6;
-        vertex_buffer_data2[cur+4] =  - 0.2 + offset;
+        vertex_buffer_data2[cur+3] =  1.5;
+        vertex_buffer_data2[cur+4] =  - 0.1 + offset;
         vertex_buffer_data2[cur+5] =  -1.0;
         cur += 6;
         offset += 0.02;
      } 
+      static const GLfloat vertex_buffer_data3[] = {
+        0.0f, -0.1f, 0.0f,
+        0.0f, 0.1f, 0.0f,
+        0.2f, -0.1f, 0.0f,
+        0.2f, -0.1f, 0.0f,
+        0.2f, 0.1f, 0.0f,
+        0.0f, 0.1f, 0.0f,
+
+     };
+      static const GLfloat vertex_buffer_data4[] = {
+         1.3f, -0.1f, 0.0f,
+        1.3f, 0.1f, 0.0f,
+        1.5f, -0.1f, 0.0f,
+        1.5f, -0.1f, 0.0f,
+        1.5f, 0.1f, 0.0f,
+        1.3f, 0.1f, 0.0f,
+     };
      //  static const GLfloat vertex_buffer_data2[] = {
      //   0.0f, 0.0f, -1.0f,
      //   0.6f, 0.0f, -1.0f,
      // };
     this->ring1 = create3DObject(GL_TRIANGLES, 3*n, vertex_buffer_data, COLOR_LIGHT_SLATE_GREY, GL_FILL);
     this->ring2 = create3DObject(GL_TRIANGLES, 3*n, vertex_buffer_data1, COLOR_LIGHT_SLATE_GREY, GL_FILL);
-    this->line = create3DObject(GL_LINE_LOOP, 2*n, vertex_buffer_data2, COLOR_DARK_RED, GL_FILL);
+    this->line = create3DObject(GL_LINES, 2*9, vertex_buffer_data2, COLOR_DARK_RED, GL_FILL);
+    this->square1 = create3DObject(GL_TRIANGLES, 3*2, vertex_buffer_data3, COLOR_LIGHT_SLATE_GREY, GL_FILL);
+    this->square2 = create3DObject(GL_TRIANGLES, 3*2, vertex_buffer_data4, COLOR_LIGHT_SLATE_GREY, GL_FILL);
     // Our vertices. Three consecutive floats give a 3D vertex; Three consecutive vertices give a triangle.
     // A cube has 6 faces with 2 triangles each, so this makes 6*2=12 triangles, and 12*3 vertices
-     this->position = glm::vec3(6.0, 0.58, 0);
+     // this->position = glm::vec3(6.0, 0.58, 0);
+     this->position = glm::vec3(3.0, 3.0, 0);
     this->rotation = 0;
 
     // this->line = create3DObject(GL_LINES, 2, vertex_buffer_data, COLOR_RED, GL_FILL);
@@ -82,6 +102,8 @@ void Firebeam::draw(glm::mat4 VP) {
     glUniformMatrix4fv(Matrices.MatrixID, 1, GL_FALSE, &MVP[0][0]);
     draw3DObject(this->ring1);
     draw3DObject(this->ring2);
+    draw3DObject(this->square2);
+    draw3DObject(this->square1);
     draw3DObject(this->line);
     // glLineWidth(2.5); 
     // glColor3f(1.0, 0.0, 0.0);

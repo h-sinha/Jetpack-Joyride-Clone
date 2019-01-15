@@ -24,6 +24,8 @@ private:
     VAO *ring1;
     VAO *ring2;
     VAO *line;
+    VAO *square1;
+    VAO *square2;
 };
 
 #endif // COIN_H

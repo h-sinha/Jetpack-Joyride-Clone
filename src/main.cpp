@@ -106,7 +106,6 @@ void draw() {
         }
     }   
     player.draw(VP);
-    fireline.draw(VP);
     bounding_box_t xx;
     xx.x = firebeam.position[0];
     xx.y = firebeam.position[1];
@@ -120,8 +119,15 @@ void draw() {
     xx.width = fireline.width;
     if(detect_collision(xx, PlayerBound))
         gameOver();
+    xx.x = boomerang.position[0];
+    xx.y = boomerang.position[1];
+    xx.height = boomerang.length;
+    xx.width = boomerang.width;
+    if(detect_collision(xx, PlayerBound))
+        gameOver();
     firebeam.draw(VP);
     boomerang.draw(VP);
+    fireline.draw(VP);
 }
 // zoom function 
 void zoom(){

@@ -68,11 +68,11 @@ Boomerang::Boomerang(float x, float y, color_t color) {
      GLfloat vertex_buffer_data3[9*n];
     for (int i = 1; i <= n; ++i)
      {
-        vertex_buffer_data1[cur] =  0.03 * cos((2.0*PI*i)/n);
-        vertex_buffer_data1[cur+1] = 0.03 * sin((2.0*PI*i)/n);
+        vertex_buffer_data1[cur] =  0.02 * cos((2.0*PI*i)/n);
+        vertex_buffer_data1[cur+1] = 0.02 * sin((2.0*PI*i)/n);
         vertex_buffer_data1[cur+2] = 0.0;
-        vertex_buffer_data1[cur+3] = 0.03 * cos((2.0*PI*(i+1))/n);
-        vertex_buffer_data1[cur+4] = 0.03 * sin((2.0*PI*(i+1))/n);
+        vertex_buffer_data1[cur+3] = 0.02 * cos((2.0*PI*(i+1))/n);
+        vertex_buffer_data1[cur+4] = 0.02 * sin((2.0*PI*(i+1))/n);
         vertex_buffer_data1[cur+5] = 0.0;
         vertex_buffer_data1[cur+6] = 0.0;
         vertex_buffer_data1[cur+7] = 0.0;
@@ -82,11 +82,11 @@ Boomerang::Boomerang(float x, float y, color_t color) {
      cur = 0;
       for (int i = 1; i <= n; ++i)
      {
-        vertex_buffer_data2[cur] =  0.03 * cos((2.0*PI*i)/n);
-        vertex_buffer_data2[cur+1] = 0.1 + 0.03 * sin((2.0*PI*i)/n);
+        vertex_buffer_data2[cur] =  0.02 * cos((2.0*PI*i)/n);
+        vertex_buffer_data2[cur+1] = 0.1 + 0.02 * sin((2.0*PI*i)/n);
         vertex_buffer_data2[cur+2] = 0.0;
-        vertex_buffer_data2[cur+3] = 0.03 * cos((2.0*PI*(i+1))/n);
-        vertex_buffer_data2[cur+4] = 0.1 + 0.03 * sin((2.0*PI*(i+1))/n);
+        vertex_buffer_data2[cur+3] = 0.02 * cos((2.0*PI*(i+1))/n);
+        vertex_buffer_data2[cur+4] = 0.1 + 0.02 * sin((2.0*PI*(i+1))/n);
         vertex_buffer_data2[cur+5] = 0.0;
         vertex_buffer_data2[cur+6] = 0.0;
         vertex_buffer_data2[cur+7] = 0.1;
@@ -96,11 +96,11 @@ Boomerang::Boomerang(float x, float y, color_t color) {
      cur = 0;
       for (int i = 1; i <= n; ++i)
      {
-        vertex_buffer_data3[cur] =  0.1 + 0.03 * cos((2.0*PI*i)/n);
-        vertex_buffer_data3[cur+1] = 0.03 * sin((2.0*PI*i)/n);
+        vertex_buffer_data3[cur] =  0.1 + 0.02 * cos((2.0*PI*i)/n);
+        vertex_buffer_data3[cur+1] = 0.02 * sin((2.0*PI*i)/n);
         vertex_buffer_data3[cur+2] = 0.0;
-        vertex_buffer_data3[cur+3] = 0.1 + 0.03 * cos((2.0*PI*(i+1))/n);
-        vertex_buffer_data3[cur+4] = 0.03 * sin((2.0*PI*(i+1))/n);
+        vertex_buffer_data3[cur+3] = 0.1 + 0.02 * cos((2.0*PI*(i+1))/n);
+        vertex_buffer_data3[cur+4] = 0.02 * sin((2.0*PI*(i+1))/n);
         vertex_buffer_data3[cur+5] = 0.0;
         vertex_buffer_data3[cur+6] = 0.1;
         vertex_buffer_data3[cur+7] = 0.0;
