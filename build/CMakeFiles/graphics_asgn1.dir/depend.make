@@ -16,12 +16,22 @@ CMakeFiles/graphics_asgn1.dir/src/coin.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.o: ../src/color.cpp
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.o: ../src/main.h
 
+CMakeFiles/graphics_asgn1.dir/src/enemy1_firelines.cpp.o: ../src/enemy1_firelines.cpp
+CMakeFiles/graphics_asgn1.dir/src/enemy1_firelines.cpp.o: ../src/enemy1_firelines.h
+CMakeFiles/graphics_asgn1.dir/src/enemy1_firelines.cpp.o: ../src/main.h
+
+CMakeFiles/graphics_asgn1.dir/src/enemy2_firebeam.cpp.o: ../src/enemy2_firebeam.cpp
+CMakeFiles/graphics_asgn1.dir/src/enemy2_firebeam.cpp.o: ../src/enemy2_firebeam.h
+CMakeFiles/graphics_asgn1.dir/src/enemy2_firebeam.cpp.o: ../src/main.h
+
 CMakeFiles/graphics_asgn1.dir/src/input.cpp.o: ../src/input.cpp
 CMakeFiles/graphics_asgn1.dir/src/input.cpp.o: ../src/main.h
 
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/ball.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/bricks.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/coin.h
+CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/enemy1_firelines.h
+CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/enemy2_firebeam.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/player.h

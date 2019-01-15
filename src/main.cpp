@@ -5,6 +5,8 @@
 #include "wall.h"
 #include "coin.h"
 #include "player.h"
+#include "enemy1_firelines.h"
+#include "enemy2_firebeam.h"
 #include <vector>
 #include <set>
 
@@ -21,6 +23,8 @@ GLFWwindow *window;
 std::vector<Brick> BrickPos;
 std::vector<Wall> WallPos;
 std::vector<Coin> CoinPos;
+Fireline fireline;
+Firebeam firebeam;
 
 Player player;
 bounding_box_t PlayerBound;
@@ -80,10 +84,10 @@ void draw() {
     {
         x = CoinPos[i];
         bounding_box_t c;
-        PlayerBound.x = player.position[0];
-        PlayerBound.y = player.position[1];
-        PlayerBound.height = player.length;
-        PlayerBound.width = player.width;
+        // PlayerBound.x = player.position[0];
+        // PlayerBound.y = player.position[1];
+        // PlayerBound.height = player.length;
+        // PlayerBound.width = player.width;
         c.x = x.position[0];
         c.y = x.position[1];
         c.height = x.length;
@@ -95,6 +99,8 @@ void draw() {
             CoinPos.erase(CoinPos.begin() + i);
     }   
     player.draw(VP);
+    fireline.draw(VP);
+    firebeam.draw(VP);
 }
 // zoom function 
 void zoom(){
@@ -119,6 +125,12 @@ void zoom(){
         x.scaley = ScaleFactor;
         x.scalez = ScaleFactor;
     }
+    fireline.scalex = ScaleFactor;
+    fireline.scalez = ScaleFactor;
+    fireline.scaley = ScaleFactor;
+     firebeam.scalex = ScaleFactor;
+    firebeam.scalez = ScaleFactor;
+    firebeam.scaley = ScaleFactor;
 }
 void tick_input(GLFWwindow *window) {
     int up  = glfwGetKey(window, GLFW_KEY_UP);
@@ -156,6 +168,12 @@ void tick_elements() {
     for (auto &x:CoinPos)
         x.tick();
     player.tick();
+    PlayerBound.x = player.position[0];
+    PlayerBound.y = player.position[1];
+    PlayerBound.height = player.length;
+    PlayerBound.width = player.width;
+    fireline.tick();
+    firebeam.tick();
 }
 
 /* Initialize the OpenGL rendering properties */
@@ -198,7 +216,8 @@ void initGL(GLFWwindow *window, int width, int height) {
         CoinPos.push_back(coin);
     }
      player = Player(1.8,0.4,COLOR_BROWN);
-
+     fireline = Fireline(0.0, 0.0, COLOR_BACKGROUND);
+     firebeam = Firebeam(0.0, 0.0, COLOR_BACKGROUND);
     // Create and compile our GLSL program from the shaders
     programID = LoadShaders("Sample_GL.vert", "Sample_GL.frag");
     // Get a handle for our "MVP" uniform

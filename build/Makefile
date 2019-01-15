@@ -231,6 +231,60 @@ src/color.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/color.cpp.s
 .PHONY : src/color.cpp.s
 
+src/enemy1_firelines.o: src/enemy1_firelines.cpp.o
+
+.PHONY : src/enemy1_firelines.o
+
+# target to build an object file
+src/enemy1_firelines.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/enemy1_firelines.cpp.o
+.PHONY : src/enemy1_firelines.cpp.o
+
+src/enemy1_firelines.i: src/enemy1_firelines.cpp.i
+
+.PHONY : src/enemy1_firelines.i
+
+# target to preprocess a source file
+src/enemy1_firelines.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/enemy1_firelines.cpp.i
+.PHONY : src/enemy1_firelines.cpp.i
+
+src/enemy1_firelines.s: src/enemy1_firelines.cpp.s
+
+.PHONY : src/enemy1_firelines.s
+
+# target to generate assembly for a file
+src/enemy1_firelines.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/enemy1_firelines.cpp.s
+.PHONY : src/enemy1_firelines.cpp.s
+
+src/enemy2_firebeam.o: src/enemy2_firebeam.cpp.o
+
+.PHONY : src/enemy2_firebeam.o
+
+# target to build an object file
+src/enemy2_firebeam.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/enemy2_firebeam.cpp.o
+.PHONY : src/enemy2_firebeam.cpp.o
+
+src/enemy2_firebeam.i: src/enemy2_firebeam.cpp.i
+
+.PHONY : src/enemy2_firebeam.i
+
+# target to preprocess a source file
+src/enemy2_firebeam.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/enemy2_firebeam.cpp.i
+.PHONY : src/enemy2_firebeam.cpp.i
+
+src/enemy2_firebeam.s: src/enemy2_firebeam.cpp.s
+
+.PHONY : src/enemy2_firebeam.s
+
+# target to generate assembly for a file
+src/enemy2_firebeam.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/enemy2_firebeam.cpp.s
+.PHONY : src/enemy2_firebeam.cpp.s
+
 src/input.o: src/input.cpp.o
 
 .PHONY : src/input.o
@@ -441,6 +495,12 @@ help:
 	@echo "... src/color.o"
 	@echo "... src/color.i"
 	@echo "... src/color.s"
+	@echo "... src/enemy1_firelines.o"
+	@echo "... src/enemy1_firelines.i"
+	@echo "... src/enemy1_firelines.s"
+	@echo "... src/enemy2_firebeam.o"
+	@echo "... src/enemy2_firebeam.i"
+	@echo "... src/enemy2_firebeam.s"
 	@echo "... src/input.o"
 	@echo "... src/input.i"
 	@echo "... src/input.s"
