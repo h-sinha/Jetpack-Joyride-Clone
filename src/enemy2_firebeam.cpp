@@ -4,7 +4,8 @@ const double PI = 3.141592653589793238460;
 
 Firebeam::Firebeam(float x, float y, color_t color) {
    
-    speed = GameSpeed;
+    speed = 0.03;
+    up = 1;
      this->scalex = 1.0;
     this->scaley = 1.0;
     this->scalez = 1.0;
@@ -94,5 +95,19 @@ void Firebeam::set_position(float x, float y) {
 
 void Firebeam::tick() {
     this->position.x -= GameSpeed;
+    if(up)
+        this->position.y += speed;
+    else 
+        this->position.y -= speed;
+    if(this->position.y > 4.0)
+    {
+        up = 0;
+        this->position.y -= speed;
+    } 
+    else if(this->position.y < 0.5)
+    {
+        up = 1;
+        this->position.y += speed;
+    }
 }
 

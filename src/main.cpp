@@ -31,8 +31,7 @@ bounding_box_t PlayerBound;
 
 float screen_zoom = 1, screen_center_x = 0, screen_center_y = 0;
 float camera_rotation_angle = 0;
-int score = 0;
-int ScreenWidth = 600, ScreenHeight = 600;
+int ScreenWidth = 600, ScreenHeight = 600, score = 0;
 // std::vector<bool> done(30);
 
 Timer t60(1.0 / 60.0);
@@ -84,10 +83,6 @@ void draw() {
     {
         x = CoinPos[i];
         bounding_box_t c;
-        // PlayerBound.x = player.position[0];
-        // PlayerBound.y = player.position[1];
-        // PlayerBound.height = player.length;
-        // PlayerBound.width = player.width;
         c.x = x.position[0];
         c.y = x.position[1];
         c.height = x.length;
@@ -96,7 +91,10 @@ void draw() {
         if(!flag)
             x.draw(VP);
         else 
+        {
+            score += 5;
             CoinPos.erase(CoinPos.begin() + i);
+        }
     }   
     player.draw(VP);
     fireline.draw(VP);
@@ -174,6 +172,7 @@ void tick_elements() {
     PlayerBound.width = player.width;
     fireline.tick();
     firebeam.tick();
+    
 }
 
 /* Initialize the OpenGL rendering properties */
