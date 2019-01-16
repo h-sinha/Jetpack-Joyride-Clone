@@ -6,16 +6,18 @@ Firebeam::Firebeam(float x, float y, color_t color) {
    
     speed = 0.03;
     up = 1;
+    float xx, yy;
     this->scalex = 1.0;
     this->scaley = 1.0;
     this->scalez = 1.0;
-    this->length = 0.8; 
-    this->width = 0.2;
+    this->length = 0.2; 
+    this->width = 1.5;
      int n=15, cur = 0;
     GLfloat vertex_buffer_data[9*n];
     GLfloat vertex_buffer_data1[9*n];
     GLfloat vertex_buffer_data2[9*n];
-
+    xx = 0.2 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
+    yy = 1.5 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
     for (int i = 1; i <= n; ++i)
      {
         vertex_buffer_data[cur] =  0.1 * cos((2.0*PI*i)/n);
@@ -133,6 +135,13 @@ void Firebeam::tick() {
         up = 1;
         this->position.y += speed;
     }
-    if(this->position.x < -3.0)this->position.x += 12;
+    
+    if(this->position.x < -3.0)
+    {
+        float xx, yy;
+        xx = 0.2 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
+         yy = 1.5 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
+        this->position.x = xx + 8.0, this->position.y = yy;
+    }
 }
 

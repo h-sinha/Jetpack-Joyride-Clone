@@ -7,7 +7,7 @@
 class Ball {
 public:
     Ball() {}
-    Ball(float x, float y, color_t color, float init_speed);
+    Ball(float x, float y, color_t color);
     glm::vec3 position;
     float rotation;
     float length;

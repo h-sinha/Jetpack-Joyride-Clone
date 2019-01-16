@@ -12,8 +12,8 @@ Fireline::Fireline(float x, float y, color_t color) {
      this->scalex = 1.0;
     this->scaley = 1.0;
     this->scalez = 1.0;
-    this->length = 1.495*1.4;
-    this->width = 1.0;
+    this->length = 1.775;
+    this->width = 0.92;
      int n=15, cur = 0;
      this->rotation = 0.1;
     // GLfloat vertex_buffer_data[9*n];

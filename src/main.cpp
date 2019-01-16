@@ -23,6 +23,7 @@ GLFWwindow *window;
 
 std::vector<Brick> BrickPos;
 // std::vector<Wall> WallPos;
+std::vector<Ball> BallPos;
 std::vector<Coin> CoinPos;
 Fireline fireline;
 Firebeam firebeam;
@@ -45,7 +46,7 @@ void gameOver()
     cout<<"-----------------GAMEOVER-------------------------\n";
     cout<<"YOUR SCORE : "<<score<<endl;
     cout<<"-----------------********-------------------------\n";
-    // quit(window);
+    quit(window);
 
 }
 void draw() {
@@ -105,15 +106,30 @@ void draw() {
             CoinPos.erase(CoinPos.begin() + i);
         }
     }   
-    player.draw(VP);
     bounding_box_t xx;
-    xx.x = firebeam.position[0];
-    xx.y = firebeam.position[1];
+    for (int i = int(BallPos.size()) - 1; i >= 0 ; --i)
+    {
+        if(BallPos[i].position.y <= 0.3)
+        {
+            BallPos.erase(BallPos.begin() + i);
+            continue;
+        }
+        bounding_box_t yy = {BallPos[i].position.x, BallPos[i].position.y, BallPos[i].width, BallPos[i].length};
+        xx = {firebeam.position[0], firebeam.position[1], firebeam.width, firebeam.length};
+        if(detect_collision(xx, yy))
+            firebeam.set_position(-100.0, -100.0);
+        xx = {fireline.position[0], fireline.position[1], fireline.width, fireline.length};
+        if(detect_collision(xx, yy))
+            fireline.set_position(-100.0, -100.0);
+    }
+    player.draw(VP);
+    xx.x = firebeam.position[0] + firebeam.width/2;
+    xx.y = firebeam.position[1] + firebeam.length/2;
     xx.height = firebeam.length;
     xx.width = firebeam.width;
     if(detect_collision(xx, PlayerBound))
         gameOver();
-    xx.x = fireline.position[0];
+    xx.x = fireline.position[0] + fireline.width/2;
     xx.y = fireline.position[1];
     xx.height = fireline.length;
     xx.width = fireline.width;
@@ -128,6 +144,10 @@ void draw() {
     firebeam.draw(VP);
     boomerang.draw(VP);
     fireline.draw(VP);
+    for (auto &x:BallPos)
+    {
+        x.draw(VP);
+    }
 }
 // zoom function 
 void zoom(){
@@ -146,12 +166,12 @@ void zoom(){
         x.scaley = ScaleFactor;
         x.scalez = ScaleFactor;
     }
-    // for (auto &x:WallPos)
-    // {
-    //     x.scalex = ScaleFactor;
-    //     x.scaley = ScaleFactor;
-    //     x.scalez = ScaleFactor;
-    // }
+    for (auto &x:BallPos)
+    {
+        x.scalex = ScaleFactor;
+        x.scaley = ScaleFactor;
+        x.scalez = ScaleFactor;
+    }
     fireline.scalex = ScaleFactor;
     fireline.scalez = ScaleFactor;
     fireline.scaley = ScaleFactor;
@@ -167,6 +187,7 @@ void tick_input(GLFWwindow *window) {
     int right = glfwGetKey(window, GLFW_KEY_RIGHT);
     int left = glfwGetKey(window, GLFW_KEY_LEFT);
     int scroll = glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_MIDDLE);
+    int shoot = glfwGetKey(window, GLFW_KEY_SPACE);
     zoom();
     if (up) {
         player.move(1);
@@ -180,6 +201,10 @@ void tick_input(GLFWwindow *window) {
             GameSpeed -= 0.001;
         }
     }
+    if(shoot){
+        Ball ball = Ball(PlayerBound.x + PlayerBound.width, PlayerBound.y + PlayerBound.height, COLOR_BLACK);
+        BallPos.push_back(ball);
+    }
     if(GameSpeed > 0.01 && !right && !left)GameSpeed -= 0.001;
     if(GameSpeed < 0.01 && !right && !left)GameSpeed += 0.001;
     if(!up)
@@ -188,6 +213,10 @@ void tick_input(GLFWwindow *window) {
 
 void tick_elements() {
     for (auto &x:BrickPos)
+    {
+        x.tick();
+    }
+    for (auto &x:BallPos)
     {
         x.tick();
     }
