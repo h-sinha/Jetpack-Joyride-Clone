@@ -14,50 +14,6 @@ Boomerang::Boomerang(float x, float y, color_t color) {
     this->width = 0.2;
     this->flag = 0;
      int n=15, cur = 0;
-    // GLfloat vertex_buffer_data[9*n];
-    // GLfloat vertex_buffer_data1[9*n];
-    // GLfloat vertex_buffer_data2[9*n];
-
-    // for (int i = 1; i <= n; ++i)
-    //  {
-    //     vertex_buffer_data[cur] =  0.1 * cos((2.0*PI*i)/n);
-    //     vertex_buffer_data[cur+1] = 0.2 * sin((2.0*PI*i)/n);
-    //     vertex_buffer_data[cur+2] = 0.0;
-    //     vertex_buffer_data[cur+3] = 0.1 * cos((2.0*PI*(i+1))/n);
-    //     vertex_buffer_data[cur+4] = 0.2 * sin((2.0*PI*(i+1))/n);
-    //     vertex_buffer_data[cur+5] = 0.0;
-    //     vertex_buffer_data[cur+6] = 0.0;
-    //     vertex_buffer_data[cur+7] = 0.0;
-    //     vertex_buffer_data[cur+8] = 0.0;
-    //     cur += 9;
-    //  } 
-    //  cur = 0;
-    // for (int i = 1; i <= n; ++i)
-    //  {
-    //     vertex_buffer_data1[cur] =  0.6 + 0.1 * cos((2.0*PI*i)/n);
-    //     vertex_buffer_data1[cur+1] =  0.2 * sin((2.0*PI*i)/n);
-    //     vertex_buffer_data1[cur+2] = 0.0;
-    //     vertex_buffer_data1[cur+3] = 0.6 + 0.1 * cos((2.0*PI*(i+1))/n);
-    //     vertex_buffer_data1[cur+4] =  0.2 * sin((2.0*PI*(i+1))/n);
-    //     vertex_buffer_data1[cur+5] = 0.0;
-    //     vertex_buffer_data1[cur+6] = 0.6 + 0.0;
-    //     vertex_buffer_data1[cur+7] =  0.0;
-    //     vertex_buffer_data1[cur+8] = 0.0;
-    //     cur += 9;
-    //  } 
-    //  cur = 0;
-    //  float offset = 0.02;
-    //  for (int i = 1; i <= n; ++i)
-    //  {
-    //     vertex_buffer_data2[cur] =  0.0;
-    //     vertex_buffer_data2[cur+1] =  - 0.2 + offset;
-    //     vertex_buffer_data2[cur+2] =  -1.0;
-    //     vertex_buffer_data2[cur+3] =  0.6;
-    //     vertex_buffer_data2[cur+4] =  - 0.2 + offset;
-    //     vertex_buffer_data2[cur+5] =  -1.0;
-    //     cur += 6;
-    //     offset += 0.02;
-    //  } 
       static const GLfloat vertex_buffer_data[] = {
         0.0f , 0.1f, 0.0f,    
         0.1f , 0.0f, 0.0f,    
@@ -107,8 +63,8 @@ Boomerang::Boomerang(float x, float y, color_t color) {
         vertex_buffer_data3[cur+8] = 0.0;
         cur += 9;
      } 
-    this->ring1 = create3DObject(GL_TRIANGLES, 3, vertex_buffer_data, COLOR_GREEN, GL_FILL);
-    this->ring2 = create3DObject(GL_TRIANGLES, 3*n, vertex_buffer_data1, COLOR_BLUE, GL_FILL);
+    this->ring1 = create3DObject(GL_TRIANGLES, 3, vertex_buffer_data, COLOR_MIDNIGHT_BLUE, GL_FILL);
+    this->ring2 = create3DObject(GL_TRIANGLES, 3*n, vertex_buffer_data1, COLOR_RED, GL_FILL);
     this->ring3 = create3DObject(GL_TRIANGLES, 3*n, vertex_buffer_data2, COLOR_RED, GL_FILL);
     this->tri = create3DObject(GL_TRIANGLES, 3*n, vertex_buffer_data3, COLOR_RED, GL_FILL);
     // this->line = create3DObject(GL_LINE_LOOP, 2*n, vertex_buffer_data2, COLOR_DARK_RED, GL_FILL);

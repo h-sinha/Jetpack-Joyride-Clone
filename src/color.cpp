@@ -1,8 +1,9 @@
 #include "main.h"
 
 // const color_t COLOR_LIGHT_RED = { 236, 100, 75 };
-const color_t COLOR_GREEN = { 135, 211, 124 };
-const color_t COLOR_BLACK = { 52, 73, 94 };
+const color_t COLOR_MIDNIGHT_BLUE = { 25, 25, 112 };
+const color_t COLOR_BLACK = { 0, 0, 0 };
+const color_t COLOR_WHITE = { 255, 255, 255 };
 const color_t COLOR_BACKGROUND = { 0,191, 255 };
 const color_t COLOR_BLUE = { 0, 0, 255 };
 const color_t COLOR_BROWN = { 139, 69, 19 };

@@ -358,7 +358,6 @@ int main(int argc, char **argv) {
 }
 
 bool detect_collision(bounding_box_t a, bounding_box_t b) {
-    printf("%lf\n",a.width);
     return (abs(a.x - b.x) * 2.0 < (a.width + b.width)) &&
            (abs(a.y - b.y) * 2.0 < (a.height + b.height));
 }

@@ -21,7 +21,15 @@ public:
     void move(int up);
     double speed;
 private:
-    VAO *object;
+    VAO *blackring;
+    VAO *whitering;
+    VAO *whiteeye1;
+    VAO *whiteeye2;
+    VAO *blackeye1;
+    VAO *blackeye2;
+    VAO *nose;
+    VAO *hand1;
+    VAO *hand2;
 };
 
 #endif // PLAYER_H
