@@ -92,6 +92,16 @@ glm/gtc/matrix_transform.hpp
 main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
 
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/magnet.cpp
+magnet.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/magnet.h
+main.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/magnet.h
+main.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.cpp
 main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
@@ -113,6 +123,8 @@ enemy2_firebeam.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy2_firebeam.h
 enemy3_boomerang.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy3_boomerang.h
+magnet.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/magnet.h
 vector
 -
 set

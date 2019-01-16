@@ -5,6 +5,7 @@ const double PI = 3.141592653589793238460;
 Ball::Ball(float x, float y, color_t color) {
     this->position = glm::vec3(x, y, 0);
     this->rotation = 0;
+    this->speed = 0.3;
     this->length = 0.3;
     this->width = 0.3;
     this->scalex = 1.0;
@@ -51,7 +52,8 @@ void Ball::tick() {
     this->position.x -= GameSpeed;
     // this->rotation += speed;
     this->position.x += 0.03;
-    this->position.y -= 0.005;
+    this->position.y += speed;
+    speed -= 0.0005;
     // this->set_position(this->position.x, this->position.y);
     // printf("%f %f\n",speed, this->position.x );
 }

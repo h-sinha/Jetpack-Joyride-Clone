@@ -7,7 +7,7 @@ Fireline::Fireline(float x, float y, color_t color) {
     speed = GameSpeed;
     float x1,y1,x2,y2,xx,yy;
     xx = 0.2 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
-    yy = 1.5 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
+    yy = 2.0 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
     // xx = 1.0, yy = 1.0;
      this->scalex = 1.0;
     this->scaley = 1.0;
@@ -62,8 +62,13 @@ void Fireline::tick() {
     this->position.x -= GameSpeed;
     if(this->position.x < -2.0)
     {
-        this->position.y = 0.2 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
-        this->position.y = 1.5 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
+        this->position.x = 8.0 + 0.2 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
+        this->position.y = 2.0 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
+    }
+    if(this->position.x > 11.0)
+    {
+        this->position.x = -3.0 + 0.2 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
+        this->position.y = 2.0 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
     }
 }
 

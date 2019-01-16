@@ -8,6 +8,7 @@
 #include "enemy1_firelines.h"
 #include "enemy2_firebeam.h"
 #include "enemy3_boomerang.h"
+#include "magnet.h"
 #include <vector>
 #include <set>
 
@@ -27,6 +28,7 @@ std::vector<Ball> BallPos;
 std::vector<Coin> CoinPos;
 Fireline fireline;
 Firebeam firebeam;
+Magnet magnet;
 Boomerang boomerang;
 Player player;
 bounding_box_t PlayerBound;
@@ -35,7 +37,7 @@ float screen_zoom = 1, screen_center_x = 0, screen_center_y = 0;
 float camera_rotation_angle = 0;
 int ScreenWidth = 600, ScreenHeight = 600, score = 0;
 // std::vector<bool> done(30);
-
+time_t tmr;
 Timer t60(1.0 / 60.0);
 
 
@@ -46,7 +48,7 @@ void gameOver()
     cout<<"-----------------GAMEOVER-------------------------\n";
     cout<<"YOUR SCORE : "<<score<<endl;
     cout<<"-----------------********-------------------------\n";
-    quit(window);
+    // quit(window);
 
 }
 void draw() {
@@ -106,7 +108,11 @@ void draw() {
             CoinPos.erase(CoinPos.begin() + i);
         }
     }   
-    bounding_box_t xx;
+    bounding_box_t Fbeam, Fline, Boom, Mag, xx;
+    Fbeam = {firebeam.position[0], firebeam.position[1], firebeam.width, firebeam.length};
+    Fline = {fireline.position[0], fireline.position[1], fireline.width, fireline.length};
+    Boom = {boomerang.position[0], boomerang.position[1], boomerang.width, boomerang.length};
+    Mag = {magnet.position[0] + 0.05f, magnet.position[1], magnet.width, magnet.length};
     for (int i = int(BallPos.size()) - 1; i >= 0 ; --i)
     {
         if(BallPos[i].position.y <= 0.3)
@@ -114,36 +120,28 @@ void draw() {
             BallPos.erase(BallPos.begin() + i);
             continue;
         }
-        bounding_box_t yy = {BallPos[i].position.x, BallPos[i].position.y, BallPos[i].width, BallPos[i].length};
-        xx = {firebeam.position[0], firebeam.position[1], firebeam.width, firebeam.length};
-        if(detect_collision(xx, yy))
+        xx = {BallPos[i].position.x, BallPos[i].position.y, BallPos[i].width, BallPos[i].length};
+        if(detect_collision(xx, Fbeam))
             firebeam.set_position(-100.0, -100.0);
-        xx = {fireline.position[0], fireline.position[1], fireline.width, fireline.length};
-        if(detect_collision(xx, yy))
+        if(detect_collision(xx, Fline))
             fireline.set_position(-100.0, -100.0);
     }
     player.draw(VP);
-    xx.x = firebeam.position[0] + firebeam.width/2;
-    xx.y = firebeam.position[1] + firebeam.length/2;
-    xx.height = firebeam.length;
-    xx.width = firebeam.width;
-    if(detect_collision(xx, PlayerBound))
+    if(detect_collision(Fbeam, PlayerBound))
         gameOver();
-    xx.x = fireline.position[0] + fireline.width/2;
-    xx.y = fireline.position[1];
-    xx.height = fireline.length;
-    xx.width = fireline.width;
-    if(detect_collision(xx, PlayerBound))
+    if(detect_collision(Fbeam, Mag))
+        magnet.position = glm::vec3 (-100.0,-100.0,0.0);
+
+    if(detect_collision(Fline, PlayerBound))
         gameOver();
-    xx.x = boomerang.position[0];
-    xx.y = boomerang.position[1];
-    xx.height = boomerang.length;
-    xx.width = boomerang.width;
-    if(detect_collision(xx, PlayerBound))
+     if(detect_collision(Fline, Mag))
+        magnet.position = glm::vec3 (-100.0,-100.0,0.0);
+    if(detect_collision(Boom, PlayerBound))
         gameOver();
     firebeam.draw(VP);
     boomerang.draw(VP);
     fireline.draw(VP);
+    magnet.draw(VP);
     for (auto &x:BallPos)
     {
         x.draw(VP);
@@ -175,6 +173,9 @@ void zoom(){
     fireline.scalex = ScaleFactor;
     fireline.scalez = ScaleFactor;
     fireline.scaley = ScaleFactor;
+    magnet.scalex = ScaleFactor;
+    magnet.scalez = ScaleFactor;
+    magnet.scaley = ScaleFactor;
      firebeam.scalex = ScaleFactor;
     firebeam.scalez = ScaleFactor;
     firebeam.scaley = ScaleFactor;
@@ -182,35 +183,6 @@ void zoom(){
     boomerang.scalez = ScaleFactor;
     boomerang.scaley = ScaleFactor;
 }
-void tick_input(GLFWwindow *window) {
-    int up  = glfwGetKey(window, GLFW_KEY_UP);
-    int right = glfwGetKey(window, GLFW_KEY_RIGHT);
-    int left = glfwGetKey(window, GLFW_KEY_LEFT);
-    int scroll = glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_MIDDLE);
-    int shoot = glfwGetKey(window, GLFW_KEY_SPACE);
-    zoom();
-    if (up) {
-        player.move(1);
-    }
-    if(right){
-        if(GameSpeed < 0.2)
-        GameSpeed+=0.001;
-    }
-    if(left){
-        if(GameSpeed > -0.2){
-            GameSpeed -= 0.001;
-        }
-    }
-    if(shoot){
-        Ball ball = Ball(PlayerBound.x + PlayerBound.width, PlayerBound.y + PlayerBound.height, COLOR_BLACK);
-        BallPos.push_back(ball);
-    }
-    if(GameSpeed > 0.01 && !right && !left)GameSpeed -= 0.001;
-    if(GameSpeed < 0.01 && !right && !left)GameSpeed += 0.001;
-    if(!up)
-    player.move(-1);
-}
-
 void tick_elements() {
     for (auto &x:BrickPos)
     {
@@ -232,10 +204,64 @@ void tick_elements() {
     PlayerBound.height = player.length;
     PlayerBound.width = player.width;
     fireline.tick();
+    magnet.tick();
     firebeam.tick();
     boomerang.tick(player.position[0]);
 
 }
+
+void tick_input(GLFWwindow *window) {
+    int up  = glfwGetKey(window, GLFW_KEY_UP);
+    int right = glfwGetKey(window, GLFW_KEY_RIGHT);
+    int left = glfwGetKey(window, GLFW_KEY_LEFT);
+    int scroll = glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_MIDDLE);
+    int shoot = glfwGetKey(window, GLFW_KEY_SPACE);
+    zoom();
+    if (up) {
+        player.move(1);
+    }
+    if(right){
+        if(GameSpeed < 0.2)
+        GameSpeed+=0.001;
+    }
+    if(left){
+        if(GameSpeed > -0.2){
+            GameSpeed -= 0.001;
+        }
+    }
+    if(shoot && abs(time(NULL) - tmr) > 1e-6){
+        tmr = time(NULL);
+        Ball ball = Ball(PlayerBound.x + PlayerBound.width, PlayerBound.y + PlayerBound.height, COLOR_BLACK);
+        BallPos.push_back(ball);
+    }
+    if(GameSpeed > 0.01 && !right && !left)GameSpeed -= 0.001;
+    if(GameSpeed < 0.01 && !right && !left)GameSpeed += 0.001;
+   
+
+    if(magnet.position.y > player.position.y + 0.2  && magnet.position.x >= 0.0 && magnet.position.x <= 3.6)
+    {
+        player.move(1);
+        player.move(1);
+    }
+    if(magnet.position.y < player.position.y + 0.2 && magnet.position.x >= 0.0 && magnet.position.x <= 3.6)player.move(-1);
+    if(magnet.position.x + 0.1 < player.position.x && magnet.position.x >= 0.0 && magnet.position.x <= 3.6)
+    {
+        if(!right)
+        GameSpeed = -0.02;
+        tick_elements();
+        GameSpeed = 0.01;
+    }
+    if(magnet.position.x - 0.1 >= player.position.x + 0.4 && magnet.position.x >= 0.0 && magnet.position.x <= 3.6)
+    {
+        if(!right)
+        GameSpeed = 0.02;
+        tick_elements();
+        GameSpeed = 0.01;
+    }
+     if(!up)
+    player.move(-1);
+}
+
 
 /* Initialize the OpenGL rendering properties */
 /* Add all the models to be created here */
@@ -278,6 +304,7 @@ void initGL(GLFWwindow *window, int width, int height) {
     }
      player = Player(1.8,0.4,COLOR_BROWN);
      fireline = Fireline(0.0, 0.0, COLOR_BACKGROUND);
+     magnet = Magnet(0.0, 0.0, COLOR_BACKGROUND);
      firebeam = Firebeam(0.0, 0.0, COLOR_BACKGROUND);
      boomerang = Boomerang(0.0, 0.0, COLOR_BACKGROUND);
     // Create and compile our GLSL program from the shaders
@@ -331,6 +358,7 @@ int main(int argc, char **argv) {
 }
 
 bool detect_collision(bounding_box_t a, bounding_box_t b) {
+    printf("%lf\n",a.width);
     return (abs(a.x - b.x) * 2.0 < (a.width + b.width)) &&
            (abs(a.y - b.y) * 2.0 < (a.height + b.height));
 }

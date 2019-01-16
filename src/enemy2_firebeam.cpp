@@ -143,5 +143,12 @@ void Firebeam::tick() {
          yy = 1.5 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
         this->position.x = xx + 8.0, this->position.y = yy;
     }
+     if(this->position.x > 11.0)
+    {
+        float xx, yy;
+        xx = 0.2 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
+         yy = 1.5 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
+        this->position.x = xx - 8.0, this->position.y = yy;
+    }
 }
 
