@@ -5,6 +5,10 @@ CMakeFiles/graphics_asgn1.dir/src/ball.cpp.o: ../src/ball.cpp
 CMakeFiles/graphics_asgn1.dir/src/ball.cpp.o: ../src/ball.h
 CMakeFiles/graphics_asgn1.dir/src/ball.cpp.o: ../src/main.h
 
+CMakeFiles/graphics_asgn1.dir/src/bonuscoin.cpp.o: ../src/bonuscoin.cpp
+CMakeFiles/graphics_asgn1.dir/src/bonuscoin.cpp.o: ../src/bonuscoin.h
+CMakeFiles/graphics_asgn1.dir/src/bonuscoin.cpp.o: ../src/main.h
+
 CMakeFiles/graphics_asgn1.dir/src/bricks.cpp.o: ../src/bricks.cpp
 CMakeFiles/graphics_asgn1.dir/src/bricks.cpp.o: ../src/bricks.h
 CMakeFiles/graphics_asgn1.dir/src/bricks.cpp.o: ../src/main.h
@@ -36,6 +40,7 @@ CMakeFiles/graphics_asgn1.dir/src/magnet.cpp.o: ../src/magnet.h
 CMakeFiles/graphics_asgn1.dir/src/magnet.cpp.o: ../src/main.h
 
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/ball.h
+CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/bonuscoin.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/bricks.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/coin.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/enemy1_firelines.h

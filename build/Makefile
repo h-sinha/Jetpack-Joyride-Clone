@@ -150,6 +150,33 @@ src/ball.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/ball.cpp.s
 .PHONY : src/ball.cpp.s
 
+src/bonuscoin.o: src/bonuscoin.cpp.o
+
+.PHONY : src/bonuscoin.o
+
+# target to build an object file
+src/bonuscoin.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/bonuscoin.cpp.o
+.PHONY : src/bonuscoin.cpp.o
+
+src/bonuscoin.i: src/bonuscoin.cpp.i
+
+.PHONY : src/bonuscoin.i
+
+# target to preprocess a source file
+src/bonuscoin.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/bonuscoin.cpp.i
+.PHONY : src/bonuscoin.cpp.i
+
+src/bonuscoin.s: src/bonuscoin.cpp.s
+
+.PHONY : src/bonuscoin.s
+
+# target to generate assembly for a file
+src/bonuscoin.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/bonuscoin.cpp.s
+.PHONY : src/bonuscoin.cpp.s
+
 src/bricks.o: src/bricks.cpp.o
 
 .PHONY : src/bricks.o
@@ -540,6 +567,9 @@ help:
 	@echo "... src/ball.o"
 	@echo "... src/ball.i"
 	@echo "... src/ball.s"
+	@echo "... src/bonuscoin.o"
+	@echo "... src/bonuscoin.i"
+	@echo "... src/bonuscoin.s"
 	@echo "... src/bricks.o"
 	@echo "... src/bricks.i"
 	@echo "... src/bricks.s"

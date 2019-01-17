@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/graphics_asgn1.dir/src/ball.cpp.o"
+  "CMakeFiles/graphics_asgn1.dir/src/bonuscoin.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/src/bricks.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/src/coin.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/src/color.cpp.o"

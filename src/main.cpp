@@ -9,6 +9,7 @@
 #include "enemy2_firebeam.h"
 #include "enemy3_boomerang.h"
 #include "magnet.h"
+#include "bonuscoin.h"
 #include <vector>
 #include <set>
 
@@ -29,6 +30,7 @@ std::vector<Coin> CoinPos;
 Fireline fireline;
 Firebeam firebeam;
 Magnet magnet;
+BonusCoin bonuscoin;
 Boomerang boomerang;
 Player player;
 bounding_box_t PlayerBound;
@@ -142,6 +144,7 @@ void draw() {
     boomerang.draw(VP);
     fireline.draw(VP);
     magnet.draw(VP);
+    bonuscoin.draw(VP);
     for (auto &x:BallPos)
     {
         x.draw(VP);
@@ -182,6 +185,9 @@ void zoom(){
     boomerang.scalex = ScaleFactor;
     boomerang.scalez = ScaleFactor;
     boomerang.scaley = ScaleFactor;
+    bonuscoin.scalex = ScaleFactor;
+    bonuscoin.scalez = ScaleFactor;
+    bonuscoin.scaley = ScaleFactor;
 }
 void tick_elements() {
     for (auto &x:BrickPos)
@@ -205,6 +211,7 @@ void tick_elements() {
     PlayerBound.width = player.width;
     fireline.tick();
     magnet.tick();
+    bonuscoin.tick();
     firebeam.tick();
     boomerang.tick(player.position[0]);
 
@@ -229,6 +236,7 @@ void tick_input(GLFWwindow *window) {
             GameSpeed -= 0.001;
         }
     }
+    
     if(shoot && abs(time(NULL) - tmr) > 1e-6){
         tmr = time(NULL);
         Ball ball = Ball(PlayerBound.x + PlayerBound.width, PlayerBound.y + PlayerBound.height, COLOR_BLACK);
@@ -305,6 +313,7 @@ void initGL(GLFWwindow *window, int width, int height) {
      player = Player(1.8,0.4,COLOR_BROWN);
      fireline = Fireline(0.0, 0.0, COLOR_BACKGROUND);
      magnet = Magnet(0.0, 0.0, COLOR_BACKGROUND);
+     bonuscoin = BonusCoin(0.0, 0.0, COLOR_BACKGROUND);
      firebeam = Firebeam(0.0, 0.0, COLOR_BACKGROUND);
      boomerang = Boomerang(0.0, 0.0, COLOR_BACKGROUND);
     // Create and compile our GLSL program from the shaders

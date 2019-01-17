@@ -11,7 +11,8 @@ const color_t COLOR_LIGHT_BROWN = { 205, 133, 63 };
 const color_t COLOR_YELLOW = { 255, 215, 0 };
 const color_t COLOR_DARK_RED = { 255, 90, 0 };
 const color_t COLOR_RED = { 255, 0, 0 };
-// const color_t COLOR_DARK_RED = { 255, 0, 0 };
+const color_t COLOR_GREEN = { 0, 255, 0 };
+const color_t COLOR_GAINS_BORO = { 220, 220, 220 };
 const color_t COLOR_FIRE_BRICK = { 178, 34, 34 };
 const color_t COLOR_LIGHT_SLATE_GREY = { 47, 79, 79 };
 

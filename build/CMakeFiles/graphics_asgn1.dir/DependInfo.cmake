@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/ball.cpp" "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/graphics_asgn1.dir/src/ball.cpp.o"
+  "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/bonuscoin.cpp" "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/graphics_asgn1.dir/src/bonuscoin.cpp.o"
   "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/bricks.cpp" "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/graphics_asgn1.dir/src/bricks.cpp.o"
   "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/coin.cpp" "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/graphics_asgn1.dir/src/coin.cpp.o"
   "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/color.cpp" "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/graphics_asgn1.dir/src/color.cpp.o"
