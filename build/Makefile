@@ -366,6 +366,33 @@ src/enemy3.boomerang.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/enemy3.boomerang.cpp.s
 .PHONY : src/enemy3.boomerang.cpp.s
 
+src/ice.o: src/ice.cpp.o
+
+.PHONY : src/ice.o
+
+# target to build an object file
+src/ice.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/ice.cpp.o
+.PHONY : src/ice.cpp.o
+
+src/ice.i: src/ice.cpp.i
+
+.PHONY : src/ice.i
+
+# target to preprocess a source file
+src/ice.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/ice.cpp.i
+.PHONY : src/ice.cpp.i
+
+src/ice.s: src/ice.cpp.s
+
+.PHONY : src/ice.s
+
+# target to generate assembly for a file
+src/ice.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/ice.cpp.s
+.PHONY : src/ice.cpp.s
+
 src/input.o: src/input.cpp.o
 
 .PHONY : src/input.o
@@ -618,6 +645,9 @@ help:
 	@echo "... src/enemy3.boomerang.o"
 	@echo "... src/enemy3.boomerang.i"
 	@echo "... src/enemy3.boomerang.s"
+	@echo "... src/ice.o"
+	@echo "... src/ice.i"
+	@echo "... src/ice.s"
 	@echo "... src/input.o"
 	@echo "... src/input.i"
 	@echo "... src/input.s"

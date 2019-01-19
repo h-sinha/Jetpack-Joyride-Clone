@@ -11,6 +11,7 @@
 #include "magnet.h"
 #include "bonuscoin.h"
 #include "dragon.h"
+#include "ice.h"
 #include <vector>
 #include <set>
 
@@ -27,6 +28,7 @@ GLFWwindow *window;
 std::vector<Brick> BrickPos;
 // std::vector<Wall> WallPos;
 std::vector<Ball> BallPos;
+std::vector<Ice> IcePos;
 std::vector<Coin> CoinPos;
 Fireline fireline;
 Firebeam firebeam;
@@ -41,7 +43,7 @@ float screen_zoom = 1, screen_center_x = 0, screen_center_y = 0;
 float camera_rotation_angle = 0;
 int ScreenWidth = 600, ScreenHeight = 600, score = 0;
 // std::vector<bool> done(30);
-time_t tmr, btr;
+time_t tmr, btr,ict;
 Timer t60(1.0 / 60.0);
 
 
@@ -112,11 +114,12 @@ void draw() {
             CoinPos.erase(CoinPos.begin() + i);
         }
     }   
-    bounding_box_t Fbeam, Fline, Boom, Mag, xx;
+    bounding_box_t Fbeam, Fline, Boom, Mag, Drag, xx;
     Fbeam = {firebeam.position[0], firebeam.position[1], firebeam.width, firebeam.length};
     Fline = {fireline.position[0], fireline.position[1], fireline.width, fireline.length};
     Boom = {boomerang.position[0], boomerang.position[1], boomerang.width, boomerang.length};
     Mag = {magnet.position[0] + 0.05f, magnet.position[1], magnet.width, magnet.length};
+    Drag = {dragon.position.x , dragon.position.y, dragon.width, dragon.length};
     for (int i = int(BallPos.size()) - 1; i >= 0 ; --i)
     {
         if(BallPos[i].position.y <= 0.3)
@@ -130,6 +133,17 @@ void draw() {
         if(detect_collision(xx, Fline))
             fireline.set_position(-100.0, -100.0);
     }
+     for (int i = int(BallPos.size()) - 1; i >= 0 ; --i)
+    {
+        if(IcePos[i].position.y <= 0.3)
+        {
+            IcePos.erase(IcePos.begin() + i);
+            continue;
+        }
+        xx = {IcePos[i].position.x, IcePos[i].position.y, IcePos[i].width, IcePos[i].length};
+        if(detect_collision(xx, PlayerBound))
+            gameOver();
+    }
     player.draw(VP);
     if(detect_collision(Fbeam, PlayerBound))
         gameOver();
@@ -142,6 +156,8 @@ void draw() {
         magnet.position = glm::vec3 (-100.0,-100.0,0.0);
     if(detect_collision(Boom, PlayerBound))
         gameOver();
+     if(detect_collision(Drag, PlayerBound))
+        gameOver();
     firebeam.draw(VP);
     boomerang.draw(VP);
     fireline.draw(VP);
@@ -149,6 +165,14 @@ void draw() {
     bonuscoin.draw(VP);
     dragon.draw(VP);
     for (auto &x:BallPos)
+    {
+        x.draw(VP);
+    }
+    for (auto &x:CoinPos)
+    {
+        x.draw(VP);
+    }
+     for (auto &x:IcePos)
     {
         x.draw(VP);
     }
@@ -171,6 +195,12 @@ void zoom(){
         x.scalez = ScaleFactor;
     }
     for (auto &x:BallPos)
+    {
+        x.scalex = ScaleFactor;
+        x.scaley = ScaleFactor;
+        x.scalez = ScaleFactor;
+    }
+    for (auto &x:IcePos)
     {
         x.scalex = ScaleFactor;
         x.scaley = ScaleFactor;
@@ -204,6 +234,10 @@ void tick_elements() {
     {
         x.tick();
     }
+    for (auto &x:IcePos)
+    {
+        x.tick();
+    }
     // for (auto &x:WallPos)
     // {
     //     x.tick();
@@ -221,7 +255,12 @@ void tick_elements() {
     dragon.tick();
     firebeam.tick();
     boomerang.tick(player.position[0]);
-
+    if(dragon.position.x > 0.0 && dragon.position.x < 3.6 && abs(time(NULL) - ict) > 1)
+    {
+        ict = time(NULL);
+        Ice ice = Ice(dragon.position.x , dragon.position.y, COLOR_MIDNIGHT_BLUE);
+        IcePos.push_back(ice);
+    }
 }
 
 void tick_input(GLFWwindow *window) {

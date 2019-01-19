@@ -36,6 +36,10 @@ CMakeFiles/graphics_asgn1.dir/src/enemy3.boomerang.cpp.o: ../src/enemy3.boomeran
 CMakeFiles/graphics_asgn1.dir/src/enemy3.boomerang.cpp.o: ../src/enemy3_boomerang.h
 CMakeFiles/graphics_asgn1.dir/src/enemy3.boomerang.cpp.o: ../src/main.h
 
+CMakeFiles/graphics_asgn1.dir/src/ice.cpp.o: ../src/ice.cpp
+CMakeFiles/graphics_asgn1.dir/src/ice.cpp.o: ../src/ice.h
+CMakeFiles/graphics_asgn1.dir/src/ice.cpp.o: ../src/main.h
+
 CMakeFiles/graphics_asgn1.dir/src/input.cpp.o: ../src/input.cpp
 CMakeFiles/graphics_asgn1.dir/src/input.cpp.o: ../src/main.h
 
@@ -51,6 +55,7 @@ CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/dragon.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/enemy1_firelines.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/enemy2_firebeam.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/enemy3_boomerang.h
+CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/ice.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/magnet.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/main.h

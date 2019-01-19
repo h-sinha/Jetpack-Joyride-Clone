@@ -84,6 +84,10 @@ main.h
 main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
 
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/ice.h
+main.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/input.cpp
 iostream
 -
@@ -143,6 +147,8 @@ bonuscoin.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/bonuscoin.h
 dragon.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/dragon.h
+ice.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/ice.h
 vector
 -
 set
