@@ -1,0 +1,3 @@
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/CMakeFiles/rebuild_cache.dir
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/CMakeFiles/graphics_asgn1.dir
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/CMakeFiles/edit_cache.dir

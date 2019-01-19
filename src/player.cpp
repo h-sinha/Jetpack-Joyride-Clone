@@ -10,6 +10,7 @@ Player::Player(float x, float y, color_t color) {
     this->scalex = 1.0;
     this->scaley = 1.0;
     this->scalez = 0.0;
+    this->color = color;
     speed = 0.02;
     // Our vertices. Three consecutive floats give a 3D vertex; Three consecutive vertices give a triangle.
     // A cube has 6 faces with 2 triangles each, so this makes 6*2=12 triangles, and 12*3 vertices

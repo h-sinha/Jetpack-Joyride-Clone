@@ -14,7 +14,7 @@
 #include <set>
 
 using namespace std;
-
+int co = 0;
 GLMatrices Matrices;
 GLuint     programID;
 GLFWwindow *window;
@@ -128,6 +128,7 @@ void draw() {
         if(detect_collision(xx, Fline))
             fireline.set_position(-100.0, -100.0);
     }
+    co++;
     player.draw(VP);
     if(detect_collision(Fbeam, PlayerBound))
         gameOver();

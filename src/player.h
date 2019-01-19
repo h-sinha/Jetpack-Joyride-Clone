@@ -15,6 +15,7 @@ public:
      float scalex;
     float scaley;
     float scalez;
+    color_t color;
     void draw(glm::mat4 VP);
     void set_position(float x, float y);
     void tick();

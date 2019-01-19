@@ -16,6 +16,7 @@ public:
     float scalez;
     float rotation;
     int flag;
+    float gravity;
     void draw(glm::mat4 VP);
     void set_position(float x, float y);
     void tick();

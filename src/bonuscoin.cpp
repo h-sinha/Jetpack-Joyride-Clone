@@ -18,7 +18,9 @@ BonusCoin::BonusCoin(float x, float y, color_t color) {
     this->flag = 0;
      int n=15, cur = 0;
      this->rotation = 0.1;
-     this->speed = 0.1;
+     this->speed = 0.05;
+     // this->speed = 1.0f;
+     this->gravity = -0.05/60.0;
     // GLfloat vertex_buffer_data[9*n];
     // GLfloat vertex_buffer_data1[9*n];
     // GLfloat vertex_buffer_data2[9*n];
@@ -104,28 +106,22 @@ void BonusCoin::set_position(float x, float y) {
 }
 
 void BonusCoin::tick() {
-  this->rotation += 0.1;
-    this->position.x += 0.005;
-    if(this->flag == 0)
-    this->position.y += 0.004;
-    else
-    this->position.y -= 0.004;
+  this->position.y += this->speed;
 
+  this->speed += this->gravity;
+  this->position.x += 0.01;
     if(this->position.y >= 3.6)
     {
-      this->flag = 1;
+      this->speed = 0;
     }
-    if(this->position.x < -3.0 || this->position.y <= 0.6)
+    if(this->position.y <= 0.5)
+      this->speed = 0.05;
+    if(this->position.x < -3.0 || this->position.x > 11.0)
     {
         this->position.x = 0.0;
         this->position.y = 0.6;
         this->flag = 0;
-    }
-    if(this->position.x > 11.0 || this->position.y <= 0.6)
-    {
-        this->position.x = 0.0 ;
-        this->position.y = 0.6;
-        this->flag = 0;
+        this->speed = 0.05;
     }
 }
 
