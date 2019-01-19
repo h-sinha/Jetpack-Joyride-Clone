@@ -55,37 +55,27 @@ Dragon::Dragon(float x, float y, color_t color) {
     //     vertex_buffer_data1[cur+8] = 0.0;
     //     cur += 9;
     //  } 
+     this->length = 0.4;
+     this->width = 0.4;
        static const GLfloat vertex_buffer_data[] = {
-        0.288f, 0.366f, 0.0f, 
-        0.097f, 0.056f, 0.0f, 
-        0.479f, 0.056f, 0.0f, 
+            0.2f, 0.4f, 0.0f,
+            0.25f, 0.3f, 0.0f,
+            0.0f, 0.2f, 0.0f,
      };
       static const GLfloat vertex_buffer_data1[] = {
-        0.268f, 0.104f, 0.0f, 
-        0.124f, 0.096f, 0.0f, 
-        0.226f, 0.142f, 0.0f, 
+        0.0f, 0.0f, 0.0f, 
+        0.2f, 0.4f, 0.0f, 
+        0.4f, 0.0f, 0.0f, 
      };
       static const GLfloat vertex_buffer_data2[] = {
-        0.268f, 0.104f, 0.0f, 
-        0.218f, 0.071f, 0.0f, 
-        0.171f, 0.094f, 0.0f, 
+        0.15f, 0.32f, 0.0f, 
+        0.2f, 0.32f, 0.0f, 
+        0.175f, 0.36f, 0.0f, 
      };
-     // static const GLfloat vertex_buffer_data3[] = {
-     //    -0.01f, -0.05f, 0.0f, 
-     //    -0.01f, -0.025f, 0.0f, 
-     //    0.05f, -0.05f, 0.0f, 
-     //    -0.01f, -0.025f, 0.0f, 
-     //    0.05f, -0.025f, 0.0f, 
-     //    0.05f, -0.05f, 0.0f, 
-     // };
-    this->tri1 = create3DObject(GL_TRIANGLES, 3, vertex_buffer_data, COLOR_YELLOW, GL_FILL);
-    this->mouth1 = create3DObject(GL_TRIANGLES, 3, vertex_buffer_data1, COLOR_RED, GL_FILL);
-    this->mouth2 = create3DObject(GL_TRIANGLES, 3, vertex_buffer_data2, COLOR_RED, GL_FILL);
-    // this->mouth2 = create3DObject(GL_TRIANGLES, 3, vertex_buffer_data2, COLOR_RED, GL_FILL);
-    // this->rect2 = create3DObject(GL_TRIANGLES, 3, vertex_buffer_data3, COLOR_RED, GL_FILL);
-    // Our vertices. Three consecutive floats give a 3D vertex; Three consecutive vertices give a triangle.
-    // A cube has 6 faces with 2 triangles each, so this makes 6*2=12 triangles, and 12*3 vertices
-    this->position = glm::vec3(3.0, 3.0, 0);
+    this->tri1 = create3DObject(GL_TRIANGLES, 3, vertex_buffer_data, COLOR_GREEN, GL_FILL);
+    this->mouth1 = create3DObject(GL_TRIANGLES, 3, vertex_buffer_data1, COLOR_GREEN, GL_FILL);
+    this->mouth2 = create3DObject(GL_TRIANGLES, 3, vertex_buffer_data2, COLOR_BLACK, GL_FILL);
+    this->position = glm::vec3(4.0, 0.4, 0);
 
     // this->line = create3DObject(GL_LINES, 2, vertex_buffer_data, COLOR_RED, GL_FILL);
 }
@@ -112,22 +102,22 @@ void Dragon::set_position(float x, float y) {
 }
 
 void Dragon::tick() {
-  // this->position.y += this->speed;
+  this->position.y += this->speed;
 
-  // this->speed += this->gravity;
-  // this->position.x += 0.01;
-  //   if(this->position.y >= 3.6)
-  //   {
-  //     this->speed = 0;
-  //   }
-  //   if(this->position.y <= 0.5)
-  //     this->speed = 0.05;
-  //   if(this->position.x < -3.0 || this->position.x > 11.0)
-  //   {
-  //       this->position.x = 0.0;
-  //       this->position.y = 0.6;
-  //       this->flag = 0;
-  //       this->speed = 0.05;
-  //   }
+  this->speed += this->gravity;
+  this->position.x -= 0.01;
+    if(this->position.y >= 3.6)
+    {
+      this->speed = 0;
+    }
+    if(this->position.y <= 0.4)
+      this->speed = 0.05;
+    if(this->position.x < -3.0 || this->position.x > 11.0)
+    {
+        this->position.x = 0.0;
+        this->position.y = 0.6;
+        this->flag = 0;
+        this->speed = 0.05;
+    }
 }
 
