@@ -10,6 +10,7 @@
 #include "enemy3_boomerang.h"
 #include "magnet.h"
 #include "bonuscoin.h"
+#include "dragon.h"
 #include <vector>
 #include <set>
 
@@ -31,6 +32,7 @@ Fireline fireline;
 Firebeam firebeam;
 Magnet magnet;
 BonusCoin bonuscoin;
+Dragon dragon;
 Boomerang boomerang;
 Player player;
 bounding_box_t PlayerBound;
@@ -39,7 +41,7 @@ float screen_zoom = 1, screen_center_x = 0, screen_center_y = 0;
 float camera_rotation_angle = 0;
 int ScreenWidth = 600, ScreenHeight = 600, score = 0;
 // std::vector<bool> done(30);
-time_t tmr;
+time_t tmr, btr;
 Timer t60(1.0 / 60.0);
 
 
@@ -128,7 +130,6 @@ void draw() {
         if(detect_collision(xx, Fline))
             fireline.set_position(-100.0, -100.0);
     }
-    co++;
     player.draw(VP);
     if(detect_collision(Fbeam, PlayerBound))
         gameOver();
@@ -146,6 +147,7 @@ void draw() {
     fireline.draw(VP);
     magnet.draw(VP);
     bonuscoin.draw(VP);
+    dragon.draw(VP);
     for (auto &x:BallPos)
     {
         x.draw(VP);
@@ -189,6 +191,9 @@ void zoom(){
     bonuscoin.scalex = ScaleFactor;
     bonuscoin.scalez = ScaleFactor;
     bonuscoin.scaley = ScaleFactor;
+    dragon.scalex = ScaleFactor;
+    dragon.scalez = ScaleFactor;
+    dragon.scaley = ScaleFactor;
 }
 void tick_elements() {
     for (auto &x:BrickPos)
@@ -213,6 +218,7 @@ void tick_elements() {
     fireline.tick();
     magnet.tick();
     bonuscoin.tick();
+    dragon.tick();
     firebeam.tick();
     boomerang.tick(player.position[0]);
 
@@ -242,6 +248,12 @@ void tick_input(GLFWwindow *window) {
         tmr = time(NULL);
         Ball ball = Ball(PlayerBound.x + PlayerBound.width, PlayerBound.y + PlayerBound.height, COLOR_BLACK);
         BallPos.push_back(ball);
+    }
+    if(abs(time(NULL) - btr) > 1 && bonuscoin.position.x <= 3.6 && bonuscoin.position.x >=0.0)
+    {
+        btr = time(NULL);
+        Coin coin = Coin(bonuscoin.position.x, bonuscoin.position.y, COLOR_HOT_PINK,1);
+        CoinPos.push_back(coin);
     }
     if(GameSpeed > 0.01 && !right && !left)GameSpeed -= 0.001;
     if(GameSpeed < 0.01 && !right && !left)GameSpeed += 0.001;
@@ -315,6 +327,7 @@ void initGL(GLFWwindow *window, int width, int height) {
      fireline = Fireline(0.0, 0.0, COLOR_BACKGROUND);
      magnet = Magnet(0.0, 0.0, COLOR_BACKGROUND);
      bonuscoin = BonusCoin(0.0, 0.0, COLOR_BACKGROUND);
+     dragon = Dragon(0.0, 0.0, COLOR_BACKGROUND);
      firebeam = Firebeam(0.0, 0.0, COLOR_BACKGROUND);
      boomerang = Boomerang(0.0, 0.0, COLOR_BACKGROUND);
     // Create and compile our GLSL program from the shaders

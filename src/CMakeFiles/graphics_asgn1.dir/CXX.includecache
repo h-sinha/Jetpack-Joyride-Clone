@@ -50,6 +50,10 @@ main.h
 main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
 
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/dragon.h
+main.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy1_firelines.cpp
 enemy1_firelines.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy1_firelines.h
@@ -137,6 +141,8 @@ magnet.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/magnet.h
 bonuscoin.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/bonuscoin.h
+dragon.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/dragon.h
 vector
 -
 set

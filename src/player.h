@@ -29,8 +29,8 @@ private:
     VAO *blackeye1;
     VAO *blackeye2;
     VAO *nose;
-    VAO *hand1;
-    VAO *hand2;
+    VAO *jet1;
+    VAO *jet2;
 };
 
 #endif // PLAYER_H

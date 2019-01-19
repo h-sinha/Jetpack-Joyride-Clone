@@ -43,6 +43,7 @@ CMakeFiles/graphics_asgn1.dir/main.cpp.o: ball.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: bonuscoin.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: bricks.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: coin.h
+CMakeFiles/graphics_asgn1.dir/main.cpp.o: dragon.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: enemy1_firelines.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: enemy2_firebeam.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: enemy3_boomerang.h

@@ -49,26 +49,70 @@ Player::Player(float x, float y, color_t color) {
        0.35f, 0.2f, 0.0f,
        0.25f, 0.3f, 0.0f,
      };
+     static const GLfloat vertex_buffer_nose[] = {
+        0.24f, 0.2f, 0.0f,
+        0.2f, 0.08f, 0.0f,
+        0.16f, 0.2f, 0.0f,
+     };
+     static const GLfloat vertex_buffer_blackeye1[] = {
+       0.063f, 0.23f, 0.0f,
+       0.063f, 0.27f, 0.0f,
+       0.13f, 0.23f, 0.0f,
+       0.13f, 0.27f, 0.0f,
+       0.13f, 0.23f, 0.0f,
+       0.063f, 0.27f, 0.0f,
+     };
+      static const GLfloat vertex_buffer_blackeye2[] = {
+       0.263f, 0.23f, 0.0f,
+       0.263f, 0.27f, 0.0f,
+       0.33f, 0.23f, 0.0f,
+       0.33f, 0.27f, 0.0f,
+       0.33f, 0.23f, 0.0f,
+       0.263f, 0.27f, 0.0f,
+     };
+      static const GLfloat vertex_buffer_jet1[] = {
+       0.03f, 0.0f, 0.0f,
+       0.15f, 0.0f, 0.0f,
+       0.09f, -0.1f, 0.0f,
+     };
+      static const GLfloat vertex_buffer_jet2[] = {
+       0.37f, 0.0f, 0.0f,
+       0.25f, 0.0f, 0.0f,
+       0.31f, -0.1f, 0.0f,
+     };
     this->blackring = create3DObject(GL_TRIANGLES, 2*3, vertex_buffer_blackring, COLOR_BLACK, GL_FILL);
     this->whitering = create3DObject(GL_TRIANGLES, 2*3, vertex_buffer_whitering, COLOR_WHITE, GL_FILL);
     this->whiteeye1 = create3DObject(GL_TRIANGLES, 2*3, vertex_buffer_whiteeye1, COLOR_WHITE, GL_FILL);
     this->whiteeye2 = create3DObject(GL_TRIANGLES, 2*3, vertex_buffer_whiteeye2, COLOR_WHITE, GL_FILL);
+    this->nose = create3DObject(GL_TRIANGLES, 3, vertex_buffer_nose, COLOR_RED, GL_FILL);
+    this->blackeye1 = create3DObject(GL_TRIANGLES, 2*3, vertex_buffer_blackeye1, COLOR_BLACK, GL_FILL);
+    this->blackeye2 = create3DObject(GL_TRIANGLES, 2*3, vertex_buffer_blackeye2, COLOR_BLACK, GL_FILL);
+    this->jet1 = create3DObject(GL_TRIANGLES, 3, vertex_buffer_jet1, COLOR_RED, GL_FILL);
+    this->jet2 = create3DObject(GL_TRIANGLES, 3, vertex_buffer_jet2, COLOR_RED, GL_FILL);
 }
 
 void Player::draw(glm::mat4 VP) {
     Matrices.model = glm::mat4(1.0f);
     glm::mat4 translate = glm::translate (this->position);    // glTranslatef
-    glm::mat4 rotate    = glm::scale(glm::vec3(this->scalex, this->scaley, this->scalez));
+    glm::mat4 scale = glm::scale(glm::vec3(this->scalex, this->scaley, this->scalez));
     // No need as coords centered at 0, 0, 0 of cube arouund which we waant to rotate
     // rotate          = rotate * glm::translate(glm::vec3(0, -0.6, 0));
-    Matrices.model *= (translate * rotate);
+    Matrices.model *= (translate * scale);
     glm::mat4 MVP = VP * Matrices.model;
-     // printf("hola\n");
     glUniformMatrix4fv(Matrices.MatrixID, 1, GL_FALSE, &MVP[0][0]);
     draw3DObject(this->blackring);
     draw3DObject(this->whitering);
     draw3DObject(this->whiteeye1);
     draw3DObject(this->whiteeye2);
+    draw3DObject(this->blackeye1);
+    draw3DObject(this->blackeye2);
+    draw3DObject(this->nose);
+    if(this->position.y>0.4)
+    {
+      printf("%lf\n",this->position.y );
+      draw3DObject(this->jet1);
+      draw3DObject(this->jet2);
+    }
 }
 
 void Player::set_position(float x, float y) {
@@ -76,7 +120,7 @@ void Player::set_position(float x, float y) {
 }
 
 void Player::tick() {
-    // this->rotation += speed;
+    this->rotation += 0.01;
     // this->position.x -= speed;
     // this->position.y -= speed;
     // this->set_position(this->position.x, this->position.y);

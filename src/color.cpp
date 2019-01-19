@@ -15,6 +15,6 @@ const color_t COLOR_GREEN = { 0, 255, 0 };
 const color_t COLOR_GAINS_BORO = { 220, 220, 220 };
 const color_t COLOR_FIRE_BRICK = { 178, 34, 34 };
 const color_t COLOR_LIGHT_SLATE_GREY = { 47, 79, 79 };
-
+const color_t COLOR_HOT_PINK = { 255, 105, 180 };
 float GameSpeed = 0.01;
 float ScaleFactor = 1.0;

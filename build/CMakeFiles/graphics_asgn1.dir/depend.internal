@@ -20,6 +20,10 @@ CMakeFiles/graphics_asgn1.dir/src/coin.cpp.o
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.o
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/color.cpp
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+CMakeFiles/graphics_asgn1.dir/src/dragon.cpp.o
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/dragon.cpp
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/dragon.h
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
 CMakeFiles/graphics_asgn1.dir/src/enemy1_firelines.cpp.o
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy1_firelines.cpp
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy1_firelines.h
@@ -44,6 +48,7 @@ CMakeFiles/graphics_asgn1.dir/src/main.cpp.o
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/bonuscoin.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/bricks.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/coin.h
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/dragon.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy1_firelines.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy2_firebeam.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy3_boomerang.h

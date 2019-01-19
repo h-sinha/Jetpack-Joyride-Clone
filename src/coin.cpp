@@ -2,7 +2,7 @@
 #include "main.h"
 const double PI = 3.141592653589793238460;
 float cur=0;
-Coin::Coin(float x, float y, color_t color) {
+Coin::Coin(float x, float y, color_t color, int flag) {
     this->rotation = 0;
     this->length = 0.2;
     this->width = 0.2;
@@ -17,8 +17,11 @@ Coin::Coin(float x, float y, color_t color) {
     // x = 0.9;
     // y = 0.3 + cur;
     // cur+=0.3;
-    x = 0.0 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(6.0)));
-    y = 0.6 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(5)));
+    if(flag == 0)
+    {
+        x = 0.0 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(6.0)));
+        y = 0.6 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(5)));
+    }
     this->position = glm::vec3(x, y  , 0);
     
     int cur = 0;
