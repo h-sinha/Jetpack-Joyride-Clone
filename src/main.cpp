@@ -32,6 +32,8 @@ std::vector<Brick> BrickPos;
 std::vector<Ball> BallPos;
 std::vector<Ice> IcePos;
 std::vector<Coin> CoinPos;
+std::vector<Score> ScorePos;
+string ScoreBoard = "SCORE-";
 Fireline fireline;
 Firebeam firebeam;
 Magnet magnet;
@@ -47,7 +49,6 @@ int ScreenWidth = 800, ScreenHeight = 800, score = 0;
 // std::vector<bool> done(30);
 time_t tmr, btr,ict;
 Timer t60(1.0 / 60.0);
-
 
 /* Render the scene with openGL */
 /* Edit this function according to your assignment */
@@ -178,11 +179,42 @@ void draw() {
     {
         x.draw(VP);
     }
-    // int aux_score = score;
-    // if(aux_score >= 100)
-    // {
+    string digit;
+    int aux_score = score;
+    for (int i = 0; i < int(ScorePos.size()); ++i)
+    {
+        if(i < 42)
+        {
+            if(i%7 == 0)digit = sevenSegment(ScoreBoard[i/7]);
+            if(digit[i%7] == '1')
+            {
+                ScorePos[i].draw(VP);
+            }
+        }
+        else
+        {
+            if(i == 42)
+            {
+                digit = sevenSegment(aux_score/100 + 48);
+                aux_score%=100;
+            }
+            else if(i == 49)
+            {
+                digit = sevenSegment(aux_score/10 + 48);
+                aux_score%=10;
+            }
+            else if(i == 56)
+            {
+                digit = sevenSegment(aux_score + 48);
+                aux_score = 0;
+            }
+            if(digit[(i-42)%7] == '1')
+            {
+                ScorePos[i].draw(VP);
+            }
+        }
+    }
 
-    // }
 }
 // zoom function 
 void zoom(){
@@ -383,7 +415,26 @@ void initGL(GLFWwindow *window, int width, int height) {
     // Get a handle for our "MVP" uniform
     Matrices.MatrixID = glGetUniformLocation(programID, "MVP");
 
-
+    float current = 0, diff = 0.02;
+    Score score;
+    for(int i =0 ;i<9;++i)
+    {   
+        score = Score(current + 2.0f, 3.8f - 2*diff - diff/2);
+        ScorePos.push_back(score);
+        score = Score(current + 2.0f + diff + diff/2, 3.8f - diff);
+        ScorePos.push_back(score);
+        score = Score(current + 2.0f + 3*diff, 3.8f - 2*diff  - diff/2);
+        ScorePos.push_back(score);
+        score = Score(current + 2.0f + 3*diff, 3.8f - 4*diff - 3*(diff/2));
+        ScorePos.push_back(score);
+        score = Score(current + 2.0f + diff + diff/2, 3.8f - 5*diff - 4*(diff/2) );
+        ScorePos.push_back(score);
+        score = Score(current + 2.0f, 3.8f - 4*diff - 3*(diff/2));
+        ScorePos.push_back(score);
+        score = Score(current + 2.0f + diff + diff/2, 3.8f - 3*diff - diff);
+        ScorePos.push_back(score);
+        current += 7*diff;
+    }
     reshapeWindow (window, width, height);
 
     // Background color of the scene

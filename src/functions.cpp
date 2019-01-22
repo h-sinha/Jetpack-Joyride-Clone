@@ -35,5 +35,7 @@ std::string sevenSegment(char s)
 			return "1111011";
 		case 'E':
 			return "1100111";
+		case '-':
+			return "0000001";
 	}
 }

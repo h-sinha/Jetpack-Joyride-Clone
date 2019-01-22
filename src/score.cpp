@@ -11,13 +11,13 @@ Score::Score(float x, float y) {
 
     static const GLfloat vertex_buffer_data[] = {
        0.0f, 0.0f, 0.0f,
-       0.01f, 0.0f, 0.0f,
-       0.0f, 0.01f, 0.0f,
-       0.01f, 0.01f, 0.0f,
-       0.0f, 0.01f, 0.0f,
-       0.01f, 0.0f, 0.0f,
+       0.04f, 0.0f, 0.0f,
+       0.0f, 0.04f, 0.0f,
+       0.04f, 0.04f, 0.0f,
+       0.0f, 0.04f, 0.0f,
+       0.04f, 0.0f, 0.0f,
      };
-    this->line = create3DObject(GL_TRIANGLES, 2*3, vertex_buffer_data, COLOR_BLACK, GL_FILL);
+    this->line = create3DObject(GL_TRIANGLES, 2*3, vertex_buffer_data, COLOR_RED, GL_FILL);
 }
 
 void Score::draw(glm::mat4 VP) {
