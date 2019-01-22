@@ -36,6 +36,10 @@ CMakeFiles/graphics_asgn1.dir/src/enemy3.boomerang.cpp.o
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy3.boomerang.cpp
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy3_boomerang.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+CMakeFiles/graphics_asgn1.dir/src/functions.cpp.o
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/functions.cpp
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/functions.h
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
 CMakeFiles/graphics_asgn1.dir/src/ice.cpp.o
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/ice.cpp
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/ice.h
@@ -56,11 +60,13 @@ CMakeFiles/graphics_asgn1.dir/src/main.cpp.o
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy1_firelines.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy2_firebeam.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy3_boomerang.h
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/functions.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/ice.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/magnet.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.cpp
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/player.h
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/score.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/timer.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/wall.h
 CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o
@@ -73,6 +79,10 @@ CMakeFiles/graphics_asgn1.dir/src/player.cpp.o
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/player.cpp
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/player.h
+CMakeFiles/graphics_asgn1.dir/src/score.cpp.o
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/score.cpp
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/score.h
 CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/timer.cpp
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/timer.h

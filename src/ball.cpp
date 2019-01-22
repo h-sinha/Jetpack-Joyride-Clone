@@ -11,7 +11,7 @@ Ball::Ball(float x, float y, color_t color) {
     this->scalex = 1.0;
     this->scaley = 1.0;
     this->scalez = 1.0;
-    speed = GameSpeed;
+    this->speed = GameSpeed;
     int cur = 0, n = 15;
     GLfloat vertex_buffer_data[9*15];
     // Our vertices. Three consecutive floats give a 3D vertex; Three consecutive vertices give a triangle.
@@ -52,8 +52,8 @@ void Ball::tick() {
     this->position.x -= GameSpeed;
     // this->rotation += speed;
     this->position.x += 0.03;
-    this->position.y += speed;
-    speed -= 0.0005;
+    this->position.y += this->speed;
+   this->speed -= 0.0005;
     // this->set_position(this->position.x, this->position.y);
     // printf("%f %f\n",speed, this->position.x );
 }

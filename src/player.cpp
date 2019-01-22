@@ -109,7 +109,6 @@ void Player::draw(glm::mat4 VP) {
     draw3DObject(this->nose);
     if(this->position.y>0.4)
     {
-      printf("%lf\n",this->position.y );
       draw3DObject(this->jet1);
       draw3DObject(this->jet2);
     }

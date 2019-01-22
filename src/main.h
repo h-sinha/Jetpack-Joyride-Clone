@@ -1,6 +1,5 @@
 #ifndef MAIN_H
 #define MAIN_H
-
 #include <iostream>
 #include <cmath>
 #include <fstream>
@@ -40,6 +39,7 @@ void scroll_callback(GLFWwindow *window, double xoffset, double yoffset);
 void error_callback(int error, const char *description);
 void quit(GLFWwindow *window);
 void reshapeWindow(GLFWwindow *window, int width, int height);
+void fillArray(GLfloat vertex_buffer_data, int n);
 
 // Types
 struct VAO {

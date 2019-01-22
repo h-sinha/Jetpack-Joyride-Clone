@@ -36,6 +36,10 @@ CMakeFiles/graphics_asgn1.dir/src/enemy3.boomerang.cpp.o: ../src/enemy3.boomeran
 CMakeFiles/graphics_asgn1.dir/src/enemy3.boomerang.cpp.o: ../src/enemy3_boomerang.h
 CMakeFiles/graphics_asgn1.dir/src/enemy3.boomerang.cpp.o: ../src/main.h
 
+CMakeFiles/graphics_asgn1.dir/src/functions.cpp.o: ../src/functions.cpp
+CMakeFiles/graphics_asgn1.dir/src/functions.cpp.o: ../src/functions.h
+CMakeFiles/graphics_asgn1.dir/src/functions.cpp.o: ../src/main.h
+
 CMakeFiles/graphics_asgn1.dir/src/ice.cpp.o: ../src/ice.cpp
 CMakeFiles/graphics_asgn1.dir/src/ice.cpp.o: ../src/ice.h
 CMakeFiles/graphics_asgn1.dir/src/ice.cpp.o: ../src/main.h
@@ -55,11 +59,13 @@ CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/dragon.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/enemy1_firelines.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/enemy2_firebeam.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/enemy3_boomerang.h
+CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/functions.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/ice.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/magnet.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/player.h
+CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/score.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/timer.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/wall.h
 
@@ -72,6 +78,10 @@ CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o: ../src/other_handlers.cp
 CMakeFiles/graphics_asgn1.dir/src/player.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/player.cpp.o: ../src/player.cpp
 CMakeFiles/graphics_asgn1.dir/src/player.cpp.o: ../src/player.h
+
+CMakeFiles/graphics_asgn1.dir/src/score.cpp.o: ../src/main.h
+CMakeFiles/graphics_asgn1.dir/src/score.cpp.o: ../src/score.cpp
+CMakeFiles/graphics_asgn1.dir/src/score.cpp.o: ../src/score.h
 
 CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o: ../src/timer.cpp
 CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o: ../src/timer.h

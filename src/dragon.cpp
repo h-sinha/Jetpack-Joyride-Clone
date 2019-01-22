@@ -105,7 +105,7 @@ void Dragon::tick() {
   this->position.y += this->speed;
 
   this->speed += this->gravity;
-  this->position.x -= GameSpeed;
+  this->position.x -= 0.01;
     if(this->position.y >= 3.6)
     {
       this->speed = 0;

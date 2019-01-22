@@ -90,6 +90,16 @@ main.h
 main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
 
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/functions.cpp
+functions.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/functions.h
+main.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/functions.h
+main.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/ice.cpp
 ice.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/ice.h
@@ -161,6 +171,10 @@ dragon.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/dragon.h
 ice.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/ice.h
+score.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/score.h
+functions.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/functions.h
 vector
 -
 set
@@ -237,6 +251,16 @@ main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
 
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/player.h
+main.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/score.cpp
+score.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/score.h
+main.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/score.h
 main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
 

@@ -22,7 +22,7 @@ Coin::Coin(float x, float y, color_t color, int flag) {
         x = 0.0 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(6.0)));
         y = 0.6 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(5)));
     }
-    this->position = glm::vec3(x, y  , 0);
+    this->position = glm::vec3(x, y  , -10.0);
     
     int cur = 0;
     for (int i = 1; i <= n; ++i)

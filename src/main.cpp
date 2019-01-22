@@ -12,6 +12,8 @@
 #include "bonuscoin.h"
 #include "dragon.h"
 #include "ice.h"
+#include "score.h"
+#include "functions.h"
 #include <vector>
 #include <set>
 
@@ -41,7 +43,7 @@ bounding_box_t PlayerBound;
 
 float screen_zoom = 1, screen_center_x = 0, screen_center_y = 0;
 float camera_rotation_angle = 0;
-int ScreenWidth = 600, ScreenHeight = 600, score = 0;
+int ScreenWidth = 800, ScreenHeight = 800, score = 0;
 // std::vector<bool> done(30);
 time_t tmr, btr,ict;
 Timer t60(1.0 / 60.0);
@@ -133,7 +135,7 @@ void draw() {
         if(detect_collision(xx, Fline))
             fireline.set_position(-100.0, -100.0);
     }
-     for (int i = int(BallPos.size()) - 1; i >= 0 ; --i)
+     for (int i = int(IcePos.size()) - 1; i >= 0 ; --i)
     {
         if(IcePos[i].position.y <= 0.3)
         {
@@ -147,13 +149,13 @@ void draw() {
     player.draw(VP);
     if(detect_collision(Fbeam, PlayerBound))
         gameOver();
-    if(detect_collision(Fbeam, Mag))
-        magnet.position = glm::vec3 (-100.0,-100.0,0.0);
+    // if(detect_collision(Fbeam, Mag))
+        // magnet.position = glm::vec3 (-100.0,-100.0,0.0);
 
     if(detect_collision(Fline, PlayerBound))
         gameOver();
-     if(detect_collision(Fline, Mag))
-        magnet.position = glm::vec3 (-100.0,-100.0,0.0);
+     // if(detect_collision(Fline, Mag))
+        // magnet.position = glm::vec3 (-100.0,-100.0,0.0);
     if(detect_collision(Boom, PlayerBound))
         gameOver();
      if(detect_collision(Drag, PlayerBound))
@@ -176,6 +178,11 @@ void draw() {
     {
         x.draw(VP);
     }
+    // int aux_score = score;
+    // if(aux_score >= 100)
+    // {
+
+    // }
 }
 // zoom function 
 void zoom(){
@@ -276,6 +283,8 @@ void tick_input(GLFWwindow *window) {
     if(right){
         if(GameSpeed < 0.2)
         GameSpeed+=0.001;
+        dragon.position.x -= GameSpeed;
+        dragon.position.x += 0.001;
     }
     if(left){
         if(GameSpeed > -0.2){
