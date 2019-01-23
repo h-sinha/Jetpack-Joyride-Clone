@@ -2,22 +2,21 @@
 #include "main.h"
 const double PI = 3.141592653589793238460;
 
-Score::Score(float x, float y) {
+Score::Score(float x, float y, float xx, float yy) {
     this->position = glm::vec3(x, y, 0);
     // this->color = color;
     // Our vertices. Three consecutive floats give a 3D vertex; Three consecutive vertices give a triangle.
     // A cube has 6 faces with 2 triangles each, so this makes 6*2=12 triangles, and 12*3 vertices
-    this->position = glm::vec3(x, y , 0);
-
-    static const GLfloat vertex_buffer_data[] = {
+    // printf("%lf %lf\n",xx, yy );
+    GLfloat vertex_buffer_data[] = {
        0.0f, 0.0f, 0.0f,
-       0.04f, 0.0f, 0.0f,
-       0.0f, 0.04f, 0.0f,
-       0.04f, 0.04f, 0.0f,
-       0.0f, 0.04f, 0.0f,
-       0.04f, 0.0f, 0.0f,
+       xx, 0.0f, 0.0f,
+       0.0f, yy, 0.0f,
+       xx, yy, 0.0f,
+       0.0f, yy, 0.0f,
+       xx, 0.0f, 0.0f,
      };
-    this->line = create3DObject(GL_TRIANGLES, 2*3, vertex_buffer_data, COLOR_RED, GL_FILL);
+    this->line = create3DObject(GL_TRIANGLES, 2*3, vertex_buffer_data, COLOR_BLACK, GL_FILL);
 }
 
 void Score::draw(glm::mat4 VP) {

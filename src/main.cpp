@@ -339,26 +339,26 @@ void tick_input(GLFWwindow *window) {
     if(GameSpeed < 0.01 && !right && !left)GameSpeed += 0.001;
    
 
-    if(magnet.position.y > player.position.y + 0.2  && magnet.position.x >= 0.0 && magnet.position.x <= 3.6)
-    {
-        player.move(1);
-        player.move(1);
-    }
-    if(magnet.position.y < player.position.y + 0.2 && magnet.position.x >= 0.0 && magnet.position.x <= 3.6)player.move(-1);
-    if(magnet.position.x + 0.1 < player.position.x && magnet.position.x >= 0.0 && magnet.position.x <= 3.6)
-    {
-        if(!right)
-        GameSpeed = -0.02;
-        tick_elements();
-        GameSpeed = 0.01;
-    }
-    if(magnet.position.x - 0.1 >= player.position.x + 0.4 && magnet.position.x >= 0.0 && magnet.position.x <= 3.6)
-    {
-        if(!right)
-        GameSpeed = 0.02;
-        tick_elements();
-        GameSpeed = 0.01;
-    }
+    // if(magnet.position.y > player.position.y + 0.2  && magnet.position.x >= 0.0 && magnet.position.x <= 3.6)
+    // {
+    //     player.move(1);
+    //     player.move(1);
+    // }
+    // if(magnet.position.y < player.position.y + 0.2 && magnet.position.x >= 0.0 && magnet.position.x <= 3.6)player.move(-1);
+    // if(magnet.position.x + 0.1 < player.position.x && magnet.position.x >= 0.0 && magnet.position.x <= 3.6)
+    // {
+    //     if(!right)
+    //     GameSpeed = -0.02;
+    //     tick_elements();
+    //     GameSpeed = 0.01;
+    // }
+    // if(magnet.position.x - 0.1 >= player.position.x + 0.4 && magnet.position.x >= 0.0 && magnet.position.x <= 3.6)
+    // {
+    //     if(!right)
+    //     GameSpeed = 0.02;
+    //     tick_elements();
+    //     GameSpeed = 0.01;
+    // }
      if(!up)
     player.move(-1);
 }
@@ -415,25 +415,25 @@ void initGL(GLFWwindow *window, int width, int height) {
     // Get a handle for our "MVP" uniform
     Matrices.MatrixID = glGetUniformLocation(programID, "MVP");
 
-    float current = 0, diff = 0.02;
+    float current = 2.75, diff = 0.02, xx = 0.02, yy = 0.08;
     Score score;
     for(int i =0 ;i<9;++i)
     {   
-        score = Score(current + 2.0f, 3.8f - 2*diff - diff/2);
+        score = Score(current, 3.94f - xx - yy - diff, xx, yy);
         ScorePos.push_back(score);
-        score = Score(current + 2.0f + diff + diff/2, 3.8f - diff);
+        score = Score(current + diff, 3.94f - xx, yy, xx);
         ScorePos.push_back(score);
-        score = Score(current + 2.0f + 3*diff, 3.8f - 2*diff  - diff/2);
+        score = Score(current + xx + yy , 3.94f - xx - yy - diff, xx, yy);
         ScorePos.push_back(score);
-        score = Score(current + 2.0f + 3*diff, 3.8f - 4*diff - 3*(diff/2));
+        score = Score(current + xx + yy, 3.94f - xx - 2*yy - 2*diff, xx, yy);
         ScorePos.push_back(score);
-        score = Score(current + 2.0f + diff + diff/2, 3.8f - 5*diff - 4*(diff/2) );
+        score = Score(current+ diff, 3.94f - 2*yy - xx -3*diff, yy, xx);
         ScorePos.push_back(score);
-        score = Score(current + 2.0f, 3.8f - 4*diff - 3*(diff/2));
+        score = Score(current, 3.94f - xx - 2*yy - 2*diff, xx, yy);
         ScorePos.push_back(score);
-        score = Score(current + 2.0f + diff + diff/2, 3.8f - 3*diff - diff);
+        score = Score(current + diff, 3.94f - xx - yy - 2*diff, yy, xx);
         ScorePos.push_back(score);
-        current += 7*diff;
+        current += (2*xx + yy + diff);
     }
     reshapeWindow (window, width, height);
 

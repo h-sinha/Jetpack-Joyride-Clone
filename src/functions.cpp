@@ -32,7 +32,7 @@ std::string sevenSegment(char s)
 		case 'O':
 			return "1111110";
 		case 'R':
-			return "1111011";
+			return "1100010";
 		case 'E':
 			return "1100111";
 		case '-':
