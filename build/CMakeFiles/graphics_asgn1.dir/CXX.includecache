@@ -165,6 +165,8 @@ enemy3_boomerang.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy3_boomerang.h
 magnet.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/magnet.h
+speedup.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/speedup.h
 bonuscoin.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/bonuscoin.h
 dragon.h
@@ -261,6 +263,16 @@ main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
 
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/score.h
+main.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/speedup.cpp
+speedup.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/speedup.h
+main.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/speedup.h
 main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
 

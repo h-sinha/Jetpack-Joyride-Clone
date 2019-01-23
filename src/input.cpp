@@ -87,12 +87,12 @@ void scroll_callback(GLFWwindow *window, double xoffset, double yoffset) {
     // Do something
     if(yoffset > 0)
     {
-        if(ScaleFactor < 1.03)
+        if(ScaleFactor < 1.1)
         ScaleFactor += 0.01;
     }
     else if(yoffset<0)
     {
-        if(ScaleFactor > 0.97)
+        if(ScaleFactor > 0.9)
         ScaleFactor -= 0.01;
     }
     else

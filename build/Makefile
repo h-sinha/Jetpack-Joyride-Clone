@@ -609,6 +609,33 @@ src/score.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/score.cpp.s
 .PHONY : src/score.cpp.s
 
+src/speedup.o: src/speedup.cpp.o
+
+.PHONY : src/speedup.o
+
+# target to build an object file
+src/speedup.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/speedup.cpp.o
+.PHONY : src/speedup.cpp.o
+
+src/speedup.i: src/speedup.cpp.i
+
+.PHONY : src/speedup.i
+
+# target to preprocess a source file
+src/speedup.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/speedup.cpp.i
+.PHONY : src/speedup.cpp.i
+
+src/speedup.s: src/speedup.cpp.s
+
+.PHONY : src/speedup.s
+
+# target to generate assembly for a file
+src/speedup.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/speedup.cpp.s
+.PHONY : src/speedup.cpp.s
+
 src/timer.o: src/timer.cpp.o
 
 .PHONY : src/timer.o
@@ -726,6 +753,9 @@ help:
 	@echo "... src/score.o"
 	@echo "... src/score.i"
 	@echo "... src/score.s"
+	@echo "... src/speedup.o"
+	@echo "... src/speedup.i"
+	@echo "... src/speedup.s"
 	@echo "... src/timer.o"
 	@echo "... src/timer.i"
 	@echo "... src/timer.s"

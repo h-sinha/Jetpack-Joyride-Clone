@@ -94,6 +94,7 @@ extern const color_t COLOR_MIDNIGHT_BLUE;
 extern const color_t COLOR_GAINS_BORO;
 extern const color_t COLOR_HOT_PINK;
 extern const color_t COLOR_LIGHT_SLATE_GREY;
+extern const color_t COLOR_NEON_GREEN;
 extern const color_t COLOR_test;
 extern float GameSpeed;
 extern float ScaleFactor;

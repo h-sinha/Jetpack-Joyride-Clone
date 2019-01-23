@@ -9,6 +9,7 @@
 #include "enemy2_firebeam.h"
 #include "enemy3_boomerang.h"
 #include "magnet.h"
+#include "speedup.h"
 #include "bonuscoin.h"
 #include "dragon.h"
 #include "ice.h"
@@ -37,6 +38,7 @@ string ScoreBoard = "SCORE-";
 Fireline fireline;
 Firebeam firebeam;
 Magnet magnet;
+Speed speedup;
 BonusCoin bonuscoin;
 Dragon dragon;
 Boomerang boomerang;
@@ -45,9 +47,9 @@ bounding_box_t PlayerBound;
 
 float screen_zoom = 1, screen_center_x = 0, screen_center_y = 0;
 float camera_rotation_angle = 0;
-int ScreenWidth = 800, ScreenHeight = 800, score = 0;
+int ScreenWidth = 800, ScreenHeight = 800, score = 0, speeding = 0;
 // std::vector<bool> done(30);
-time_t tmr, btr,ict;
+time_t tmr, btr,ict, speedtime;
 Timer t60(1.0 / 60.0);
 
 /* Render the scene with openGL */
@@ -117,12 +119,13 @@ void draw() {
             CoinPos.erase(CoinPos.begin() + i);
         }
     }   
-    bounding_box_t Fbeam, Fline, Boom, Mag, Drag, xx;
+    bounding_box_t Fbeam, Fline, Boom, Mag, Drag, xx, SpeedUp;
     Fbeam = {firebeam.position[0], firebeam.position[1], firebeam.width, firebeam.length};
     Fline = {fireline.position[0], fireline.position[1], fireline.width, fireline.length};
     Boom = {boomerang.position[0], boomerang.position[1], boomerang.width, boomerang.length};
     Mag = {magnet.position[0] + 0.05f, magnet.position[1], magnet.width, magnet.length};
     Drag = {dragon.position.x , dragon.position.y, dragon.width, dragon.length};
+    SpeedUp = {speedup.position.x , speedup.position.y, speedup.width, speedup.length};
     for (int i = int(BallPos.size()) - 1; i >= 0 ; --i)
     {
         if(BallPos[i].position.y <= 0.3)
@@ -150,6 +153,17 @@ void draw() {
     player.draw(VP);
     if(detect_collision(Fbeam, PlayerBound))
         gameOver();
+    if(detect_collision(SpeedUp, PlayerBound))
+    {
+        speedtime = time(NULL);
+        GameSpeed += 0.01;
+        speeding = 1;
+    }
+    if(time(NULL) - speedtime > 3.0 && speeding)
+    {
+        speeding = 0;
+        GameSpeed = 0.01;
+    }
     // if(detect_collision(Fbeam, Mag))
         // magnet.position = glm::vec3 (-100.0,-100.0,0.0);
 
@@ -165,6 +179,7 @@ void draw() {
     boomerang.draw(VP);
     fireline.draw(VP);
     magnet.draw(VP);
+    speedup.draw(VP);
     bonuscoin.draw(VP);
     dragon.draw(VP);
     for (auto &x:BallPos)
@@ -251,6 +266,9 @@ void zoom(){
     magnet.scalex = ScaleFactor;
     magnet.scalez = ScaleFactor;
     magnet.scaley = ScaleFactor;
+    speedup.scalex = ScaleFactor;
+    speedup.scalez = ScaleFactor;
+    speedup.scaley = ScaleFactor;
      firebeam.scalex = ScaleFactor;
     firebeam.scalez = ScaleFactor;
     firebeam.scaley = ScaleFactor;
@@ -290,6 +308,7 @@ void tick_elements() {
     PlayerBound.width = player.width;
     fireline.tick();
     magnet.tick();
+    speedup.tick();
     bonuscoin.tick();
     dragon.tick();
     firebeam.tick();
@@ -406,6 +425,7 @@ void initGL(GLFWwindow *window, int width, int height) {
      player = Player(1.8,0.4,COLOR_BROWN);
      fireline = Fireline(0.0, 0.0, COLOR_BACKGROUND);
      magnet = Magnet(0.0, 0.0, COLOR_BACKGROUND);
+     speedup = Speed(0.0, 0.0);
      bonuscoin = BonusCoin(0.0, 0.0, COLOR_BACKGROUND);
      dragon = Dragon(0.0, 0.0, COLOR_BACKGROUND);
      firebeam = Firebeam(0.0, 0.0, COLOR_BACKGROUND);
