@@ -11,7 +11,7 @@ Firebeam::Firebeam(float x, float y, color_t color) {
     this->scaley = 1.0;
     this->scalez = 1.0;
     this->length = 0.2; 
-    this->width = 1.5;
+    this->width = 1.6;
      int n=15, cur = 0;
     GLfloat vertex_buffer_data[9*n];
     GLfloat vertex_buffer_data1[9*n];
@@ -87,7 +87,7 @@ Firebeam::Firebeam(float x, float y, color_t color) {
     // Our vertices. Three consecutive floats give a 3D vertex; Three consecutive vertices give a triangle.
     // A cube has 6 faces with 2 triangles each, so this makes 6*2=12 triangles, and 12*3 vertices
      // this->position = glm::vec3(6.0, 0.58, 0);
-     this->position = glm::vec3(3.0, 3.0, 0);
+     this->position = glm::vec3(6.0, 6.0, 0);
     this->rotation = 0;
 
     // this->line = create3DObject(GL_LINES, 2, vertex_buffer_data, COLOR_RED, GL_FILL);
@@ -136,19 +136,19 @@ void Firebeam::tick() {
         this->position.y += speed;
     }
     
-    if(this->position.x < -5.0)
+    if(this->position.x < -6.0)
     {
         float xx, yy;
         xx = 0.2 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
          yy = 1.5 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
-        this->position.x =  5.0 - xx, this->position.y = yy;
+        this->position.x =  6.0 - xx, this->position.y = yy;
     }
-     if(this->position.x > 5.0)
+     if(this->position.x > 6.0)
     {
         float xx, yy;
         xx = 0.2 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
          yy = 1.5 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
-        this->position.x = xx - 5.0, this->position.y = yy;
+        this->position.x = xx - 6.0, this->position.y = yy;
     }
 }
 

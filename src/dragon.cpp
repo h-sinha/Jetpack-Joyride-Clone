@@ -75,7 +75,7 @@ Dragon::Dragon(float x, float y, color_t color) {
     this->tri1 = create3DObject(GL_TRIANGLES, 3, vertex_buffer_data, COLOR_GREEN, GL_FILL);
     this->mouth1 = create3DObject(GL_TRIANGLES, 3, vertex_buffer_data1, COLOR_GREEN, GL_FILL);
     this->mouth2 = create3DObject(GL_TRIANGLES, 3, vertex_buffer_data2, COLOR_BLACK, GL_FILL);
-    this->position = glm::vec3(4.0, 0.4, 0);
+    this->position = glm::vec3(8.0, 0.4, 0);
 
     // this->line = create3DObject(GL_LINES, 2, vertex_buffer_data, COLOR_RED, GL_FILL);
 }
@@ -112,7 +112,7 @@ void Dragon::tick() {
     }
     if(this->position.y <= 0.4)
       this->speed = 0.05;
-    if(this->position.x < -15.0 || this->position.x > 15.0)
+    if(this->position.x < -20.0 || this->position.x > 20.0)
     {
         this->position.x = 4.0;
         this->position.y = 0.4;

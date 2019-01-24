@@ -60,6 +60,8 @@ void gameOver()
     cout<<"YOUR SCORE : "<<score<<endl;
     cout<<"-----------------********-------------------------\n";
     // quit(window);
+    score -= 1;
+    if(score < 0)score = 0;
 
 }
 void draw() {
@@ -167,8 +169,17 @@ void draw() {
     // if(detect_collision(Fbeam, Mag))
         // magnet.position = glm::vec3 (-100.0,-100.0,0.0);
 
-    if(detect_collision(Fline, PlayerBound))
-        gameOver();
+    for (int i = 0; i < 6; ++i)
+    {
+        for (int j = 0; j < 4; ++j)
+        {
+            printf("fire %lf %lf %lf %lf\n",fireline.line[i][0], fireline.line[i][1], fireline.line[i][2], fireline.line[i][3]);
+            printf("player %lf %lf %lf %lf\n",player.line[j][0], player.line[j][1], player.line[j][2], player.line[j][3]);
+            if(check_intersection(fireline.line[i], player.line[j]))
+                gameOver();
+        }
+
+    }
      // if(detect_collision(Fline, Mag))
         // magnet.position = glm::vec3 (-100.0,-100.0,0.0);
     if(detect_collision(Boom, PlayerBound))
@@ -499,9 +510,20 @@ int main(int argc, char **argv) {
     quit(window);
 }
 
-bool detect_collision(bounding_box_t a, bounding_box_t b) {
-    return (abs(a.x - b.x) * 2.0 < (a.width + b.width)) &&
-           (abs(a.y - b.y) * 2.0 < (a.height + b.height));
+bool detect_collision(bounding_box_t rect1, bounding_box_t rect2) {
+    // return (abs(a.x - b.x) * 2.0 < (a.width + b.width)) &&
+           // (abs(a.y - b.y) * 2.0 < (a.height + b.height));
+if (rect1.x < rect2.x + rect2.width && rect1.x + rect1.width > rect2.x &&
+   rect1.y < rect2.y + rect2.height && rect1.height + rect1.y > rect2.y) {
+    // collision detected!
+            return 1;
+}
+if (rect2.x < rect1.x + rect1.width && rect2.x + rect2.width > rect1.x &&
+   rect2.y < rect1.y + rect1.height && rect2.height + rect2.y > rect1.y) {
+    // collision detected!
+            return 1;
+}
+return 0;
 }
 
 void reset_screen() {

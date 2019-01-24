@@ -89,6 +89,10 @@ Player::Player(float x, float y, color_t color) {
     this->blackeye2 = create3DObject(GL_TRIANGLES, 2*3, vertex_buffer_blackeye2, COLOR_BLACK, GL_FILL);
     this->jet1 = create3DObject(GL_TRIANGLES, 3, vertex_buffer_jet1, COLOR_RED, GL_FILL);
     this->jet2 = create3DObject(GL_TRIANGLES, 3, vertex_buffer_jet2, COLOR_RED, GL_FILL);
+    this->line[0] = glm::vec4(x, y, x + 0.4f, y);
+    this->line[1] = glm::vec4(x + 0.4f, y, x + 0.4f, y + 0.4f);
+    this->line[2] = glm::vec4(x , y + 0.4f, x + 0.4f, y + 0.4f);
+    this->line[3] = glm::vec4(x, y, x , y + 0.4f);
 }
 
 void Player::draw(glm::mat4 VP) {
@@ -131,12 +135,32 @@ void Player::move(int up) {
     if(up == 1)
     {
       if(this->position.y + speed + 0.4f < 4.0f)
+      {
         this->position.y += speed;
+        this->line[0][1] += speed;
+        this->line[0][3] += speed;
+         this->line[1][1] += speed;
+        this->line[1][3] += speed;
+         this->line[2][1] += speed;
+        this->line[2][3] += speed;
+         this->line[3][1] += speed;
+        this->line[3][3] += speed;
+      }
     }
     else
     {
       if(this->position.y - speed > 0.38f)
+      {
         this->position.y -= speed;
+        this->line[0][1] -= speed;
+        this->line[0][3] -= speed;
+         this->line[1][1] -= speed;
+        this->line[1][3] -= speed;
+         this->line[2][1] -= speed;
+        this->line[2][3] -= speed;
+         this->line[3][1] -= speed;
+        this->line[3][3] -= speed;
+      }
     }
-    this->set_position(this->position.x, this->position.y);
+    // this->set_position(this->position.x, this->position.y);
 }

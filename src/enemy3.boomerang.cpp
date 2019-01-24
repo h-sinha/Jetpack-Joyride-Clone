@@ -105,7 +105,7 @@ void Boomerang::set_position(float x, float y) {
 }
 
 void Boomerang::tick(float x) {
-    // this->position.x -= GameSpeed/2;
+    this->position.x -= GameSpeed;
     this->rotation += 0.1;
     if(this->left == 1)this->position.x -= 0.01;
     else this->position.x += 0.01;

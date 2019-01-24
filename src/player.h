@@ -9,6 +9,7 @@ public:
     Player() {}
     Player(float x, float y, color_t color);
     glm::vec3 position;
+    glm::vec4 line[4];
     float rotation;
      float length;
     float width;

@@ -9,6 +9,7 @@ public:
     Fireline() {}
     Fireline(float x, float y, color_t color);
     glm::vec3 position;
+    glm::vec4 line[6];
      float length;
     float width;
      float scalex;
@@ -22,7 +23,7 @@ public:
 private:
     VAO *ring1;
     VAO *ring2;
-    VAO *line;
+    // VAO *lin;
 };
 
 #endif // COIN_H
