@@ -136,19 +136,19 @@ void Firebeam::tick() {
         this->position.y += speed;
     }
     
-    if(this->position.x < -3.0)
+    if(this->position.x < -5.0)
     {
         float xx, yy;
         xx = 0.2 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
          yy = 1.5 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
-        this->position.x = xx + 8.0, this->position.y = yy;
+        this->position.x =  5.0 - xx, this->position.y = yy;
     }
-     if(this->position.x > 11.0)
+     if(this->position.x > 5.0)
     {
         float xx, yy;
         xx = 0.2 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
          yy = 1.5 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
-        this->position.x = xx - 8.0, this->position.y = yy;
+        this->position.x = xx - 5.0, this->position.y = yy;
     }
 }
 

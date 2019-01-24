@@ -112,7 +112,7 @@ void Dragon::tick() {
     }
     if(this->position.y <= 0.4)
       this->speed = 0.05;
-    if(this->position.x < -4.0 || this->position.x > 11.0)
+    if(this->position.x < -15.0 || this->position.x > 15.0)
     {
         this->position.x = 4.0;
         this->position.y = 0.4;

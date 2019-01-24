@@ -47,11 +47,14 @@ CMakeFiles/graphics_asgn1.dir/main.cpp.o: dragon.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: enemy1_firelines.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: enemy2_firebeam.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: enemy3_boomerang.h
+CMakeFiles/graphics_asgn1.dir/main.cpp.o: functions.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: ice.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: magnet.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: main.cpp
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: main.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: player.h
+CMakeFiles/graphics_asgn1.dir/main.cpp.o: score.h
+CMakeFiles/graphics_asgn1.dir/main.cpp.o: speedup.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: timer.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: wall.h
 

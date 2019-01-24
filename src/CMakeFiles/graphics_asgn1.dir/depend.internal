@@ -48,11 +48,14 @@ CMakeFiles/graphics_asgn1.dir/main.cpp.o
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy1_firelines.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy2_firebeam.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy3_boomerang.h
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/functions.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/ice.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/magnet.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.cpp
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/player.h
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/score.h
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/speedup.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/timer.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/wall.h
 CMakeFiles/graphics_asgn1.dir/nonedit.cpp.o

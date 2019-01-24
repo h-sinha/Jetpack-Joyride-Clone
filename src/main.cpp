@@ -159,10 +159,10 @@ void draw() {
         GameSpeed += 0.01;
         speeding = 1;
     }
-    if(time(NULL) - speedtime > 3.0 && speeding)
+    if(time(NULL) - speedtime > 5.0 && speeding)
     {
         speeding = 0;
-        GameSpeed = 0.01;
+        GameSpeed -= 0.01;
     }
     // if(detect_collision(Fbeam, Mag))
         // magnet.position = glm::vec3 (-100.0,-100.0,0.0);

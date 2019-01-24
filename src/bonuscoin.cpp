@@ -116,7 +116,7 @@ void BonusCoin::tick() {
     }
     if(this->position.y <= 0.5)
       this->speed = 0.05;
-    if(this->position.x < -3.0 || this->position.x > 11.0)
+    if(this->position.x < -5.0 || this->position.x > 9.0)
     {
         this->position.x = 0.0;
         this->position.y = 0.6;

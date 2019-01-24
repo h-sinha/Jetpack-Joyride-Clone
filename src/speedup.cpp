@@ -58,16 +58,16 @@ void Speed::set_position(float x, float y) {
 void Speed::tick() {
     this->position.x -= GameSpeed;
     float x, y;
-    if(this->position.x <-6.0)
+    if(this->position.x <-10.0)
     {
-       x =  4.0 + 0.0 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(6.0)));
+       x =  10.0 - 0.0 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(6.0)));
         y = 0.6 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(5)));
          this->position.x = x;
          this->position.y = y;
     }
-    else if(this->position.x > 6.0)
+    else if(this->position.x > 10.0)
     {
-         x = -6.0 + 0.0 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(6.0)));
+         x = -10.0 + 0.0 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(6.0)));
           y = 0.6 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(5)));
          this->position.x = x;
          this->position.y = y;

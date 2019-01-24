@@ -84,6 +84,10 @@ main.h
 main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
 
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/functions.h
+main.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/ice.h
 main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
@@ -143,12 +147,18 @@ enemy3_boomerang.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy3_boomerang.h
 magnet.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/magnet.h
+speedup.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/speedup.h
 bonuscoin.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/bonuscoin.h
 dragon.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/dragon.h
 ice.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/ice.h
+score.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/score.h
+functions.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/functions.h
 vector
 -
 set
@@ -225,6 +235,14 @@ main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
 
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/player.h
+main.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/score.h
+main.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/speedup.h
 main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
 

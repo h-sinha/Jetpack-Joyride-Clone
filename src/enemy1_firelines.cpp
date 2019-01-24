@@ -60,14 +60,14 @@ void Fireline::set_position(float x, float y) {
 
 void Fireline::tick() {
     this->position.x -= GameSpeed;
-    if(this->position.x < -2.0)
+    if(this->position.x < -8.0)
     {
-        this->position.x = 8.0 + 0.2 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
+        this->position.x = 8.0 - 0.2 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
         this->position.y = 2.0 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
     }
-    if(this->position.x > 11.0)
+    if(this->position.x > 8.0)
     {
-        this->position.x = -3.0 + 0.2 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
+        this->position.x = -8.0 + 0.2 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
         this->position.y = 2.0 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2.0)));
     }
 }

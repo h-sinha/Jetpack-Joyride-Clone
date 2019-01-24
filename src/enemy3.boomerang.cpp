@@ -134,11 +134,11 @@ void Boomerang::tick(float x) {
         up = 1;
         this->position.y += 0.015;
     }
-    if(this->position.x > 6.0)
+    if(this->position.x > 7.0)
     {
         this->flag = 0;
         this->left = 0;
-     this->position = glm::vec3(3.0, 0.0, 0);
+        this->position = glm::vec3(3.0, 0.0, 0);
     }
 
 }
