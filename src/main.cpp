@@ -9,6 +9,7 @@
 #include "enemy2_firebeam.h"
 #include "enemy3_boomerang.h"
 #include "magnet.h"
+#include "semicircle.h"
 #include "speedup.h"
 #include "bonuscoin.h"
 #include "dragon.h"
@@ -38,6 +39,7 @@ string ScoreBoard = "SCORE-";
 Fireline fireline;
 Firebeam firebeam;
 Magnet magnet;
+Semicircle semicircle;
 Speed speedup;
 BonusCoin bonuscoin;
 Dragon dragon;
@@ -47,9 +49,9 @@ bounding_box_t PlayerBound;
 
 float screen_zoom = 1, screen_center_x = 0, screen_center_y = 0;
 float camera_rotation_angle = 0;
-int ScreenWidth = 800, ScreenHeight = 800, score = 0, speeding = 0;
+int ScreenWidth = 800, ScreenHeight = 800, score = 0, speeding = 0, semimove, posinmove;
 // std::vector<bool> done(30);
-time_t tmr, btr,ict, speedtime;
+time_t tmr, btr,ict, speedtime, gtr;
 Timer t60(1.0 / 60.0);
 
 /* Render the scene with openGL */
@@ -60,7 +62,11 @@ void gameOver()
     cout<<"YOUR SCORE : "<<score<<endl;
     cout<<"-----------------********-------------------------\n";
     // quit(window);
-    score -= 1;
+    if(time(NULL) - gtr > 1)
+    {
+        gtr = time(NULL);
+        score -= 1;
+    }
     if(score < 0)score = 0;
 
 }
@@ -166,6 +172,11 @@ void draw() {
         speeding = 0;
         GameSpeed -= 0.01;
     }
+    if(sqrt( (player.position.x - semicircle.position.x)*(player.position.x - semicircle.position.x)
+         + (player.position.y - semicircle.position.y)*(player.position.y - semicircle.position.y)) <= 0.4)
+    {
+        semimove = 1;
+    }
     // if(detect_collision(Fbeam, Mag))
         // magnet.position = glm::vec3 (-100.0,-100.0,0.0);
 
@@ -173,8 +184,6 @@ void draw() {
     {
         for (int j = 0; j < 4; ++j)
         {
-            printf("fire %lf %lf %lf %lf\n",fireline.line[i][0], fireline.line[i][1], fireline.line[i][2], fireline.line[i][3]);
-            printf("player %lf %lf %lf %lf\n",player.line[j][0], player.line[j][1], player.line[j][2], player.line[j][3]);
             if(check_intersection(fireline.line[i], player.line[j]))
                 gameOver();
         }
@@ -190,6 +199,7 @@ void draw() {
     boomerang.draw(VP);
     fireline.draw(VP);
     magnet.draw(VP);
+    semicircle.draw(VP);
     speedup.draw(VP);
     bonuscoin.draw(VP);
     dragon.draw(VP);
@@ -277,6 +287,9 @@ void zoom(){
     magnet.scalex = ScaleFactor;
     magnet.scalez = ScaleFactor;
     magnet.scaley = ScaleFactor;
+    semicircle.scalex = ScaleFactor;
+    semicircle.scalez = ScaleFactor;
+    semicircle.scaley = ScaleFactor;
     speedup.scalex = ScaleFactor;
     speedup.scalez = ScaleFactor;
     speedup.scaley = ScaleFactor;
@@ -312,13 +325,32 @@ void tick_elements() {
     // }
     for (auto &x:CoinPos)
         x.tick();
-    player.tick();
+    if(!semimove)player.tick();
+    else
+    {
+        // GameSpeed -= 0.4*cos(0.0001);
+        // player.position.x += 0.4 * cos(0.0001);
+        player.position.y += 0.4 * sin(1);
+        if(player.position.x >= 0.4)semimove = 0;
+        // for (int i = posinmove; i < int(semicircle.positions.size()); i+=2)
+        // {
+        //     player.position.x = semicircle.position.x +  semicircle.positions[i];
+        //     player.position.y = semicircle.position.y + semicircle.positions[i+1];
+        //     posinmove = i;
+        // }
+        // if(posinmove == int(semicircle.positions.size()))
+        // {
+        //     semimove = 0;
+        //     posinmove = 0;
+        // }
+    }
     PlayerBound.x = player.position[0];
     PlayerBound.y = player.position[1];
     PlayerBound.height = player.length;
     PlayerBound.width = player.width;
     fireline.tick();
     magnet.tick();
+    semicircle.tick();
     speedup.tick();
     bonuscoin.tick();
     dragon.tick();
@@ -436,6 +468,7 @@ void initGL(GLFWwindow *window, int width, int height) {
      player = Player(1.8,0.4,COLOR_BROWN);
      fireline = Fireline(0.0, 0.0, COLOR_BACKGROUND);
      magnet = Magnet(0.0, 0.0, COLOR_BACKGROUND);
+     semicircle = Semicircle(0.0, 0.0, COLOR_BACKGROUND);
      speedup = Speed(0.0, 0.0);
      bonuscoin = BonusCoin(0.0, 0.0, COLOR_BACKGROUND);
      dragon = Dragon(0.0, 0.0, COLOR_BACKGROUND);

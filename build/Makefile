@@ -609,6 +609,33 @@ src/score.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/score.cpp.s
 .PHONY : src/score.cpp.s
 
+src/semicircle.o: src/semicircle.cpp.o
+
+.PHONY : src/semicircle.o
+
+# target to build an object file
+src/semicircle.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/semicircle.cpp.o
+.PHONY : src/semicircle.cpp.o
+
+src/semicircle.i: src/semicircle.cpp.i
+
+.PHONY : src/semicircle.i
+
+# target to preprocess a source file
+src/semicircle.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/semicircle.cpp.i
+.PHONY : src/semicircle.cpp.i
+
+src/semicircle.s: src/semicircle.cpp.s
+
+.PHONY : src/semicircle.s
+
+# target to generate assembly for a file
+src/semicircle.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/semicircle.cpp.s
+.PHONY : src/semicircle.cpp.s
+
 src/speedup.o: src/speedup.cpp.o
 
 .PHONY : src/speedup.o
@@ -753,6 +780,9 @@ help:
 	@echo "... src/score.o"
 	@echo "... src/score.i"
 	@echo "... src/score.s"
+	@echo "... src/semicircle.o"
+	@echo "... src/semicircle.i"
+	@echo "... src/semicircle.s"
 	@echo "... src/speedup.o"
 	@echo "... src/speedup.i"
 	@echo "... src/speedup.s"

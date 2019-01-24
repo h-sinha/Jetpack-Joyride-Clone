@@ -67,6 +67,7 @@ CMakeFiles/graphics_asgn1.dir/src/main.cpp.o
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/player.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/score.h
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/semicircle.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/speedup.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/timer.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/wall.h
@@ -84,6 +85,10 @@ CMakeFiles/graphics_asgn1.dir/src/score.cpp.o
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/score.cpp
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/score.h
+CMakeFiles/graphics_asgn1.dir/src/semicircle.cpp.o
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/semicircle.cpp
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/semicircle.h
 CMakeFiles/graphics_asgn1.dir/src/speedup.cpp.o
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/speedup.cpp

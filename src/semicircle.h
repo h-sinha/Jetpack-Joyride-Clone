@@ -1,13 +1,14 @@
 #include "main.h"
+#include <algorithm>
 
-#ifndef COIN_H
-#define COIN_H
+#ifndef SEMICIRCLE_H
+#define SEMICIRCLE_H
 
 
-class Coin {
+class Semicircle {
 public:
-    Coin() {}
-    Coin(float x, float y, color_t color, int flag = 0);
+    Semicircle() {}
+    Semicircle(float x, float y, color_t color);
     glm::vec3 position;
      float length;
     float width;
@@ -15,14 +16,14 @@ public:
     float scaley;
     float scalez;
     float rotation;
+    std::vector<float > positions;
     void draw(glm::mat4 VP);
     void set_position(float x, float y);
     void tick();
     double speed;
 private:
-    VAO *object;
-    VAO *ring;
     VAO *ring1;
+    VAO *ring2;
 };
 
 #endif // COIN_H

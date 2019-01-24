@@ -66,6 +66,7 @@ CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/player.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/score.h
+CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/semicircle.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/speedup.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/timer.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/wall.h
@@ -83,6 +84,10 @@ CMakeFiles/graphics_asgn1.dir/src/player.cpp.o: ../src/player.h
 CMakeFiles/graphics_asgn1.dir/src/score.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/score.cpp.o: ../src/score.cpp
 CMakeFiles/graphics_asgn1.dir/src/score.cpp.o: ../src/score.h
+
+CMakeFiles/graphics_asgn1.dir/src/semicircle.cpp.o: ../src/main.h
+CMakeFiles/graphics_asgn1.dir/src/semicircle.cpp.o: ../src/semicircle.cpp
+CMakeFiles/graphics_asgn1.dir/src/semicircle.cpp.o: ../src/semicircle.h
 
 CMakeFiles/graphics_asgn1.dir/src/speedup.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/speedup.cpp.o: ../src/speedup.cpp
