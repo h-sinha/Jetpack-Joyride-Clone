@@ -48,13 +48,10 @@ Semicircle::Semicircle(float x, float y, color_t color) {
         vertex_buffer_data1[cur+6] = 0.0;
         vertex_buffer_data1[cur+7] = 0.0;
         vertex_buffer_data1[cur+8] = -100.0;
-        this->positions.push_back(vertex_buffer_data1[cur]);
-        this->positions.push_back(vertex_buffer_data1[cur+1]);
-        this->positions.push_back(vertex_buffer_data1[cur+3]);
-        this->positions.push_back(vertex_buffer_data1[cur+4]);
+       
         cur += 9;
      } 
-    reverse(this->positions.begin(), this->positions.end());
+    // reverse(this->positions.begin(), this->positions.end());
     this->ring1 = create3DObject(GL_TRIANGLES, 3*n/2, vertex_buffer_data, COLOR_RED, GL_FILL);
     this->ring2 = create3DObject(GL_TRIANGLES, 3*n/2, vertex_buffer_data1, COLOR_BACKGROUND, GL_FILL);
     this->position = glm::vec3(xx, yy, 0);

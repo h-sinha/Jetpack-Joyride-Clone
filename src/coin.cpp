@@ -93,7 +93,7 @@ void Coin::set_position(float x, float y) {
 }
 
 void Coin::tick() {
-    this->rotation += 0.1;
+    this->rotation += 0.01;
     this->position.x -= GameSpeed;
     if(this->position.x <-6.0)
       this->position.x += 12.0;

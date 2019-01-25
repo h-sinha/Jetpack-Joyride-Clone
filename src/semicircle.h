@@ -16,7 +16,6 @@ public:
     float scaley;
     float scalez;
     float rotation;
-    std::vector<float > positions;
     void draw(glm::mat4 VP);
     void set_position(float x, float y);
     void tick();

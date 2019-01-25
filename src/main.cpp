@@ -58,9 +58,9 @@ Timer t60(1.0 / 60.0);
 /* Edit this function according to your assignment */
 void gameOver()
 {
-    cout<<"-----------------GAMEOVER-------------------------\n";
-    cout<<"YOUR SCORE : "<<score<<endl;
-    cout<<"-----------------********-------------------------\n";
+    // cout<<"-----------------GAMEOVER-------------------------\n";
+    // cout<<"YOUR SCORE : "<<score<<endl;
+    // cout<<"-----------------********-------------------------\n";
     // quit(window);
     if(time(NULL) - gtr > 1)
     {
@@ -172,8 +172,9 @@ void draw() {
         speeding = 0;
         GameSpeed -= 0.01;
     }
-    if(sqrt( (player.position.x - semicircle.position.x)*(player.position.x - semicircle.position.x)
-         + (player.position.y - semicircle.position.y)*(player.position.y - semicircle.position.y)) <= 0.4)
+    if(( (player.position.x - semicircle.position.x)*(player.position.x - semicircle.position.x)
+         + (player.position.y - semicircle.position.y)*(player.position.y - semicircle.position.y)) <= 0.64
+         && player.position.y <= semicircle.position.y)
     {
         semimove = 1;
     }
@@ -328,21 +329,10 @@ void tick_elements() {
     if(!semimove)player.tick();
     else
     {
-        // GameSpeed -= 0.4*cos(0.0001);
-        // player.position.x += 0.4 * cos(0.0001);
-        player.position.y += 0.4 * sin(1);
-        if(player.position.x >= 0.4)semimove = 0;
-        // for (int i = posinmove; i < int(semicircle.positions.size()); i+=2)
-        // {
-        //     player.position.x = semicircle.position.x +  semicircle.positions[i];
-        //     player.position.y = semicircle.position.y + semicircle.positions[i+1];
-        //     posinmove = i;
-        // }
-        // if(posinmove == int(semicircle.positions.size()))
-        // {
-        //     semimove = 0;
-        //     posinmove = 0;
-        // }
+        if((player.position.x - semicircle.position.x) *(player.position.x - semicircle.position.x) <= 0.16 )
+        player.position.y = semicircle.position.y - sqrt(0.16f - (player.position.x - semicircle.position.x) *(player.position.x - semicircle.position.x) );
+        else semimove = 0;
+        if(player.position.y >=  semicircle.position.y)semimove = 0;
     }
     PlayerBound.x = player.position[0];
     PlayerBound.y = player.position[1];
@@ -421,7 +411,7 @@ void tick_input(GLFWwindow *window) {
     //     tick_elements();
     //     GameSpeed = 0.01;
     // }
-     if(!up)
+     if(!up && !semimove)
     player.move(-1);
 }
 
