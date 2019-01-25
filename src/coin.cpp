@@ -84,8 +84,8 @@ void Coin::draw(glm::mat4 VP) {
     glm::mat4 MVP = VP * Matrices.model;
     glUniformMatrix4fv(Matrices.MatrixID, 1, GL_FALSE, &MVP[0][0]);
     draw3DObject(this->object);
-    draw3DObject(this->ring);
-    draw3DObject(this->ring1);
+    // draw3DObject(this->ring);
+    // draw3DObject(this->ring1);
 }
 
 void Coin::set_position(float x, float y) {

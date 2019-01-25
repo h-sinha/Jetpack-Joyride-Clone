@@ -258,6 +258,33 @@ color.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/color.cpp.s
 .PHONY : color.cpp.s
 
+dragon.o: dragon.cpp.o
+
+.PHONY : dragon.o
+
+# target to build an object file
+dragon.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/dragon.cpp.o
+.PHONY : dragon.cpp.o
+
+dragon.i: dragon.cpp.i
+
+.PHONY : dragon.i
+
+# target to preprocess a source file
+dragon.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/dragon.cpp.i
+.PHONY : dragon.cpp.i
+
+dragon.s: dragon.cpp.s
+
+.PHONY : dragon.s
+
+# target to generate assembly for a file
+dragon.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/dragon.cpp.s
+.PHONY : dragon.cpp.s
+
 enemy1_firelines.o: enemy1_firelines.cpp.o
 
 .PHONY : enemy1_firelines.o
@@ -338,6 +365,60 @@ enemy3.boomerang.s: enemy3.boomerang.cpp.s
 enemy3.boomerang.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/enemy3.boomerang.cpp.s
 .PHONY : enemy3.boomerang.cpp.s
+
+functions.o: functions.cpp.o
+
+.PHONY : functions.o
+
+# target to build an object file
+functions.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/functions.cpp.o
+.PHONY : functions.cpp.o
+
+functions.i: functions.cpp.i
+
+.PHONY : functions.i
+
+# target to preprocess a source file
+functions.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/functions.cpp.i
+.PHONY : functions.cpp.i
+
+functions.s: functions.cpp.s
+
+.PHONY : functions.s
+
+# target to generate assembly for a file
+functions.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/functions.cpp.s
+.PHONY : functions.cpp.s
+
+ice.o: ice.cpp.o
+
+.PHONY : ice.o
+
+# target to build an object file
+ice.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/ice.cpp.o
+.PHONY : ice.cpp.o
+
+ice.i: ice.cpp.i
+
+.PHONY : ice.i
+
+# target to preprocess a source file
+ice.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/ice.cpp.i
+.PHONY : ice.cpp.i
+
+ice.s: ice.cpp.s
+
+.PHONY : ice.s
+
+# target to generate assembly for a file
+ice.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/ice.cpp.s
+.PHONY : ice.cpp.s
 
 input.o: input.cpp.o
 
@@ -501,6 +582,87 @@ player.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/player.cpp.s
 .PHONY : player.cpp.s
 
+score.o: score.cpp.o
+
+.PHONY : score.o
+
+# target to build an object file
+score.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/score.cpp.o
+.PHONY : score.cpp.o
+
+score.i: score.cpp.i
+
+.PHONY : score.i
+
+# target to preprocess a source file
+score.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/score.cpp.i
+.PHONY : score.cpp.i
+
+score.s: score.cpp.s
+
+.PHONY : score.s
+
+# target to generate assembly for a file
+score.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/score.cpp.s
+.PHONY : score.cpp.s
+
+semicircle.o: semicircle.cpp.o
+
+.PHONY : semicircle.o
+
+# target to build an object file
+semicircle.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/semicircle.cpp.o
+.PHONY : semicircle.cpp.o
+
+semicircle.i: semicircle.cpp.i
+
+.PHONY : semicircle.i
+
+# target to preprocess a source file
+semicircle.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/semicircle.cpp.i
+.PHONY : semicircle.cpp.i
+
+semicircle.s: semicircle.cpp.s
+
+.PHONY : semicircle.s
+
+# target to generate assembly for a file
+semicircle.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/semicircle.cpp.s
+.PHONY : semicircle.cpp.s
+
+speedup.o: speedup.cpp.o
+
+.PHONY : speedup.o
+
+# target to build an object file
+speedup.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/speedup.cpp.o
+.PHONY : speedup.cpp.o
+
+speedup.i: speedup.cpp.i
+
+.PHONY : speedup.i
+
+# target to preprocess a source file
+speedup.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/speedup.cpp.i
+.PHONY : speedup.cpp.i
+
+speedup.s: speedup.cpp.s
+
+.PHONY : speedup.s
+
+# target to generate assembly for a file
+speedup.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/speedup.cpp.s
+.PHONY : speedup.cpp.s
+
 timer.o: timer.cpp.o
 
 .PHONY : timer.o
@@ -579,6 +741,9 @@ help:
 	@echo "... color.o"
 	@echo "... color.i"
 	@echo "... color.s"
+	@echo "... dragon.o"
+	@echo "... dragon.i"
+	@echo "... dragon.s"
 	@echo "... enemy1_firelines.o"
 	@echo "... enemy1_firelines.i"
 	@echo "... enemy1_firelines.s"
@@ -588,6 +753,12 @@ help:
 	@echo "... enemy3.boomerang.o"
 	@echo "... enemy3.boomerang.i"
 	@echo "... enemy3.boomerang.s"
+	@echo "... functions.o"
+	@echo "... functions.i"
+	@echo "... functions.s"
+	@echo "... ice.o"
+	@echo "... ice.i"
+	@echo "... ice.s"
 	@echo "... input.o"
 	@echo "... input.i"
 	@echo "... input.s"
@@ -606,6 +777,15 @@ help:
 	@echo "... player.o"
 	@echo "... player.i"
 	@echo "... player.s"
+	@echo "... score.o"
+	@echo "... score.i"
+	@echo "... score.s"
+	@echo "... semicircle.o"
+	@echo "... semicircle.i"
+	@echo "... semicircle.s"
+	@echo "... speedup.o"
+	@echo "... speedup.i"
+	@echo "... speedup.s"
 	@echo "... timer.o"
 	@echo "... timer.i"
 	@echo "... timer.s"

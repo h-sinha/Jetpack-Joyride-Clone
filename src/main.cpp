@@ -11,6 +11,8 @@
 #include "magnet.h"
 #include "semicircle.h"
 #include "speedup.h"
+#include "shield.h"
+#include "sword.h"
 #include "bonuscoin.h"
 #include "dragon.h"
 #include "ice.h"
@@ -41,6 +43,8 @@ Firebeam firebeam;
 Magnet magnet;
 Semicircle semicircle;
 Speed speedup;
+Shield shield;
+Sword sword;
 BonusCoin bonuscoin;
 Dragon dragon;
 Boomerang boomerang;
@@ -51,7 +55,8 @@ float screen_zoom = 1, screen_center_x = 0, screen_center_y = 0;
 float camera_rotation_angle = 0;
 int ScreenWidth = 800, ScreenHeight = 800, score = 0, speeding = 0, semimove, posinmove;
 // std::vector<bool> done(30);
-time_t tmr, btr,ict, speedtime, gtr;
+int shielded ;
+time_t tmr, btr,ict, speedtime, gtr, str;
 Timer t60(1.0 / 60.0);
 
 /* Render the scene with openGL */
@@ -127,13 +132,23 @@ void draw() {
             CoinPos.erase(CoinPos.begin() + i);
         }
     }   
-    bounding_box_t Fbeam, Fline, Boom, Mag, Drag, xx, SpeedUp;
+    bounding_box_t SwordBox,  Fbeam, Fline, Boom, Mag, Drag, xx, SpeedUp, ShieldBox;
     Fbeam = {firebeam.position[0], firebeam.position[1], firebeam.width, firebeam.length};
     Fline = {fireline.position[0], fireline.position[1], fireline.width, fireline.length};
     Boom = {boomerang.position[0], boomerang.position[1], boomerang.width, boomerang.length};
     Mag = {magnet.position[0] + 0.05f, magnet.position[1], magnet.width, magnet.length};
     Drag = {dragon.position.x , dragon.position.y, dragon.width, dragon.length};
     SpeedUp = {speedup.position.x , speedup.position.y, speedup.width, speedup.length};
+    ShieldBox = {shield.position.x , shield.position.y, shield.width, shield.length};
+    SwordBox = {sword.position.x , sword.position.y, sword.width, sword.length};
+    if(shielded && detect_collision(SwordBox, Fline))
+        fireline.position.x = fireline.position.y = -100.0f;
+    if(shielded && detect_collision(SwordBox, Fbeam))
+        firebeam.position.x = firebeam.position.y = -100.0f;
+    if(shielded && detect_collision(SwordBox, Drag))
+        dragon.position.x = dragon.position.y = -100.0f;
+     if(shielded && detect_collision(SwordBox, Boom))
+        boomerang.position.x = boomerang.position.y = -100.0f;
     for (int i = int(BallPos.size()) - 1; i >= 0 ; --i)
     {
         if(BallPos[i].position.y <= 0.3)
@@ -178,6 +193,14 @@ void draw() {
     {
         semimove = 1;
     }
+    if(( (player.position.x - shield.position.x)*(player.position.x - shield.position.x)
+         + (player.position.y - shield.position.y)*(player.position.y - shield.position.y)) <= 0.64
+         && player.position.y <= shield.position.y)
+    {
+        shielded = 1;
+        str = time(NULL);
+    }
+    if(time(NULL) - str > 10)shielded = 0;
     // if(detect_collision(Fbeam, Mag))
         // magnet.position = glm::vec3 (-100.0,-100.0,0.0);
 
@@ -202,6 +225,8 @@ void draw() {
     magnet.draw(VP);
     semicircle.draw(VP);
     speedup.draw(VP);
+    shield.draw(VP);
+    if(shielded)sword.draw(VP);
     bonuscoin.draw(VP);
     dragon.draw(VP);
     for (auto &x:BallPos)
@@ -294,6 +319,12 @@ void zoom(){
     speedup.scalex = ScaleFactor;
     speedup.scalez = ScaleFactor;
     speedup.scaley = ScaleFactor;
+    shield.scalex = ScaleFactor;
+    shield.scalez = ScaleFactor;
+    shield.scaley = ScaleFactor;
+    sword.scalex = ScaleFactor;
+    sword.scalez = ScaleFactor;
+    sword.scaley = ScaleFactor;
      firebeam.scalex = ScaleFactor;
     firebeam.scalez = ScaleFactor;
     firebeam.scaley = ScaleFactor;
@@ -342,6 +373,7 @@ void tick_elements() {
     magnet.tick();
     semicircle.tick();
     speedup.tick();
+    shield.tick();
     bonuscoin.tick();
     dragon.tick();
     firebeam.tick();
@@ -352,6 +384,8 @@ void tick_elements() {
         Ice ice = Ice(dragon.position.x , dragon.position.y, COLOR_MIDNIGHT_BLUE);
         IcePos.push_back(ice);
     }
+    sword.position.x = player.position.x + 0.4;
+    sword.position.y = player.position.y;
 }
 
 void tick_input(GLFWwindow *window) {
@@ -452,7 +486,7 @@ void initGL(GLFWwindow *window, int width, int height) {
     for (float i = 0; i < 10; ++i)
     {
         // Coin coin;
-        Coin coin = Coin(0.0f, 0.0f, COLOR_YELLOW);
+        Coin coin = Coin(0.0f, 0.0f, COLOR_COIN);
         CoinPos.push_back(coin);
     }
      player = Player(1.8,0.4,COLOR_BROWN);
@@ -460,6 +494,8 @@ void initGL(GLFWwindow *window, int width, int height) {
      magnet = Magnet(0.0, 0.0, COLOR_BACKGROUND);
      semicircle = Semicircle(0.0, 0.0, COLOR_BACKGROUND);
      speedup = Speed(0.0, 0.0);
+     shield = Shield(0.0, 0.0);
+     sword = Sword(0.0, 0.0);
      bonuscoin = BonusCoin(0.0, 0.0, COLOR_BACKGROUND);
      dragon = Dragon(0.0, 0.0, COLOR_BACKGROUND);
      firebeam = Firebeam(0.0, 0.0, COLOR_BACKGROUND);

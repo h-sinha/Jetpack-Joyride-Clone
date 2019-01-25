@@ -68,7 +68,9 @@ CMakeFiles/graphics_asgn1.dir/src/main.cpp.o
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/player.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/score.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/semicircle.h
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/shield.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/speedup.h
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/sword.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/timer.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/wall.h
 CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o
@@ -89,10 +91,18 @@ CMakeFiles/graphics_asgn1.dir/src/semicircle.cpp.o
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/semicircle.cpp
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/semicircle.h
+CMakeFiles/graphics_asgn1.dir/src/shield.cpp.o
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/shield.cpp
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/shield.h
 CMakeFiles/graphics_asgn1.dir/src/speedup.cpp.o
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/speedup.cpp
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/speedup.h
+CMakeFiles/graphics_asgn1.dir/src/sword.cpp.o
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/sword.cpp
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/sword.h
 CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/timer.cpp
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/timer.h

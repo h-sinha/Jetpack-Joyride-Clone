@@ -29,7 +29,7 @@ Ice::Ice(float x, float y, color_t color) {
         vertex_buffer_data[cur+8] = 0.0;
         cur += 9;
      } 
-    this->object = create3DObject(GL_TRIANGLES, 15*3, vertex_buffer_data, color, GL_FILL);
+    this->object = create3DObject(GL_TRIANGLES, 15*3, vertex_buffer_data,COLOR_DARK_RED, GL_FILL);
 }
 
 void Ice::draw(glm::mat4 VP) {

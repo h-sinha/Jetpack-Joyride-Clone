@@ -1,27 +1,30 @@
 #include "main.h"
 
-#ifndef SPEED_H
-#define SPEED_H
+#ifndef SWORD_H
+#define SWORD_H
 
 
-class Speed {
+class Sword {
 public:
-    Speed() {}
-    Speed(float x, float y);
+    Sword() {}
+    Sword(float x, float y);
     glm::vec3 position;
+    glm::vec4 line[4];
+    float rotation;
      float length;
     float width;
      float scalex;
     float scaley;
     float scalez;
-    float rotation;
+    color_t color;
     void draw(glm::mat4 VP);
     void set_position(float x, float y);
-    void tick();
     double speed;
 private:
-    VAO *object;
-    VAO *object1;
-    VAO *object2;
+    VAO* blade1;
+    VAO* blade2;
+    VAO* blade3;
+    VAO* handle;
 };
-#endif // COIN_H
+
+#endif // PLAYER_H

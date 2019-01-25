@@ -636,6 +636,33 @@ src/semicircle.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/semicircle.cpp.s
 .PHONY : src/semicircle.cpp.s
 
+src/shield.o: src/shield.cpp.o
+
+.PHONY : src/shield.o
+
+# target to build an object file
+src/shield.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/shield.cpp.o
+.PHONY : src/shield.cpp.o
+
+src/shield.i: src/shield.cpp.i
+
+.PHONY : src/shield.i
+
+# target to preprocess a source file
+src/shield.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/shield.cpp.i
+.PHONY : src/shield.cpp.i
+
+src/shield.s: src/shield.cpp.s
+
+.PHONY : src/shield.s
+
+# target to generate assembly for a file
+src/shield.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/shield.cpp.s
+.PHONY : src/shield.cpp.s
+
 src/speedup.o: src/speedup.cpp.o
 
 .PHONY : src/speedup.o
@@ -662,6 +689,33 @@ src/speedup.s: src/speedup.cpp.s
 src/speedup.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/speedup.cpp.s
 .PHONY : src/speedup.cpp.s
+
+src/sword.o: src/sword.cpp.o
+
+.PHONY : src/sword.o
+
+# target to build an object file
+src/sword.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/sword.cpp.o
+.PHONY : src/sword.cpp.o
+
+src/sword.i: src/sword.cpp.i
+
+.PHONY : src/sword.i
+
+# target to preprocess a source file
+src/sword.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/sword.cpp.i
+.PHONY : src/sword.cpp.i
+
+src/sword.s: src/sword.cpp.s
+
+.PHONY : src/sword.s
+
+# target to generate assembly for a file
+src/sword.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/sword.cpp.s
+.PHONY : src/sword.cpp.s
 
 src/timer.o: src/timer.cpp.o
 
@@ -783,9 +837,15 @@ help:
 	@echo "... src/semicircle.o"
 	@echo "... src/semicircle.i"
 	@echo "... src/semicircle.s"
+	@echo "... src/shield.o"
+	@echo "... src/shield.i"
+	@echo "... src/shield.s"
 	@echo "... src/speedup.o"
 	@echo "... src/speedup.i"
 	@echo "... src/speedup.s"
+	@echo "... src/sword.o"
+	@echo "... src/sword.i"
+	@echo "... src/sword.s"
 	@echo "... src/timer.o"
 	@echo "... src/timer.i"
 	@echo "... src/timer.s"

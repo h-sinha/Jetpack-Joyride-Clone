@@ -1,13 +1,13 @@
 #include "main.h"
 
-#ifndef SPEED_H
-#define SPEED_H
+#ifndef SHIELD_H
+#define SHIELD_H
 
 
-class Speed {
+class Shield {
 public:
-    Speed() {}
-    Speed(float x, float y);
+    Shield() {}
+    Shield(float x, float y);
     glm::vec3 position;
      float length;
     float width;
@@ -24,4 +24,5 @@ private:
     VAO *object1;
     VAO *object2;
 };
+
 #endif // COIN_H
