@@ -4,7 +4,7 @@ const double PI = 3.141592653589793238460;
 
 Boomerang::Boomerang(float x, float y, color_t color) {
    
-    speed = 1.0;
+    this->speed = 0.05;
     up = 1;
     this->left = 0;
      this->scalex = 1.0;
@@ -13,7 +13,10 @@ Boomerang::Boomerang(float x, float y, color_t color) {
     this->length = 0.8; 
     this->width = 0.2;
     this->flag = 0;
+    this->center = 2.0;
+     this->gravity = -0.05/60.0;
      int n=15, cur = 0;
+     this->theta = PI/4.0;
       static const GLfloat vertex_buffer_data[] = {
         0.0f , 0.1f, 0.0f,    
         0.1f , 0.0f, 0.0f,    
@@ -106,41 +109,15 @@ void Boomerang::set_position(float x, float y) {
 }
 
 void Boomerang::tick(float x) {
-    this->position.x -= GameSpeed;
-    this->rotation += 0.1;
-    if(this->left == 1)this->position.x -= 0.01;
-    else this->position.x += 0.01;
-    if(this->flag == 0)
-    speed -= 0.01;
-    else 
-    speed += 0.01;
-    if(abs(speed + 3.0)<=1e-6)
+    this->theta += 0.02;
+    this->rotation += 0.02;
+    this->center -= GameSpeed;
+    this->position.x = this->center + 1.814*cos(this->theta);
+    this->position.y = 2.0 + 1.214*sin(this->theta);
+    if(this->center < -4.0 || this->center >6.0)
     {
-        this->flag = 1;
-        this->left = 0;
+        this->center = 4.0;
+        this->theta = 0.0;
     }
-    if(abs(speed-0.0)<1e-6 && this->flag == 0)this->left = 1;
-
-    if(up)
-        this->position.y += 0.015;
-    else 
-        this->position.y -= 0.015;
-    if(this->position.y > 4.0)
-    {
-        up = 0;
-        this->position.y -= 0.015;
-    } 
-    else if(this->position.y < 0.5)
-    {
-        up = 1;
-        this->position.y += 0.015;
-    }
-    if(this->position.x > 7.0)
-    {
-        this->flag = 0;
-        this->left = 0;
-        this->position = glm::vec3(3.0, 0.0, 0);
-    }
-
 }
 

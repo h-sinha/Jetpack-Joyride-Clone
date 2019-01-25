@@ -15,6 +15,9 @@ public:
     float scaley;
     float scalez;
     float rotation;
+    float gravity;
+    float theta;
+    float center;
     bool up, left, flag;
     void draw(glm::mat4 VP);
     void set_position(float x, float y);
