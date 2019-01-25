@@ -21,4 +21,5 @@ const color_t COLOR_BALL = { 202, 231, 226 };
 const color_t COLOR_COIN = { 207, 182, 60 };
 const color_t COLOR_NEON_GREEN = { 57, 255, 20 };
 float GameSpeed = 0.01;
+float CurrentGameSpeed = 0.01;
 float ScaleFactor = 1.0;

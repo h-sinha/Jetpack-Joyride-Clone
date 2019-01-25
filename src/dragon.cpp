@@ -81,6 +81,7 @@ Dragon::Dragon(float x, float y, color_t color) {
 }
 
 void Dragon::draw(glm::mat4 VP) {
+    if(this->position.x < -2.0 || this->position.x > 6)return;
     Matrices.model = glm::mat4(1.0f);
     glm::mat4 translate = glm::translate (this->position);    // glTranslatef
     glm::mat4 scale    = glm::scale(glm::vec3(this->scalex, this->scaley, this->scalez));
@@ -105,7 +106,7 @@ void Dragon::tick() {
   this->position.y += this->speed;
 
   this->speed += this->gravity;
-  this->position.x -= 0.01;
+  this->position.x -= abs(GameSpeed);
     if(this->position.y >= 3.6)
     {
       this->speed = 0;

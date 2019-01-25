@@ -91,9 +91,17 @@ CMakeFiles/graphics_asgn1.dir/semicircle.cpp.o: main.h
 CMakeFiles/graphics_asgn1.dir/semicircle.cpp.o: semicircle.cpp
 CMakeFiles/graphics_asgn1.dir/semicircle.cpp.o: semicircle.h
 
+CMakeFiles/graphics_asgn1.dir/shield.cpp.o: main.h
+CMakeFiles/graphics_asgn1.dir/shield.cpp.o: shield.cpp
+CMakeFiles/graphics_asgn1.dir/shield.cpp.o: shield.h
+
 CMakeFiles/graphics_asgn1.dir/speedup.cpp.o: main.h
 CMakeFiles/graphics_asgn1.dir/speedup.cpp.o: speedup.cpp
 CMakeFiles/graphics_asgn1.dir/speedup.cpp.o: speedup.h
+
+CMakeFiles/graphics_asgn1.dir/sword.cpp.o: main.h
+CMakeFiles/graphics_asgn1.dir/sword.cpp.o: sword.cpp
+CMakeFiles/graphics_asgn1.dir/sword.cpp.o: sword.h
 
 CMakeFiles/graphics_asgn1.dir/timer.cpp.o: timer.cpp
 CMakeFiles/graphics_asgn1.dir/timer.cpp.o: timer.h

@@ -132,7 +132,7 @@ void draw() {
             CoinPos.erase(CoinPos.begin() + i);
         }
     }   
-    bounding_box_t Semi,SwordBox,  Fbeam, Fline, Boom, Mag, Drag, xx, SpeedUp, ShieldBox;
+    bounding_box_t SwordBox,  Fbeam, Fline, Boom, Mag, Drag, xx, SpeedUp, ShieldBox;
     Fbeam = {firebeam.position[0], firebeam.position[1], firebeam.width, firebeam.length};
     Fline = {fireline.position[0], fireline.position[1], fireline.width, fireline.length};
     Boom = {boomerang.position[0], boomerang.position[1], boomerang.width, boomerang.length};
@@ -141,15 +141,10 @@ void draw() {
     SpeedUp = {speedup.position.x , speedup.position.y, speedup.width, speedup.length};
     ShieldBox = {shield.position.x , shield.position.y, shield.width, shield.length};
     SwordBox = {sword.position.x , sword.position.y, sword.width, sword.length};
-    Semi = {semicircle.position.x , semicircle.position.y, semicircle.width, semicircle.length};
-    if(semicircle.position.x >= 0 && semicircle.position.x <= 4.0)
-        magnet.position.x = -100.0f;
-     if(detect_collision(Semi, SpeedUp))
-        speedup.position.x = -100.0f;
-     if(detect_collision(Semi, ShieldBox))
-        shield.position.x = -100.0f;
     if(detect_collision(ShieldBox, SpeedUp))
         speedup.position.x = -100.0f;
+    if(shielded && detect_collision(SwordBox, Fline))
+        fireline.position.x = fireline.position.y = -100.0f;
     if(shielded && detect_collision(SwordBox, Fbeam))
         firebeam.position.x = firebeam.position.y = -100.0f;
     if(shielded && detect_collision(SwordBox, Drag))

@@ -636,6 +636,33 @@ semicircle.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/semicircle.cpp.s
 .PHONY : semicircle.cpp.s
 
+shield.o: shield.cpp.o
+
+.PHONY : shield.o
+
+# target to build an object file
+shield.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/shield.cpp.o
+.PHONY : shield.cpp.o
+
+shield.i: shield.cpp.i
+
+.PHONY : shield.i
+
+# target to preprocess a source file
+shield.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/shield.cpp.i
+.PHONY : shield.cpp.i
+
+shield.s: shield.cpp.s
+
+.PHONY : shield.s
+
+# target to generate assembly for a file
+shield.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/shield.cpp.s
+.PHONY : shield.cpp.s
+
 speedup.o: speedup.cpp.o
 
 .PHONY : speedup.o
@@ -662,6 +689,33 @@ speedup.s: speedup.cpp.s
 speedup.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/speedup.cpp.s
 .PHONY : speedup.cpp.s
+
+sword.o: sword.cpp.o
+
+.PHONY : sword.o
+
+# target to build an object file
+sword.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/sword.cpp.o
+.PHONY : sword.cpp.o
+
+sword.i: sword.cpp.i
+
+.PHONY : sword.i
+
+# target to preprocess a source file
+sword.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/sword.cpp.i
+.PHONY : sword.cpp.i
+
+sword.s: sword.cpp.s
+
+.PHONY : sword.s
+
+# target to generate assembly for a file
+sword.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/sword.cpp.s
+.PHONY : sword.cpp.s
 
 timer.o: timer.cpp.o
 
@@ -783,9 +837,15 @@ help:
 	@echo "... semicircle.o"
 	@echo "... semicircle.i"
 	@echo "... semicircle.s"
+	@echo "... shield.o"
+	@echo "... shield.i"
+	@echo "... shield.s"
 	@echo "... speedup.o"
 	@echo "... speedup.i"
 	@echo "... speedup.s"
+	@echo "... sword.o"
+	@echo "... sword.i"
+	@echo "... sword.s"
 	@echo "... timer.o"
 	@echo "... timer.i"
 	@echo "... timer.s"

@@ -35,6 +35,7 @@ Wall::Wall(float x, float y, color_t color) {
 }
 
 void Wall::draw(glm::mat4 VP) {
+    if(this->position.x < 0.0 || this->position.x > 6)return;
     Matrices.model = glm::mat4(1.0f);
     glm::mat4 translate = glm::translate (this->position);    // glTranslatef
     glm::mat4 rotate    = glm::scale(glm::vec3(this->scalex, this->scaley, this->scalez));

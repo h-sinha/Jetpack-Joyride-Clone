@@ -99,6 +99,7 @@ extern const color_t COLOR_COIN;
 extern const color_t COLOR_BALL;
 extern const color_t COLOR_test;
 extern float GameSpeed;
+extern float CurrentGameSpeed;
 extern float ScaleFactor;
 
 
