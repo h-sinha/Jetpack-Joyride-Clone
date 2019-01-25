@@ -40,6 +40,10 @@ CMakeFiles/graphics_asgn1.dir/src/functions.cpp.o
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/functions.cpp
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/functions.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+CMakeFiles/graphics_asgn1.dir/src/heart.cpp.o
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/heart.cpp
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/heart.h
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
 CMakeFiles/graphics_asgn1.dir/src/ice.cpp.o
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/ice.cpp
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/ice.h
@@ -61,6 +65,7 @@ CMakeFiles/graphics_asgn1.dir/src/main.cpp.o
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy2_firebeam.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy3_boomerang.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/functions.h
+ /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/heart.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/ice.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/magnet.h
  /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.cpp

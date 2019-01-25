@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/graphics_asgn1.dir/enemy2_firebeam.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/enemy3.boomerang.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/functions.cpp.o"
+  "CMakeFiles/graphics_asgn1.dir/heart.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/ice.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/input.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/magnet.cpp.o"

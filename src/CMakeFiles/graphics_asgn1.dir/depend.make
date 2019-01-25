@@ -40,6 +40,10 @@ CMakeFiles/graphics_asgn1.dir/functions.cpp.o: functions.cpp
 CMakeFiles/graphics_asgn1.dir/functions.cpp.o: functions.h
 CMakeFiles/graphics_asgn1.dir/functions.cpp.o: main.h
 
+CMakeFiles/graphics_asgn1.dir/heart.cpp.o: heart.cpp
+CMakeFiles/graphics_asgn1.dir/heart.cpp.o: heart.h
+CMakeFiles/graphics_asgn1.dir/heart.cpp.o: main.h
+
 CMakeFiles/graphics_asgn1.dir/ice.cpp.o: ice.cpp
 CMakeFiles/graphics_asgn1.dir/ice.cpp.o: ice.h
 CMakeFiles/graphics_asgn1.dir/ice.cpp.o: main.h
@@ -60,6 +64,7 @@ CMakeFiles/graphics_asgn1.dir/main.cpp.o: enemy1_firelines.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: enemy2_firebeam.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: enemy3_boomerang.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: functions.h
+CMakeFiles/graphics_asgn1.dir/main.cpp.o: heart.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: ice.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: magnet.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: main.cpp

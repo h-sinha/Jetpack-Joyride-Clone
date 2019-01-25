@@ -110,7 +110,7 @@ void Boomerang::set_position(float x, float y) {
 
 void Boomerang::tick(float x) {
     this->theta += 0.02;
-    this->rotation += 0.02;
+    // this->rotation += 0.02;
     this->center -= GameSpeed;
     this->position.x = this->center + 1.814*cos(this->theta);
     this->position.y = 2.0 + 1.214*sin(this->theta);

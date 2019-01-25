@@ -393,6 +393,33 @@ functions.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/functions.cpp.s
 .PHONY : functions.cpp.s
 
+heart.o: heart.cpp.o
+
+.PHONY : heart.o
+
+# target to build an object file
+heart.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/heart.cpp.o
+.PHONY : heart.cpp.o
+
+heart.i: heart.cpp.i
+
+.PHONY : heart.i
+
+# target to preprocess a source file
+heart.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/heart.cpp.i
+.PHONY : heart.cpp.i
+
+heart.s: heart.cpp.s
+
+.PHONY : heart.s
+
+# target to generate assembly for a file
+heart.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/heart.cpp.s
+.PHONY : heart.cpp.s
+
 ice.o: ice.cpp.o
 
 .PHONY : ice.o
@@ -810,6 +837,9 @@ help:
 	@echo "... functions.o"
 	@echo "... functions.i"
 	@echo "... functions.s"
+	@echo "... heart.o"
+	@echo "... heart.i"
+	@echo "... heart.s"
 	@echo "... ice.o"
 	@echo "... ice.i"
 	@echo "... ice.s"

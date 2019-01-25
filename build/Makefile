@@ -393,6 +393,33 @@ src/functions.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/functions.cpp.s
 .PHONY : src/functions.cpp.s
 
+src/heart.o: src/heart.cpp.o
+
+.PHONY : src/heart.o
+
+# target to build an object file
+src/heart.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/heart.cpp.o
+.PHONY : src/heart.cpp.o
+
+src/heart.i: src/heart.cpp.i
+
+.PHONY : src/heart.i
+
+# target to preprocess a source file
+src/heart.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/heart.cpp.i
+.PHONY : src/heart.cpp.i
+
+src/heart.s: src/heart.cpp.s
+
+.PHONY : src/heart.s
+
+# target to generate assembly for a file
+src/heart.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/heart.cpp.s
+.PHONY : src/heart.cpp.s
+
 src/ice.o: src/ice.cpp.o
 
 .PHONY : src/ice.o
@@ -810,6 +837,9 @@ help:
 	@echo "... src/functions.o"
 	@echo "... src/functions.i"
 	@echo "... src/functions.s"
+	@echo "... src/heart.o"
+	@echo "... src/heart.i"
+	@echo "... src/heart.s"
 	@echo "... src/ice.o"
 	@echo "... src/ice.i"
 	@echo "... src/ice.s"

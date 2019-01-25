@@ -17,6 +17,7 @@
 #include "dragon.h"
 #include "ice.h"
 #include "score.h"
+#include "heart.h"
 #include "functions.h"
 #include <vector>
 #include <set>
@@ -37,6 +38,7 @@ std::vector<Ball> BallPos;
 std::vector<Ice> IcePos;
 std::vector<Coin> CoinPos;
 std::vector<Score> ScorePos;
+std::vector<Heart> HeartPos;
 string ScoreBoard = "SCORE-";
 Fireline fireline;
 Firebeam firebeam;
@@ -55,7 +57,7 @@ float screen_zoom = 1, screen_center_x = 0, screen_center_y = 0;
 float camera_rotation_angle = 0;
 int ScreenWidth = 800, counter = 0, ScreenHeight = 800, score = 0, speeding = 0, semimove, posinmove;
 // std::vector<bool> done(30);
-int shielded ;
+int shielded , lives = 5;
 time_t tmr, btr,ict, speedtime, gtr, str;
 Timer t60(1.0 / 60.0);
 
@@ -67,10 +69,12 @@ void gameOver()
     // cout<<"YOUR SCORE : "<<score<<endl;
     // cout<<"-----------------********-------------------------\n";
     // quit(window);
-    if(time(NULL) - gtr > 1)
+    if(time(NULL) - gtr > 1 && !shielded)
     {
         gtr = time(NULL);
         score -= 1;
+        lives--;
+        // if(lives == 0)quit(window);
     }
     if(score < 0)score = 0;
 
@@ -284,7 +288,10 @@ void draw() {
             }
         }
     }
-
+    for (int i = 0; i < lives; ++i)
+    {
+        HeartPos[i].draw(VP);
+    }
 }
 // zoom function 
 void zoom(){
@@ -533,6 +540,15 @@ void initGL(GLFWwindow *window, int width, int height) {
         ScorePos.push_back(score);
         current += (2*xx + yy + diff);
     }
+    Heart heart;
+    current = diff*8;
+    for (int i = 0; i < 5; ++i)
+    {
+        heart = Heart(current, 3.7f);
+        HeartPos.push_back(heart);
+        current += 0.26 + diff;
+    }
+
     reshapeWindow (window, width, height);
 
     // Background color of the scene
