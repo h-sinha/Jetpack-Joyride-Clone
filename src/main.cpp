@@ -53,7 +53,7 @@ bounding_box_t PlayerBound;
 
 float screen_zoom = 1, screen_center_x = 0, screen_center_y = 0;
 float camera_rotation_angle = 0;
-int ScreenWidth = 800, ScreenHeight = 800, score = 0, speeding = 0, semimove, posinmove;
+int ScreenWidth = 800, counter = 0, ScreenHeight = 800, score = 0, speeding = 0, semimove, posinmove;
 // std::vector<bool> done(30);
 int shielded ;
 time_t tmr, btr,ict, speedtime, gtr, str;
@@ -141,12 +141,14 @@ void draw() {
     SpeedUp = {speedup.position.x , speedup.position.y, speedup.width, speedup.length};
     ShieldBox = {shield.position.x , shield.position.y, shield.width, shield.length};
     SwordBox = {sword.position.x , sword.position.y, sword.width, sword.length};
+    if(detect_collision(ShieldBox, SpeedUp))
+        speedup.position.x = -100.0f;
     if(shielded && detect_collision(SwordBox, Fline))
         fireline.position.x = fireline.position.y = -100.0f;
     if(shielded && detect_collision(SwordBox, Fbeam))
         firebeam.position.x = firebeam.position.y = -100.0f;
     if(shielded && detect_collision(SwordBox, Drag))
-        dragon.position.x = dragon.position.y = -100.0f;
+        dragon.position.x = dragon.position.y = -18.0f;
      if(shielded && detect_collision(SwordBox, Boom))
         boomerang.position.x = boomerang.position.y = -100.0f;
     for (int i = int(BallPos.size()) - 1; i >= 0 ; --i)
@@ -219,6 +221,7 @@ void draw() {
         gameOver();
      if(detect_collision(Drag, PlayerBound))
         gameOver();
+
     firebeam.draw(VP);
     boomerang.draw(VP);
     fireline.draw(VP);
@@ -425,26 +428,26 @@ void tick_input(GLFWwindow *window) {
     if(GameSpeed < 0.01 && !right && !left)GameSpeed += 0.001;
    
 
-    // if(magnet.position.y > player.position.y + 0.2  && magnet.position.x >= 0.0 && magnet.position.x <= 3.6)
-    // {
-    //     player.move(1);
-    //     player.move(1);
-    // }
-    // if(magnet.position.y < player.position.y + 0.2 && magnet.position.x >= 0.0 && magnet.position.x <= 3.6)player.move(-1);
-    // if(magnet.position.x + 0.1 < player.position.x && magnet.position.x >= 0.0 && magnet.position.x <= 3.6)
-    // {
-    //     if(!right)
-    //     GameSpeed = -0.02;
-    //     tick_elements();
-    //     GameSpeed = 0.01;
-    // }
-    // if(magnet.position.x - 0.1 >= player.position.x + 0.4 && magnet.position.x >= 0.0 && magnet.position.x <= 3.6)
-    // {
-    //     if(!right)
-    //     GameSpeed = 0.02;
-    //     tick_elements();
-    //     GameSpeed = 0.01;
-    // }
+    if(magnet.position.y > player.position.y + 0.2  && magnet.position.x >= 0.0 && magnet.position.x <= 3.6)
+    {
+        player.move(1);
+        player.move(1);
+    }
+    if(magnet.position.y < player.position.y + 0.2 && magnet.position.x >= 0.0 && magnet.position.x <= 3.6)player.move(-1);
+    if(magnet.position.x + 0.1 < player.position.x && magnet.position.x >= 0.0 && magnet.position.x <= 3.6)
+    {
+        if(!right)
+        GameSpeed = -0.02;
+        tick_elements();
+        GameSpeed = 0.01;
+    }
+    if(magnet.position.x - 0.1 >= player.position.x + 0.4 && magnet.position.x >= 0.0 && magnet.position.x <= 3.6)
+    {
+        if(!right)
+        GameSpeed = 0.02;
+        tick_elements();
+        GameSpeed = 0.01;
+    }
      if(!up && !semimove)
     player.move(-1);
 }

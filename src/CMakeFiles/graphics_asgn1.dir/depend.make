@@ -67,7 +67,9 @@ CMakeFiles/graphics_asgn1.dir/main.cpp.o: main.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: player.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: score.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: semicircle.h
+CMakeFiles/graphics_asgn1.dir/main.cpp.o: shield.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: speedup.h
+CMakeFiles/graphics_asgn1.dir/main.cpp.o: sword.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: timer.h
 CMakeFiles/graphics_asgn1.dir/main.cpp.o: wall.h
 

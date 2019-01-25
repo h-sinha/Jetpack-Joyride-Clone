@@ -169,6 +169,10 @@ semicircle.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/semicircle.h
 speedup.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/speedup.h
+shield.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/shield.h
+sword.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/sword.h
 bonuscoin.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/bonuscoin.h
 dragon.h
@@ -280,6 +284,10 @@ main.h
 algorithm
 -
 
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/shield.h
+main.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/speedup.cpp
 speedup.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/speedup.h
@@ -287,6 +295,10 @@ main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
 
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/speedup.h
+main.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/sword.h
 main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
 
