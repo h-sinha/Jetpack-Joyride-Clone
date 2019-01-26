@@ -295,63 +295,91 @@ void draw() {
 }
 // zoom function 
 void zoom(){
-    player.scalex = ScaleFactor;
-    player.scaley = ScaleFactor;
-    player.scalez = ScaleFactor;
+    screen_zoom =ScaleFactor;
+    float prev_top = Top;
+    reset_screen();
+    float diff = prev_top - Top;
+    if(diff == 0)return;
+    ScreenDiff = diff;
+    player.position[1] -= diff;
+    // player.scalex = ScaleFactor;
+    // player.scaley = ScaleFactor;
+    // player.scalez = ScaleFactor;
+    Bottom = BrickPos[0].position[1] + 0.2 - diff;
     for (auto &x:BrickPos)
     {
-        x.scalex = ScaleFactor;
-        x.scaley = ScaleFactor;
-        x.scalez = ScaleFactor;
+        x.position[1] -= diff;
+        Bottom = max(x.position[1] + 0.2f, Bottom);
+        // x.scalex = ScaleFactor;
+        // x.scaley = ScaleFactor;
+        // x.scalez = ScaleFactor;
     }
     for (auto &x:CoinPos)
     {
-        x.scalex = ScaleFactor;
-        x.scaley = ScaleFactor;
-        x.scalez = ScaleFactor;
+        x.position[1] -= diff;
+        // x.scalex = ScaleFactor;
+        // x.scaley = ScaleFactor;
+        // x.scalez = ScaleFactor;
     }
     for (auto &x:BallPos)
     {
-        x.scalex = ScaleFactor;
-        x.scaley = ScaleFactor;
-        x.scalez = ScaleFactor;
+        x.position[1] -= diff;
+        // x.scalex = ScaleFactor;
+        // x.scaley = ScaleFactor;
+        // x.scalez = ScaleFactor;
     }
     for (auto &x:IcePos)
     {
-        x.scalex = ScaleFactor;
-        x.scaley = ScaleFactor;
-        x.scalez = ScaleFactor;
+        x.position[1] -= diff;
+        // x.scalex = ScaleFactor;
+        // x.scaley = ScaleFactor;
+        // x.scalez = ScaleFactor;
     }
-    fireline.scalex = ScaleFactor;
-    fireline.scalez = ScaleFactor;
-    fireline.scaley = ScaleFactor;
-    magnet.scalex = ScaleFactor;
-    magnet.scalez = ScaleFactor;
-    magnet.scaley = ScaleFactor;
-    semicircle.scalex = ScaleFactor;
-    semicircle.scalez = ScaleFactor;
-    semicircle.scaley = ScaleFactor;
-    speedup.scalex = ScaleFactor;
-    speedup.scalez = ScaleFactor;
-    speedup.scaley = ScaleFactor;
-    shield.scalex = ScaleFactor;
-    shield.scalez = ScaleFactor;
-    shield.scaley = ScaleFactor;
-    sword.scalex = ScaleFactor;
-    sword.scalez = ScaleFactor;
-    sword.scaley = ScaleFactor;
-     firebeam.scalex = ScaleFactor;
-    firebeam.scalez = ScaleFactor;
-    firebeam.scaley = ScaleFactor;
-    boomerang.scalex = ScaleFactor;
-    boomerang.scalez = ScaleFactor;
-    boomerang.scaley = ScaleFactor;
-    bonuscoin.scalex = ScaleFactor;
-    bonuscoin.scalez = ScaleFactor;
-    bonuscoin.scaley = ScaleFactor;
-    dragon.scalex = ScaleFactor;
-    dragon.scalez = ScaleFactor;
-    dragon.scaley = ScaleFactor;
+    fireline.position[1] -= diff;
+    // fireline.scalex = ScaleFactor;
+    // fireline.scalez = ScaleFactor;
+    // fireline.scaley = ScaleFactor;
+    magnet.position[1] -= diff;
+    // magnet.scalex = ScaleFactor;
+    // magnet.scalez = ScaleFactor;
+    // magnet.scaley = ScaleFactor;
+    semicircle.position[1] -= diff;
+    // semicircle.scalex = ScaleFactor;
+    // semicircle.scalez = ScaleFactor;
+    // semicircle.scaley = ScaleFactor;
+    speedup.position[1] -= diff;
+    // speedup.scalex = ScaleFactor;
+    // speedup.scalez = ScaleFactor;
+    // speedup.scaley = ScaleFactor;
+    shield.position[1] -= diff;
+    // shield.scalex = ScaleFactor;
+    // shield.scalez = ScaleFactor;
+    // shield.scaley = ScaleFactor;
+    sword.position[1] -= diff;
+    // sword.scalex = ScaleFactor;
+    // sword.scalez = ScaleFactor;
+    // sword.scaley = ScaleFactor;
+    firebeam.position[1] -= diff;
+    //  firebeam.scalex = ScaleFactor;
+    // firebeam.scalez = ScaleFactor;
+    // firebeam.scaley = ScaleFactor;
+    boomerang.position[1] -= diff;
+    // boomerang.scalex = ScaleFactor;
+    // boomerang.scalez = ScaleFactor;
+    // boomerang.scaley = ScaleFactor;
+    bonuscoin.position[1] -= diff;
+    // bonuscoin.scalex = ScaleFactor;
+    // bonuscoin.scalez = ScaleFactor;
+    // bonuscoin.scaley = ScaleFactor;
+    dragon.position[1] -= diff;
+    // dragon.scalex = ScaleFactor;
+    // dragon.scalez = ScaleFactor;
+    // dragon.scaley = ScaleFactor;
+    for(auto &x: HeartPos)x.position[1] -= diff;
+    for(auto &x: ScorePos)x.position[1] -= diff, x.position[0] -= diff;
+    sword.position[1] -= diff;
+    shield.position[1] -= diff;
+    speedup.position[1] -= diff;
 }
 void tick_elements() {
     for (auto &x:BrickPos)
@@ -616,6 +644,7 @@ void reset_screen() {
     float left   = 0;
     float right  = 4 / screen_zoom;
     // changed origin
+    Top = top;
      Matrices.projection = glm::ortho(left, right, bottom, top, 0.1f, 500.0f);
     // Matrices.projection = glm::ortho(0.0f, right, 0.0f, top, 0.1f, 500.0f);
     // Matrices.projection = glm::ortho(0.0f, 0.0f, 0.0f, 0.0f, 0.1f, 500.0f);

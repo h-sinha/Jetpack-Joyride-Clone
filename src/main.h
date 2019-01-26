@@ -101,6 +101,9 @@ extern const color_t COLOR_test;
 extern float GameSpeed;
 extern float CurrentGameSpeed;
 extern float ScaleFactor;
+extern float Top;
+extern float Bottom;
+extern float ScreenDiff;
 
 
 #endif

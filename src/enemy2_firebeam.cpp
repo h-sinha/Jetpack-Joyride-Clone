@@ -126,12 +126,12 @@ void Firebeam::tick() {
         this->position.y += speed;
     else 
         this->position.y -= speed;
-    if(this->position.y > 4.0)
+    if(this->position.y > Top)
     {
         up = 0;
         this->position.y -= speed;
     } 
-    else if(this->position.y < 0.5)
+    else if(this->position.y < Bottom + 0.1)
     {
         up = 1;
         this->position.y += speed;

@@ -135,7 +135,7 @@ void Player::move(int up) {
     // this->position.x -= speed;
     if(up == 1)
     {
-      if(this->position.y + speed + 0.4f < 4.0f)
+      if(this->position.y + speed + 0.4f < Top)
       {
         this->position.y += speed;
         this->line[0][1] += speed;
@@ -150,7 +150,9 @@ void Player::move(int up) {
     }
     else
     {
-      if(this->position.y - speed > 0.38f)
+      // std::cout<<this->position.y<<std::endl;
+      // std::cout<<0.38-ScreenDiff<<" "<<this->position.y - speed<<std::endl;
+      if(this->position.y - speed > Bottom)
       {
         this->position.y -= speed;
         this->line[0][1] -= speed;
@@ -162,6 +164,20 @@ void Player::move(int up) {
          this->line[3][1] -= speed;
         this->line[3][3] -= speed;
       }
+      // else
+      // {
+      //   float diff = this->position.y - 0.38+2*ScreenDiff;
+      //   // printf("%lf\n",diff );
+      //    this->position.y -= diff;
+      //   this->line[0][1] -= diff;
+      //   this->line[0][3] -= diff;
+      //    this->line[1][1] -= diff;
+      //   this->line[1][3] -= diff;
+      //    this->line[2][1] -= diff;
+      //   this->line[2][3] -= diff;
+      //    this->line[3][1] -= diff;
+      //   this->line[3][3] -= diff;
+      // }
     }
     // this->set_position(this->position.x, this->position.y);
 }

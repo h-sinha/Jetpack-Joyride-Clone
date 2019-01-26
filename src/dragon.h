@@ -25,7 +25,7 @@ private:
     VAO *tri1;
     VAO *mouth1;
     VAO *mouth2;
-    VAO *rect2;
+    VAO *rect1;
 };
 
 #endif // COIN_H

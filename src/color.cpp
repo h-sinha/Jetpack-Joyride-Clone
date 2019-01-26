@@ -23,3 +23,6 @@ const color_t COLOR_NEON_GREEN = { 57, 255, 20 };
 float GameSpeed = 0.01;
 float CurrentGameSpeed = 0.01;
 float ScaleFactor = 1.0;
+float Top = 4.0;
+float Bottom = 0.38;
+float ScreenDiff = 0.0;
