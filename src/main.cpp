@@ -170,8 +170,17 @@ void draw() {
         xx = {BallPos[i].position.x, BallPos[i].position.y, BallPos[i].width, BallPos[i].length};
         if(detect_collision(xx, Fbeam))
             firebeam.set_position(-100.0, -100.0);
-        if(detect_collision(xx, Fline))
-            fireline.set_position(-100.0, -100.0);
+        // if(detect_collision(xx, Fline))
+        //     fireline.set_position(-100.0, -100.0);
+        for (int j = 0; j < 6 ; ++j)
+        {
+            for (int k = 0; k < 3 ; ++k)
+            {
+                if(check_intersection(BallPos[i].line[k], fireline.line[j]))
+                    fireline.set_position(-100.0, -100.0);
+            }
+        }
+
     }
      for (int i = int(IcePos.size()) - 1; i >= 0 ; --i)
     {

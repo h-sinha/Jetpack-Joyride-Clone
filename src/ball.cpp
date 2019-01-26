@@ -16,6 +16,7 @@ Ball::Ball(float x, float y, color_t color) {
     GLfloat vertex_buffer_data[9*n];
     // Our vertices. Three consecutive floats give a 3D vertex; Three consecutive vertices give a triangle.
     // A cube has 6 faces with 2 triangles each, so this makes 6*2=12 triangles, and 12*3 vertices
+    float xmin, xmax, ymin, ymax;
     for (int i = 1; i <= n; ++i)
      {
         vertex_buffer_data[cur] =  0.1 * cos((2.0*PI*i)/n);
@@ -27,8 +28,23 @@ Ball::Ball(float x, float y, color_t color) {
         vertex_buffer_data[cur+6] = 0.0;
         vertex_buffer_data[cur+7] = 0.0;
         vertex_buffer_data[cur+8] = 0.0;
+        xmin = std::min(xmin, vertex_buffer_data[cur]);
+        xmin = std::min(xmin, vertex_buffer_data[cur+3]);
+        xmin = std::min(xmin, vertex_buffer_data[cur+6]);
+         xmax = std::max(xmin, vertex_buffer_data[cur]);
+        xmax = std::max(xmin, vertex_buffer_data[cur+3]);
+        xmax = std::max(xmin, vertex_buffer_data[cur+6]);
+        ymin = std::min(ymin, vertex_buffer_data[cur+1]);
+        ymin = std::min(ymin, vertex_buffer_data[cur+4]);
+        ymin = std::min(ymin, vertex_buffer_data[cur+7]);
+        ymax = std::max(ymin, vertex_buffer_data[cur+1]);
+        ymax = std::max(ymin, vertex_buffer_data[cur+4]);
+        ymax = std::max(ymin, vertex_buffer_data[cur+7]);
         cur += 9;
      } 
+     this->line[0] = glm::vec4(x + xmin, y + ymin, x + xmin, y + ymax);
+     this->line[1] = glm::vec4(x + xmin, y + ymin, x + xmax, y + (ymax-ymin)/2.0f);
+     this->line[2] = glm::vec4(x + xmin, y + ymax, x + xmin, y + (ymax-ymin)/2.0f);
     this->object = create3DObject(GL_TRIANGLES, n*3, vertex_buffer_data, COLOR_BALL, GL_FILL);
 }
 
@@ -51,9 +67,22 @@ void Ball::set_position(float x, float y) {
 
 void Ball::tick() {
     this->position.x -= GameSpeed;
+    for (int i = 0; i < 3; ++i)
+    {
+        this->line[i][0] -= GameSpeed;
+        this->line[i][2] -= GameSpeed;
+    }
+
     // this->rotation += speed;
     this->position.x += 0.03;
     this->position.y += this->speed;
+     for (int i = 0; i < 3; ++i)
+    {
+        this->line[i][0] += 0.03;
+        this->line[i][2] += 0.03;
+         this->line[i][1] += this->speed;
+        this->line[i][3] += this->speed;
+    }
    this->speed -= 0.0005;
     // this->set_position(this->position.x, this->position.y);
     // printf("%f %f\n",speed, this->position.x );

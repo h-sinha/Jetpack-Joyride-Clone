@@ -13,6 +13,7 @@ public:
     float length;
     float width;
     float scalex;
+    glm::vec4 line[3];
     float scaley;
     float scalez;
     void draw(glm::mat4 VP);
