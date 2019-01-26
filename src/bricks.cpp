@@ -41,7 +41,6 @@ void Brick::set_position(float x, float y) {
 }
 
 void Brick::tick() {
-    printf("%lf\n",this->position.y );
     this->position.x -= GameSpeed;
     if(this->position.x <= -0.8)
       this->position.x += 5.8;

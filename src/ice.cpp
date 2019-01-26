@@ -12,11 +12,11 @@ Ice::Ice(float x, float y, color_t color) {
     this->scaley = 1.0;
     this->scalez = 1.0;
     speed = GameSpeed;
-    int cur = 0, n = 15;
-    GLfloat vertex_buffer_data[9*15];
+    int cur = 0, n = 5;
+    GLfloat vertex_buffer_data[9*n];
     // Our vertices. Three consecutive floats give a 3D vertex; Three consecutive vertices give a triangle.
     // A cube has 6 faces with 2 triangles each, so this makes 6*2=12 triangles, and 12*3 vertices
-    for (int i = 1; i <= 15; ++i)
+    for (int i = 1; i <= n; ++i)
      {
         vertex_buffer_data[cur] =  0.1 * cos((2.0*PI*i)/n);
         vertex_buffer_data[cur+1] = 0.1 * sin((2.0*PI*i)/n);
@@ -29,7 +29,7 @@ Ice::Ice(float x, float y, color_t color) {
         vertex_buffer_data[cur+8] = 0.0;
         cur += 9;
      } 
-    this->object = create3DObject(GL_TRIANGLES, 15*3, vertex_buffer_data,COLOR_DARK_RED, GL_FILL);
+    this->object = create3DObject(GL_TRIANGLES, n*3, vertex_buffer_data,COLOR_DARK_RED, GL_FILL);
 }
 
 void Ice::draw(glm::mat4 VP) {
