@@ -74,7 +74,7 @@ void gameOver()
         gtr = time(NULL);
         score -= 1;
         lives--;
-        // if(lives == 0)quit(window);
+        if(lives == 0)quit(window);
     }
     if(score < 0)score = 0;
 
