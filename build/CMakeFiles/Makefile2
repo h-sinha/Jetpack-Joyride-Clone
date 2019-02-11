@@ -60,39 +60,39 @@ CMAKE_SOURCE_DIR = /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-C
 CMAKE_BINARY_DIR = /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/graphics_asgn1.dir
+# Target rules for target CMakeFiles/jetpack-joyride.dir
 
 # All Build rule for target.
-CMakeFiles/graphics_asgn1.dir/all:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/depend
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25 "Built target graphics_asgn1"
-.PHONY : CMakeFiles/graphics_asgn1.dir/all
+CMakeFiles/jetpack-joyride.dir/all:
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/depend
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25 "Built target jetpack-joyride"
+.PHONY : CMakeFiles/jetpack-joyride.dir/all
 
 # Include target in all.
-all: CMakeFiles/graphics_asgn1.dir/all
+all: CMakeFiles/jetpack-joyride.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/graphics_asgn1.dir/rule: cmake_check_build_system
+CMakeFiles/jetpack-joyride.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles 25
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/graphics_asgn1.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/jetpack-joyride.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles 0
-.PHONY : CMakeFiles/graphics_asgn1.dir/rule
+.PHONY : CMakeFiles/jetpack-joyride.dir/rule
 
 # Convenience name for target.
-graphics_asgn1: CMakeFiles/graphics_asgn1.dir/rule
+jetpack-joyride: CMakeFiles/jetpack-joyride.dir/rule
 
-.PHONY : graphics_asgn1
-
-# clean rule for target.
-CMakeFiles/graphics_asgn1.dir/clean:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/clean
-.PHONY : CMakeFiles/graphics_asgn1.dir/clean
+.PHONY : jetpack-joyride
 
 # clean rule for target.
-clean: CMakeFiles/graphics_asgn1.dir/clean
+CMakeFiles/jetpack-joyride.dir/clean:
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/clean
+.PHONY : CMakeFiles/jetpack-joyride.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/jetpack-joyride.dir/clean
 
 .PHONY : clean
 

@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named graphics_asgn1
+# Target rules for targets named jetpack-joyride
 
 # Build rule for target.
-graphics_asgn1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 graphics_asgn1
-.PHONY : graphics_asgn1
+jetpack-joyride: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 jetpack-joyride
+.PHONY : jetpack-joyride
 
 # fast build rule for target.
-graphics_asgn1/fast:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/build
-.PHONY : graphics_asgn1/fast
+jetpack-joyride/fast:
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/build
+.PHONY : jetpack-joyride/fast
 
 src/ball.o: src/ball.cpp.o
 
@@ -129,7 +129,7 @@ src/ball.o: src/ball.cpp.o
 
 # target to build an object file
 src/ball.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/ball.cpp.o
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/ball.cpp.o
 .PHONY : src/ball.cpp.o
 
 src/ball.i: src/ball.cpp.i
@@ -138,7 +138,7 @@ src/ball.i: src/ball.cpp.i
 
 # target to preprocess a source file
 src/ball.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/ball.cpp.i
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/ball.cpp.i
 .PHONY : src/ball.cpp.i
 
 src/ball.s: src/ball.cpp.s
@@ -147,7 +147,7 @@ src/ball.s: src/ball.cpp.s
 
 # target to generate assembly for a file
 src/ball.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/ball.cpp.s
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/ball.cpp.s
 .PHONY : src/ball.cpp.s
 
 src/bonuscoin.o: src/bonuscoin.cpp.o
@@ -156,7 +156,7 @@ src/bonuscoin.o: src/bonuscoin.cpp.o
 
 # target to build an object file
 src/bonuscoin.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/bonuscoin.cpp.o
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/bonuscoin.cpp.o
 .PHONY : src/bonuscoin.cpp.o
 
 src/bonuscoin.i: src/bonuscoin.cpp.i
@@ -165,7 +165,7 @@ src/bonuscoin.i: src/bonuscoin.cpp.i
 
 # target to preprocess a source file
 src/bonuscoin.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/bonuscoin.cpp.i
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/bonuscoin.cpp.i
 .PHONY : src/bonuscoin.cpp.i
 
 src/bonuscoin.s: src/bonuscoin.cpp.s
@@ -174,7 +174,7 @@ src/bonuscoin.s: src/bonuscoin.cpp.s
 
 # target to generate assembly for a file
 src/bonuscoin.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/bonuscoin.cpp.s
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/bonuscoin.cpp.s
 .PHONY : src/bonuscoin.cpp.s
 
 src/bricks.o: src/bricks.cpp.o
@@ -183,7 +183,7 @@ src/bricks.o: src/bricks.cpp.o
 
 # target to build an object file
 src/bricks.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/bricks.cpp.o
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/bricks.cpp.o
 .PHONY : src/bricks.cpp.o
 
 src/bricks.i: src/bricks.cpp.i
@@ -192,7 +192,7 @@ src/bricks.i: src/bricks.cpp.i
 
 # target to preprocess a source file
 src/bricks.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/bricks.cpp.i
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/bricks.cpp.i
 .PHONY : src/bricks.cpp.i
 
 src/bricks.s: src/bricks.cpp.s
@@ -201,7 +201,7 @@ src/bricks.s: src/bricks.cpp.s
 
 # target to generate assembly for a file
 src/bricks.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/bricks.cpp.s
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/bricks.cpp.s
 .PHONY : src/bricks.cpp.s
 
 src/coin.o: src/coin.cpp.o
@@ -210,7 +210,7 @@ src/coin.o: src/coin.cpp.o
 
 # target to build an object file
 src/coin.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/coin.cpp.o
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/coin.cpp.o
 .PHONY : src/coin.cpp.o
 
 src/coin.i: src/coin.cpp.i
@@ -219,7 +219,7 @@ src/coin.i: src/coin.cpp.i
 
 # target to preprocess a source file
 src/coin.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/coin.cpp.i
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/coin.cpp.i
 .PHONY : src/coin.cpp.i
 
 src/coin.s: src/coin.cpp.s
@@ -228,7 +228,7 @@ src/coin.s: src/coin.cpp.s
 
 # target to generate assembly for a file
 src/coin.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/coin.cpp.s
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/coin.cpp.s
 .PHONY : src/coin.cpp.s
 
 src/color.o: src/color.cpp.o
@@ -237,7 +237,7 @@ src/color.o: src/color.cpp.o
 
 # target to build an object file
 src/color.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/color.cpp.o
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/color.cpp.o
 .PHONY : src/color.cpp.o
 
 src/color.i: src/color.cpp.i
@@ -246,7 +246,7 @@ src/color.i: src/color.cpp.i
 
 # target to preprocess a source file
 src/color.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/color.cpp.i
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/color.cpp.i
 .PHONY : src/color.cpp.i
 
 src/color.s: src/color.cpp.s
@@ -255,7 +255,7 @@ src/color.s: src/color.cpp.s
 
 # target to generate assembly for a file
 src/color.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/color.cpp.s
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/color.cpp.s
 .PHONY : src/color.cpp.s
 
 src/dragon.o: src/dragon.cpp.o
@@ -264,7 +264,7 @@ src/dragon.o: src/dragon.cpp.o
 
 # target to build an object file
 src/dragon.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/dragon.cpp.o
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/dragon.cpp.o
 .PHONY : src/dragon.cpp.o
 
 src/dragon.i: src/dragon.cpp.i
@@ -273,7 +273,7 @@ src/dragon.i: src/dragon.cpp.i
 
 # target to preprocess a source file
 src/dragon.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/dragon.cpp.i
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/dragon.cpp.i
 .PHONY : src/dragon.cpp.i
 
 src/dragon.s: src/dragon.cpp.s
@@ -282,7 +282,7 @@ src/dragon.s: src/dragon.cpp.s
 
 # target to generate assembly for a file
 src/dragon.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/dragon.cpp.s
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/dragon.cpp.s
 .PHONY : src/dragon.cpp.s
 
 src/enemy1_firelines.o: src/enemy1_firelines.cpp.o
@@ -291,7 +291,7 @@ src/enemy1_firelines.o: src/enemy1_firelines.cpp.o
 
 # target to build an object file
 src/enemy1_firelines.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/enemy1_firelines.cpp.o
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/enemy1_firelines.cpp.o
 .PHONY : src/enemy1_firelines.cpp.o
 
 src/enemy1_firelines.i: src/enemy1_firelines.cpp.i
@@ -300,7 +300,7 @@ src/enemy1_firelines.i: src/enemy1_firelines.cpp.i
 
 # target to preprocess a source file
 src/enemy1_firelines.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/enemy1_firelines.cpp.i
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/enemy1_firelines.cpp.i
 .PHONY : src/enemy1_firelines.cpp.i
 
 src/enemy1_firelines.s: src/enemy1_firelines.cpp.s
@@ -309,7 +309,7 @@ src/enemy1_firelines.s: src/enemy1_firelines.cpp.s
 
 # target to generate assembly for a file
 src/enemy1_firelines.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/enemy1_firelines.cpp.s
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/enemy1_firelines.cpp.s
 .PHONY : src/enemy1_firelines.cpp.s
 
 src/enemy2_firebeam.o: src/enemy2_firebeam.cpp.o
@@ -318,7 +318,7 @@ src/enemy2_firebeam.o: src/enemy2_firebeam.cpp.o
 
 # target to build an object file
 src/enemy2_firebeam.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/enemy2_firebeam.cpp.o
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/enemy2_firebeam.cpp.o
 .PHONY : src/enemy2_firebeam.cpp.o
 
 src/enemy2_firebeam.i: src/enemy2_firebeam.cpp.i
@@ -327,7 +327,7 @@ src/enemy2_firebeam.i: src/enemy2_firebeam.cpp.i
 
 # target to preprocess a source file
 src/enemy2_firebeam.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/enemy2_firebeam.cpp.i
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/enemy2_firebeam.cpp.i
 .PHONY : src/enemy2_firebeam.cpp.i
 
 src/enemy2_firebeam.s: src/enemy2_firebeam.cpp.s
@@ -336,7 +336,7 @@ src/enemy2_firebeam.s: src/enemy2_firebeam.cpp.s
 
 # target to generate assembly for a file
 src/enemy2_firebeam.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/enemy2_firebeam.cpp.s
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/enemy2_firebeam.cpp.s
 .PHONY : src/enemy2_firebeam.cpp.s
 
 src/enemy3.boomerang.o: src/enemy3.boomerang.cpp.o
@@ -345,7 +345,7 @@ src/enemy3.boomerang.o: src/enemy3.boomerang.cpp.o
 
 # target to build an object file
 src/enemy3.boomerang.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/enemy3.boomerang.cpp.o
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/enemy3.boomerang.cpp.o
 .PHONY : src/enemy3.boomerang.cpp.o
 
 src/enemy3.boomerang.i: src/enemy3.boomerang.cpp.i
@@ -354,7 +354,7 @@ src/enemy3.boomerang.i: src/enemy3.boomerang.cpp.i
 
 # target to preprocess a source file
 src/enemy3.boomerang.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/enemy3.boomerang.cpp.i
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/enemy3.boomerang.cpp.i
 .PHONY : src/enemy3.boomerang.cpp.i
 
 src/enemy3.boomerang.s: src/enemy3.boomerang.cpp.s
@@ -363,7 +363,7 @@ src/enemy3.boomerang.s: src/enemy3.boomerang.cpp.s
 
 # target to generate assembly for a file
 src/enemy3.boomerang.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/enemy3.boomerang.cpp.s
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/enemy3.boomerang.cpp.s
 .PHONY : src/enemy3.boomerang.cpp.s
 
 src/functions.o: src/functions.cpp.o
@@ -372,7 +372,7 @@ src/functions.o: src/functions.cpp.o
 
 # target to build an object file
 src/functions.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/functions.cpp.o
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/functions.cpp.o
 .PHONY : src/functions.cpp.o
 
 src/functions.i: src/functions.cpp.i
@@ -381,7 +381,7 @@ src/functions.i: src/functions.cpp.i
 
 # target to preprocess a source file
 src/functions.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/functions.cpp.i
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/functions.cpp.i
 .PHONY : src/functions.cpp.i
 
 src/functions.s: src/functions.cpp.s
@@ -390,7 +390,7 @@ src/functions.s: src/functions.cpp.s
 
 # target to generate assembly for a file
 src/functions.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/functions.cpp.s
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/functions.cpp.s
 .PHONY : src/functions.cpp.s
 
 src/heart.o: src/heart.cpp.o
@@ -399,7 +399,7 @@ src/heart.o: src/heart.cpp.o
 
 # target to build an object file
 src/heart.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/heart.cpp.o
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/heart.cpp.o
 .PHONY : src/heart.cpp.o
 
 src/heart.i: src/heart.cpp.i
@@ -408,7 +408,7 @@ src/heart.i: src/heart.cpp.i
 
 # target to preprocess a source file
 src/heart.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/heart.cpp.i
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/heart.cpp.i
 .PHONY : src/heart.cpp.i
 
 src/heart.s: src/heart.cpp.s
@@ -417,7 +417,7 @@ src/heart.s: src/heart.cpp.s
 
 # target to generate assembly for a file
 src/heart.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/heart.cpp.s
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/heart.cpp.s
 .PHONY : src/heart.cpp.s
 
 src/ice.o: src/ice.cpp.o
@@ -426,7 +426,7 @@ src/ice.o: src/ice.cpp.o
 
 # target to build an object file
 src/ice.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/ice.cpp.o
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/ice.cpp.o
 .PHONY : src/ice.cpp.o
 
 src/ice.i: src/ice.cpp.i
@@ -435,7 +435,7 @@ src/ice.i: src/ice.cpp.i
 
 # target to preprocess a source file
 src/ice.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/ice.cpp.i
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/ice.cpp.i
 .PHONY : src/ice.cpp.i
 
 src/ice.s: src/ice.cpp.s
@@ -444,7 +444,7 @@ src/ice.s: src/ice.cpp.s
 
 # target to generate assembly for a file
 src/ice.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/ice.cpp.s
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/ice.cpp.s
 .PHONY : src/ice.cpp.s
 
 src/input.o: src/input.cpp.o
@@ -453,7 +453,7 @@ src/input.o: src/input.cpp.o
 
 # target to build an object file
 src/input.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/input.cpp.o
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/input.cpp.o
 .PHONY : src/input.cpp.o
 
 src/input.i: src/input.cpp.i
@@ -462,7 +462,7 @@ src/input.i: src/input.cpp.i
 
 # target to preprocess a source file
 src/input.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/input.cpp.i
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/input.cpp.i
 .PHONY : src/input.cpp.i
 
 src/input.s: src/input.cpp.s
@@ -471,7 +471,7 @@ src/input.s: src/input.cpp.s
 
 # target to generate assembly for a file
 src/input.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/input.cpp.s
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/input.cpp.s
 .PHONY : src/input.cpp.s
 
 src/magnet.o: src/magnet.cpp.o
@@ -480,7 +480,7 @@ src/magnet.o: src/magnet.cpp.o
 
 # target to build an object file
 src/magnet.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/magnet.cpp.o
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/magnet.cpp.o
 .PHONY : src/magnet.cpp.o
 
 src/magnet.i: src/magnet.cpp.i
@@ -489,7 +489,7 @@ src/magnet.i: src/magnet.cpp.i
 
 # target to preprocess a source file
 src/magnet.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/magnet.cpp.i
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/magnet.cpp.i
 .PHONY : src/magnet.cpp.i
 
 src/magnet.s: src/magnet.cpp.s
@@ -498,7 +498,7 @@ src/magnet.s: src/magnet.cpp.s
 
 # target to generate assembly for a file
 src/magnet.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/magnet.cpp.s
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/magnet.cpp.s
 .PHONY : src/magnet.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -507,7 +507,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -516,7 +516,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -525,7 +525,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/nonedit.o: src/nonedit.cpp.o
@@ -534,7 +534,7 @@ src/nonedit.o: src/nonedit.cpp.o
 
 # target to build an object file
 src/nonedit.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/nonedit.cpp.o
 .PHONY : src/nonedit.cpp.o
 
 src/nonedit.i: src/nonedit.cpp.i
@@ -543,7 +543,7 @@ src/nonedit.i: src/nonedit.cpp.i
 
 # target to preprocess a source file
 src/nonedit.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.i
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/nonedit.cpp.i
 .PHONY : src/nonedit.cpp.i
 
 src/nonedit.s: src/nonedit.cpp.s
@@ -552,7 +552,7 @@ src/nonedit.s: src/nonedit.cpp.s
 
 # target to generate assembly for a file
 src/nonedit.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.s
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/nonedit.cpp.s
 .PHONY : src/nonedit.cpp.s
 
 src/other_handlers.o: src/other_handlers.cpp.o
@@ -561,7 +561,7 @@ src/other_handlers.o: src/other_handlers.cpp.o
 
 # target to build an object file
 src/other_handlers.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/other_handlers.cpp.o
 .PHONY : src/other_handlers.cpp.o
 
 src/other_handlers.i: src/other_handlers.cpp.i
@@ -570,7 +570,7 @@ src/other_handlers.i: src/other_handlers.cpp.i
 
 # target to preprocess a source file
 src/other_handlers.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.i
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/other_handlers.cpp.i
 .PHONY : src/other_handlers.cpp.i
 
 src/other_handlers.s: src/other_handlers.cpp.s
@@ -579,7 +579,7 @@ src/other_handlers.s: src/other_handlers.cpp.s
 
 # target to generate assembly for a file
 src/other_handlers.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.s
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/other_handlers.cpp.s
 .PHONY : src/other_handlers.cpp.s
 
 src/player.o: src/player.cpp.o
@@ -588,7 +588,7 @@ src/player.o: src/player.cpp.o
 
 # target to build an object file
 src/player.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/player.cpp.o
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/player.cpp.o
 .PHONY : src/player.cpp.o
 
 src/player.i: src/player.cpp.i
@@ -597,7 +597,7 @@ src/player.i: src/player.cpp.i
 
 # target to preprocess a source file
 src/player.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/player.cpp.i
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/player.cpp.i
 .PHONY : src/player.cpp.i
 
 src/player.s: src/player.cpp.s
@@ -606,7 +606,7 @@ src/player.s: src/player.cpp.s
 
 # target to generate assembly for a file
 src/player.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/player.cpp.s
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/player.cpp.s
 .PHONY : src/player.cpp.s
 
 src/score.o: src/score.cpp.o
@@ -615,7 +615,7 @@ src/score.o: src/score.cpp.o
 
 # target to build an object file
 src/score.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/score.cpp.o
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/score.cpp.o
 .PHONY : src/score.cpp.o
 
 src/score.i: src/score.cpp.i
@@ -624,7 +624,7 @@ src/score.i: src/score.cpp.i
 
 # target to preprocess a source file
 src/score.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/score.cpp.i
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/score.cpp.i
 .PHONY : src/score.cpp.i
 
 src/score.s: src/score.cpp.s
@@ -633,7 +633,7 @@ src/score.s: src/score.cpp.s
 
 # target to generate assembly for a file
 src/score.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/score.cpp.s
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/score.cpp.s
 .PHONY : src/score.cpp.s
 
 src/semicircle.o: src/semicircle.cpp.o
@@ -642,7 +642,7 @@ src/semicircle.o: src/semicircle.cpp.o
 
 # target to build an object file
 src/semicircle.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/semicircle.cpp.o
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/semicircle.cpp.o
 .PHONY : src/semicircle.cpp.o
 
 src/semicircle.i: src/semicircle.cpp.i
@@ -651,7 +651,7 @@ src/semicircle.i: src/semicircle.cpp.i
 
 # target to preprocess a source file
 src/semicircle.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/semicircle.cpp.i
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/semicircle.cpp.i
 .PHONY : src/semicircle.cpp.i
 
 src/semicircle.s: src/semicircle.cpp.s
@@ -660,7 +660,7 @@ src/semicircle.s: src/semicircle.cpp.s
 
 # target to generate assembly for a file
 src/semicircle.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/semicircle.cpp.s
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/semicircle.cpp.s
 .PHONY : src/semicircle.cpp.s
 
 src/shield.o: src/shield.cpp.o
@@ -669,7 +669,7 @@ src/shield.o: src/shield.cpp.o
 
 # target to build an object file
 src/shield.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/shield.cpp.o
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/shield.cpp.o
 .PHONY : src/shield.cpp.o
 
 src/shield.i: src/shield.cpp.i
@@ -678,7 +678,7 @@ src/shield.i: src/shield.cpp.i
 
 # target to preprocess a source file
 src/shield.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/shield.cpp.i
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/shield.cpp.i
 .PHONY : src/shield.cpp.i
 
 src/shield.s: src/shield.cpp.s
@@ -687,7 +687,7 @@ src/shield.s: src/shield.cpp.s
 
 # target to generate assembly for a file
 src/shield.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/shield.cpp.s
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/shield.cpp.s
 .PHONY : src/shield.cpp.s
 
 src/speedup.o: src/speedup.cpp.o
@@ -696,7 +696,7 @@ src/speedup.o: src/speedup.cpp.o
 
 # target to build an object file
 src/speedup.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/speedup.cpp.o
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/speedup.cpp.o
 .PHONY : src/speedup.cpp.o
 
 src/speedup.i: src/speedup.cpp.i
@@ -705,7 +705,7 @@ src/speedup.i: src/speedup.cpp.i
 
 # target to preprocess a source file
 src/speedup.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/speedup.cpp.i
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/speedup.cpp.i
 .PHONY : src/speedup.cpp.i
 
 src/speedup.s: src/speedup.cpp.s
@@ -714,7 +714,7 @@ src/speedup.s: src/speedup.cpp.s
 
 # target to generate assembly for a file
 src/speedup.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/speedup.cpp.s
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/speedup.cpp.s
 .PHONY : src/speedup.cpp.s
 
 src/sword.o: src/sword.cpp.o
@@ -723,7 +723,7 @@ src/sword.o: src/sword.cpp.o
 
 # target to build an object file
 src/sword.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/sword.cpp.o
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/sword.cpp.o
 .PHONY : src/sword.cpp.o
 
 src/sword.i: src/sword.cpp.i
@@ -732,7 +732,7 @@ src/sword.i: src/sword.cpp.i
 
 # target to preprocess a source file
 src/sword.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/sword.cpp.i
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/sword.cpp.i
 .PHONY : src/sword.cpp.i
 
 src/sword.s: src/sword.cpp.s
@@ -741,7 +741,7 @@ src/sword.s: src/sword.cpp.s
 
 # target to generate assembly for a file
 src/sword.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/sword.cpp.s
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/sword.cpp.s
 .PHONY : src/sword.cpp.s
 
 src/timer.o: src/timer.cpp.o
@@ -750,7 +750,7 @@ src/timer.o: src/timer.cpp.o
 
 # target to build an object file
 src/timer.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/timer.cpp.o
 .PHONY : src/timer.cpp.o
 
 src/timer.i: src/timer.cpp.i
@@ -759,7 +759,7 @@ src/timer.i: src/timer.cpp.i
 
 # target to preprocess a source file
 src/timer.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/timer.cpp.i
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/timer.cpp.i
 .PHONY : src/timer.cpp.i
 
 src/timer.s: src/timer.cpp.s
@@ -768,7 +768,7 @@ src/timer.s: src/timer.cpp.s
 
 # target to generate assembly for a file
 src/timer.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/timer.cpp.s
+	$(MAKE) -f CMakeFiles/jetpack-joyride.dir/build.make CMakeFiles/jetpack-joyride.dir/src/timer.cpp.s
 .PHONY : src/timer.cpp.s
 
 # Help Target
@@ -778,7 +778,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... graphics_asgn1"
+	@echo "... jetpack-joyride"
 	@echo "... edit_cache"
 	@echo "... src/ball.o"
 	@echo "... src/ball.i"
