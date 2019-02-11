@@ -1,5 +1,6 @@
 # Jetpack-Joyride-Clone
 A basic replica of Jetpack-Joyride using OpenGL.
+![alt text](https://github.com/h-sinha/Jetpack-Joyride-Clone/blob/master/screenshot.png)
 ### Controls
 * Up Arrow :arrow_up: - Move Up
 * Left Arrow :arrow_left: - Move Left
