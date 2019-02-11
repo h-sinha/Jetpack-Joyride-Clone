@@ -28,7 +28,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/speedup.cpp" "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/graphics_asgn1.dir/src/speedup.cpp.o"
   "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/sword.cpp" "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/graphics_asgn1.dir/src/sword.cpp.o"
   "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/timer.cpp" "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o"
-  "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/wall.cpp" "/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/build/CMakeFiles/graphics_asgn1.dir/src/wall.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

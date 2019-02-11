@@ -23,7 +23,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/graphics_asgn1.dir/src/speedup.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/src/sword.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o"
-  "CMakeFiles/graphics_asgn1.dir/src/wall.cpp.o"
   "graphics_asgn1.pdb"
   "graphics_asgn1"
 )

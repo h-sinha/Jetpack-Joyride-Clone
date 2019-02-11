@@ -21,6 +21,8 @@ bonuscoin.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/bonuscoin.h
 main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+functions.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/functions.h
 
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/bonuscoin.h
 main.h
@@ -41,6 +43,8 @@ coin.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/coin.h
 main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+functions.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/functions.h
 
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/coin.h
 main.h
@@ -75,6 +79,8 @@ enemy2_firebeam.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy2_firebeam.h
 main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+functions.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/functions.h
 
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy2_firebeam.h
 main.h
@@ -85,6 +91,8 @@ enemy3_boomerang.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy3_boomerang.h
 main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+functions.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/functions.h
 
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/enemy3_boomerang.h
 main.h
@@ -105,6 +113,8 @@ heart.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/heart.h
 main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+functions.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/functions.h
 
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/heart.h
 main.h
@@ -115,6 +125,8 @@ ice.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/ice.h
 main.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
+functions.h
+/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/functions.h
 
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/ice.h
 main.h
@@ -161,8 +173,6 @@ ball.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/ball.h
 bricks.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/bricks.h
-wall.h
-/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/wall.h
 coin.h
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/coin.h
 player.h
@@ -333,14 +343,4 @@ GLFW/glfw3.h
 -
 
 /home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/timer.h
-
-/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/wall.cpp
-wall.h
-/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/wall.h
-main.h
-/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
-
-/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/wall.h
-main.h
-/home/harsh/acads/sem4/Graphics/assignments/Jetpack-Joyride-Clone/src/main.h
 

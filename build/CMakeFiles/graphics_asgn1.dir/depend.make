@@ -7,6 +7,7 @@ CMakeFiles/graphics_asgn1.dir/src/ball.cpp.o: ../src/main.h
 
 CMakeFiles/graphics_asgn1.dir/src/bonuscoin.cpp.o: ../src/bonuscoin.cpp
 CMakeFiles/graphics_asgn1.dir/src/bonuscoin.cpp.o: ../src/bonuscoin.h
+CMakeFiles/graphics_asgn1.dir/src/bonuscoin.cpp.o: ../src/functions.h
 CMakeFiles/graphics_asgn1.dir/src/bonuscoin.cpp.o: ../src/main.h
 
 CMakeFiles/graphics_asgn1.dir/src/bricks.cpp.o: ../src/bricks.cpp
@@ -15,6 +16,7 @@ CMakeFiles/graphics_asgn1.dir/src/bricks.cpp.o: ../src/main.h
 
 CMakeFiles/graphics_asgn1.dir/src/coin.cpp.o: ../src/coin.cpp
 CMakeFiles/graphics_asgn1.dir/src/coin.cpp.o: ../src/coin.h
+CMakeFiles/graphics_asgn1.dir/src/coin.cpp.o: ../src/functions.h
 CMakeFiles/graphics_asgn1.dir/src/coin.cpp.o: ../src/main.h
 
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.o: ../src/color.cpp
@@ -30,20 +32,24 @@ CMakeFiles/graphics_asgn1.dir/src/enemy1_firelines.cpp.o: ../src/main.h
 
 CMakeFiles/graphics_asgn1.dir/src/enemy2_firebeam.cpp.o: ../src/enemy2_firebeam.cpp
 CMakeFiles/graphics_asgn1.dir/src/enemy2_firebeam.cpp.o: ../src/enemy2_firebeam.h
+CMakeFiles/graphics_asgn1.dir/src/enemy2_firebeam.cpp.o: ../src/functions.h
 CMakeFiles/graphics_asgn1.dir/src/enemy2_firebeam.cpp.o: ../src/main.h
 
 CMakeFiles/graphics_asgn1.dir/src/enemy3.boomerang.cpp.o: ../src/enemy3.boomerang.cpp
 CMakeFiles/graphics_asgn1.dir/src/enemy3.boomerang.cpp.o: ../src/enemy3_boomerang.h
+CMakeFiles/graphics_asgn1.dir/src/enemy3.boomerang.cpp.o: ../src/functions.h
 CMakeFiles/graphics_asgn1.dir/src/enemy3.boomerang.cpp.o: ../src/main.h
 
 CMakeFiles/graphics_asgn1.dir/src/functions.cpp.o: ../src/functions.cpp
 CMakeFiles/graphics_asgn1.dir/src/functions.cpp.o: ../src/functions.h
 CMakeFiles/graphics_asgn1.dir/src/functions.cpp.o: ../src/main.h
 
+CMakeFiles/graphics_asgn1.dir/src/heart.cpp.o: ../src/functions.h
 CMakeFiles/graphics_asgn1.dir/src/heart.cpp.o: ../src/heart.cpp
 CMakeFiles/graphics_asgn1.dir/src/heart.cpp.o: ../src/heart.h
 CMakeFiles/graphics_asgn1.dir/src/heart.cpp.o: ../src/main.h
 
+CMakeFiles/graphics_asgn1.dir/src/ice.cpp.o: ../src/functions.h
 CMakeFiles/graphics_asgn1.dir/src/ice.cpp.o: ../src/ice.cpp
 CMakeFiles/graphics_asgn1.dir/src/ice.cpp.o: ../src/ice.h
 CMakeFiles/graphics_asgn1.dir/src/ice.cpp.o: ../src/main.h
@@ -76,7 +82,6 @@ CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/shield.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/speedup.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/sword.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/timer.h
-CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/wall.h
 
 CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o: ../src/nonedit.cpp
@@ -110,8 +115,4 @@ CMakeFiles/graphics_asgn1.dir/src/sword.cpp.o: ../src/sword.h
 
 CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o: ../src/timer.cpp
 CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o: ../src/timer.h
-
-CMakeFiles/graphics_asgn1.dir/src/wall.cpp.o: ../src/main.h
-CMakeFiles/graphics_asgn1.dir/src/wall.cpp.o: ../src/wall.cpp
-CMakeFiles/graphics_asgn1.dir/src/wall.cpp.o: ../src/wall.h
 

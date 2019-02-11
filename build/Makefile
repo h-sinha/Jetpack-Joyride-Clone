@@ -771,33 +771,6 @@ src/timer.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/timer.cpp.s
 .PHONY : src/timer.cpp.s
 
-src/wall.o: src/wall.cpp.o
-
-.PHONY : src/wall.o
-
-# target to build an object file
-src/wall.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/wall.cpp.o
-.PHONY : src/wall.cpp.o
-
-src/wall.i: src/wall.cpp.i
-
-.PHONY : src/wall.i
-
-# target to preprocess a source file
-src/wall.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/wall.cpp.i
-.PHONY : src/wall.cpp.i
-
-src/wall.s: src/wall.cpp.s
-
-.PHONY : src/wall.s
-
-# target to generate assembly for a file
-src/wall.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/wall.cpp.s
-.PHONY : src/wall.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -879,9 +852,6 @@ help:
 	@echo "... src/timer.o"
 	@echo "... src/timer.i"
 	@echo "... src/timer.s"
-	@echo "... src/wall.o"
-	@echo "... src/wall.i"
-	@echo "... src/wall.s"
 .PHONY : help
 
 

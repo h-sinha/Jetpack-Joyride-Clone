@@ -2,7 +2,6 @@
 #include "timer.h"
 #include "ball.h"
 #include "bricks.h"
-#include "wall.h"
 #include "coin.h"
 #include "player.h"
 #include "enemy1_firelines.h"

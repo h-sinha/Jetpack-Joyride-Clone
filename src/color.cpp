@@ -1,6 +1,5 @@
 #include "main.h"
 
-// const color_t COLOR_LIGHT_RED = { 236, 100, 75 };
 const color_t COLOR_MIDNIGHT_BLUE = { 25, 25, 112 };
 const color_t COLOR_BLACK = { 0, 0, 0 };
 const color_t COLOR_WHITE = { 255, 255, 255 };
